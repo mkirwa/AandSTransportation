@@ -1,7 +1,9 @@
 package com.prapamab.AandSTransportation.config;
 
 import javax.servlet.ServletContext;
+
 import javax.servlet.ServletException;
+
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
@@ -18,16 +20,18 @@ public class AdminDispatcherServletInitializer extends AbstractAnnotationConfigD
 		protected Class<?>[] getRootConfigClasses() {
 			// TODO Auto-generated method stub
 			//this is actually the business layer
-			return new Class[] {SpringRootConfig.class};
+			return new Class[]{SpringRootConfig.class};
+		
 		}
 		
 		@Override
 		//this is web specific beans
 		protected Class<?>[] getServletConfigClasses() {
 			// TODO Auto-generated method stub
-			return new Class[] {SpringWebConfig.class};
-
+			return new Class[]{SpringWebConfig.class};
+			
 		}
+
 		
 		@Override
 		//dispatcher servlet is a front controller

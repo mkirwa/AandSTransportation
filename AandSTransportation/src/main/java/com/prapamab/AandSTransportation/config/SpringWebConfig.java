@@ -1,23 +1,25 @@
 package com.prapamab.AandSTransportation.config;
 
 import org.springframework.context.annotation.Bean;
+
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
 
+//@SuppressWarnings("deprecation")
 @Configuration
-@ComponentScan(basePackages={"com.prapamab"})
+@ComponentScan(basePackages={"com.prapamab.AandSTransportation"})
 //enabling web mvc will activate your configuration module
 //very important
 @EnableWebMvc
 //if you require you can add one resource here....the import resource
 //You also have to extend webmvc configurer adapter
-public class SpringWebConfig extends WebMvcConfigurerAdapter {
+public class SpringWebConfig implements WebMvcConfigurer {
 	
 	//this method handles static resources...
 	//spring won't allow any resources to be accessed on the JSP page
