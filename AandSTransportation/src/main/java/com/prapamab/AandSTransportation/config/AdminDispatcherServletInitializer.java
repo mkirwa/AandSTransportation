@@ -1,17 +1,13 @@
 package com.prapamab.AandSTransportation.config;
 
 import javax.servlet.ServletContext;
-
 import javax.servlet.ServletException;
-
-
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 //the front initializer will be initialized by this particular class
 
 public class AdminDispatcherServletInitializer extends AbstractAnnotationConfigDispatcherServletInitializer
 {
-
 		@Override
 		//here, you have to return the root configuration
 		//there could be multiple root configurations
