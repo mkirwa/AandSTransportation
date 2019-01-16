@@ -23,16 +23,13 @@ public class AdminDispatcherServletInitializer extends AbstractAnnotationConfigD
 			return new Class[]{SpringRootConfig.class};
 		
 		}
-		
 		@Override
 		//this is web specific beans
 		protected Class<?>[] getServletConfigClasses() {
 			// TODO Auto-generated method stub
 			return new Class[]{SpringWebConfig.class};
 			
-		}
-
-		
+		}	
 		@Override
 		//dispatcher servlet is a front controller
 		//it will receive a specific pattern of the url
