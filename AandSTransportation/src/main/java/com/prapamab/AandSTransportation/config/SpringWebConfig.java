@@ -39,7 +39,6 @@ public class SpringWebConfig implements WebMvcConfigurer {
 	//3.HandlerMapping
 		
 	//view resolver component...this is a bean actually
-	
 		
 	@Bean
 	public ViewResolver viewResolver() {

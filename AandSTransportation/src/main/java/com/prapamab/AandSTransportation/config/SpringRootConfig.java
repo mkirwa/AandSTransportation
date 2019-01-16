@@ -13,5 +13,4 @@ public class SpringRootConfig {
 	//TODO: add services, DAO, DataSource, Email sender or other business
 	//layer beans
 	
-
 }
