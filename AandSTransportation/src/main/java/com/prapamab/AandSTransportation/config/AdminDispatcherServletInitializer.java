@@ -1,5 +1,5 @@
 package com.prapamab.AandSTransportation.config;
-//Defines a set of methods that a servlet uses to communicate 
+//javax.servlet Defines a set of methods that a servlet uses to communicate 
 //with its servlet container, for example, to get the MIME type of a file,
 //dispatch requests, or write to a log file.
 import javax.servlet.ServletContext;
@@ -15,6 +15,7 @@ public class AdminDispatcherServletInitializer extends AbstractAnnotationConfigD
 		//there could be multiple root configurations
 		//it's for this reason that it is returning class
 		//array. ---Class<?>[] ----
+		//
 		protected Class<?>[] getRootConfigClasses() {
 			// TODO Auto-generated method stub
 			//this is actually the business layer
