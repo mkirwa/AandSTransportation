@@ -1,5 +1,7 @@
 package com.prapamab.AandSTransportation.config;
-
+//Defines a set of methods that a servlet uses to communicate 
+//with its servlet container, for example, to get the MIME type of a file,
+//dispatch requests, or write to a log file.
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;

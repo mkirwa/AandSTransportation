@@ -1,7 +1,8 @@
 package com.prapamab.AandSTransportation.controller;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+//import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class TestController {
@@ -13,7 +14,8 @@ public class TestController {
 		//it is resolved using view resolver 
 		//WEB-INF is the prefix.....
 		//hello.jsp...the .jsp is the suffix
-		@RequestMapping("/test/hello")
+		//@RequestMapping("/test/hello")
+		@GetMapping("/test/hello")
 		public String helloWorld(){
 			//hello is the view name
 			return "hello";//
