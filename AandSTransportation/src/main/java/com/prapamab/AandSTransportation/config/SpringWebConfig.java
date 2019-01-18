@@ -57,6 +57,7 @@ public class SpringWebConfig implements WebMvcConfigurer {
 		return vr;
 	}
 	///added
+	//I think this should be removed....
 	@Bean
 	public ViewResolver resourceBundleViewResolver() {
 	    ResourceBundleViewResolver bean = new ResourceBundleViewResolver();
