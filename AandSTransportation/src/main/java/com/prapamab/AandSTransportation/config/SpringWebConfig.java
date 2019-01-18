@@ -58,6 +58,8 @@ public class SpringWebConfig implements WebMvcConfigurer {
 	}
 	///added
 	//I think this should be removed....
+	//find out what this shit does!!!
+	//I need to move on as soon as possible 
 	@Bean
 	public ViewResolver resourceBundleViewResolver() {
 	    ResourceBundleViewResolver bean = new ResourceBundleViewResolver();
