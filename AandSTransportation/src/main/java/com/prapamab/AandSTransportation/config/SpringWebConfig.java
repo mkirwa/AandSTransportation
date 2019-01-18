@@ -10,6 +10,7 @@ import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
+import org.springframework.web.servlet.view.ResourceBundleViewResolver;
 
 //@SuppressWarnings("deprecation")
 @Configuration
@@ -18,7 +19,7 @@ import org.springframework.web.servlet.view.JstlView;
 //very important
 @EnableWebMvc
 //if you require you can add one resource here....the import resource
-//You also have to extend webmvc configurer adapter
+//You also have to extend webmvc configurer 
 public class SpringWebConfig implements WebMvcConfigurer {
 	
 	//this method handles static resources...
@@ -54,6 +55,13 @@ public class SpringWebConfig implements WebMvcConfigurer {
 		//suffix is the extension of your view
 		vr.setSuffix(".jsp");
 		return vr;
+	}
+	///added
+	@Bean
+	public ViewResolver resourceBundleViewResolver() {
+	    ResourceBundleViewResolver bean = new ResourceBundleViewResolver();
+	    bean.setBasename("views");
+	    return bean;
 	}
 		
 	
