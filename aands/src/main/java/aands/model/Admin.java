@@ -16,6 +16,15 @@ public class Admin {
 	private Integer role;
 	private Integer loginStatus;
 	
+	
+	public Admin() {
+		super();
+		
+	}
+	public Admin(Integer drivingLicenseNo) {
+		super();
+		this.drivingLicenseNo = drivingLicenseNo;
+	}
 	public String getName() {
 		return name;
 	}
