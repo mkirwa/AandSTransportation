@@ -2,6 +2,7 @@ package aands.model;
 
 public class Admin {
 
+	private Integer id;
 	private String name;
 	private String address;
 	private String emailAddress;
@@ -21,9 +22,17 @@ public class Admin {
 		super();
 		
 	}
-	public Admin(Integer drivingLicenseNo) {
+	public Admin(Integer id) {
 		super();
-		this.drivingLicenseNo = drivingLicenseNo;
+		this.id = id;
+	}
+	
+	public Integer getId() {
+		return id;
+	}
+	
+	public void setId(Integer id) {
+		this.id = id;
 	}
 	public String getName() {
 		return name;
