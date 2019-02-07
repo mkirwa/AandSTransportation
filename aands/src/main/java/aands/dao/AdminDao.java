@@ -13,6 +13,6 @@ public interface AdminDao {
 	
 	public void deleteAdmin(Admin admin);
 	
-	public Admin findAdminbyId(int id);
+	public Admin findAdminbyId(int idAdmin);
 	
 }
