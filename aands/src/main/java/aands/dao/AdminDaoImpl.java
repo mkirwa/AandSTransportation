@@ -22,7 +22,7 @@ public class AdminDaoImpl implements AdminDao{
 	}
 	
 	public List<Admin> listAllAdmins() {
-		String sql ="";
+		String sql ="SELECT idAdmin, Name, Address, PhoneNumber, Race, CountryofOrigin, DrivingLicense,EmergencyName, EmergencyPhone, Username, Password, Email, Role, LoginStatus FROM Admin;";
 		return null;
 	}
 
