@@ -23,9 +23,19 @@ public class AdminDaoImpl implements AdminDao{
 	
 	public List<Admin> listAllAdmins() {
 		String sql ="SELECT idAdmin, Name, Address, PhoneNumber, Race, CountryofOrigin, DrivingLicense,EmergencyName, EmergencyPhone, Username, Password, Email, Role, LoginStatus FROM Admin;";
+		List<Admin> list = namedParameterJdbcTemplate.query(sql, paramSource, rowMapper);
 		return null;
 	}
 
+	private SqlParameterSource getsqlParameterByModel(Admin Admin) {
+		
+		MapSqlParameterSource paramSource = new MapSqlParameterSource();
+		
+		return paramSource;
+	}
+	
+	
+	
 	public void addAdmin(Admin admin) {
 		// TODO Auto-generated method stub
 		
