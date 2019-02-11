@@ -2,7 +2,9 @@ package aands.dao;
 
 import java.util.List;
 import aands.model.Admin;
-
+//specifies what the class must do and not how
+//the blue print of the class
+//Used to achieve total abstraction and loose coupling
 public interface AdminDao {
 		
 	public List <Admin> listAllAdmins();
