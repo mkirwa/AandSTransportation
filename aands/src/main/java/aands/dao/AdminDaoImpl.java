@@ -10,7 +10,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
-import org.springframework.jdbc.core.namedparam.SqlParameterSource;
 import org.springframework.stereotype.Repository;
 
 import aands.model.Admin;
@@ -29,11 +28,11 @@ public class AdminDaoImpl implements AdminDao{
 	
 	public List<Admin> listAllAdmins() {
 		String sql ="SELECT idAdmin, Name, Address, PhoneNumber, Race, CountryofOrigin, DrivingLicense,EmergencyName, EmergencyPhone, Username, Password, Email, Role, LoginStatus FROM Admin;";
-		List<Admin> list = namedParameterJdbcTemplate.query(sql, paramSource, rowMapper);
+		List<Admin> list = namedParameterJdbcTemplate.query(sql, getSqlParameterByModel, rowMapper);
 		return null;
 	}
 
-	private SqlParameterSource getsqlParameterByModel(Admin Admin) {
+	private SqlParameterSource getSqlParameterByModel(Admin Admin) {
 		
 		MapSqlParameterSource paramSource = new MapSqlParameterSource();
 		
