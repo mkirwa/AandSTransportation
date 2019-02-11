@@ -10,7 +10,7 @@ public class Admin {
 	private String emailAddress;
 	private Integer phoneNumber;
 	private String race;
-	private String countryOfCitizenship; 
+	private String Citizenship; 
 	private Integer drivingLicenseNo;
 	private String emergencyContactName;
 	private Integer emergencyContactNumber;
@@ -81,11 +81,11 @@ public class Admin {
 	public void setRace(String race) {
 		this.race = race;
 	}
-	public String getCountryOfCitizenship() {
-		return countryOfCitizenship;
+	public String getCitizenship() {
+		return Citizenship;
 	}
-	public void setCountryOfCitizenship(String countryOfCitizenship) {
-		this.countryOfCitizenship = countryOfCitizenship;
+	public void setCitizenship(String Citizenship) {
+		this.Citizenship = Citizenship;
 	}
 	public Integer getDrivingLicenseNo() {
 		return drivingLicenseNo;
