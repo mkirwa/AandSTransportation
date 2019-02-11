@@ -3,7 +3,9 @@ package aands.model;
 public class Admin {
 
 	private Integer idAdmin;
-	private String name;
+	private String firstName;
+	private String middleInitial;
+	private String lastName;
 	private String address;
 	private String emailAddress;
 	private Integer phoneNumber;
@@ -34,12 +36,27 @@ public class Admin {
 	public void setId(Integer id) {
 		this.idAdmin = idAdmin;
 	}
-	public String getName() {
-		return name;
+	public String getfirstName() {
+		return firstName;
 	}
-	public void setName(String name) {
-		this.name = name;
+	public void setfirstName(String firstName) {
+		this.firstName = firstName;
 	}
+	
+	public String getmiddleInitial() {
+		return middleInitial;
+	}
+	public void setmiddleInitial(String middleInitial) {
+		this.middleInitial = middleInitial;
+	}
+	
+	public String getlastName() {
+		return lastName;
+	}
+	public void setlastName(String lastName) {
+		this.lastName = lastName;
+	}
+	
 	public String getAddress() {
 		return address;
 	}

@@ -27,7 +27,7 @@ public class AdminDaoImpl implements AdminDao{
 	}
 	
 	public List<Admin> listAllAdmins() {
-		String sql ="SELECT idAdmin, Name, Address, PhoneNumber, Race, CountryofOrigin, DrivingLicense,EmergencyName, EmergencyPhone, Username, Password, Email, Role, LoginStatus FROM Admin;";
+		String sql ="SELECT idAdmin, Address, PhoneNumber, Race, CountryofOrigin, DrivingLicense,EmergencyName, EmergencyPhone, Username, Password, Email, Role, LoginStatus, lastName, firstName, middleInitial FROM Admin;";
 		List<Admin> list = namedParameterJdbcTemplate.query(sql, getSqlParameterByModel(null), new AdminMapper());
 		return list;
 	}
@@ -43,6 +43,10 @@ public class AdminDaoImpl implements AdminDao{
 		
 		public Admin mapRow(ResultSet rs, int rowNum)throws SQLException{
 			Admin admin = new Admin();
+			admin.setId(rs.getInt("id"));
+			admin.setfirstName(rs.getString("firstName"));
+			admin.setmiddleInitial(rs.getString("middleInitial"));
+			admin.setlastName(rs.getString("lastName"));
 			return admin;
 		}
 	}
