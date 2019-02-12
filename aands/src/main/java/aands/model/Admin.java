@@ -15,10 +15,10 @@ public class Admin {
 	private String EmergencyContactFirstName;
 	private String EmergencyContactLastName;
 	private Integer EmergencyContactPhoneNumber;
-	private String username;
-	private String password;
-	private Integer role;
-	private Integer loginStatus;
+	private String Username;
+	private String Password;
+	private Integer Role;
+	private Integer LoginStatus;
 	
 	
 	public Admin() {
@@ -113,28 +113,28 @@ public class Admin {
 		this.EmergencyContactPhoneNumber = EmergencyContactPhoneNumber;
 	}
 	public String getUsername() {
-		return username;
+		return Username;
 	}
-	public void setUsername(String username) {
-		this.username = username;
+	public void setUsername(String Username) {
+		this.Username = Username;
 	}
 	public String getPassword() {
-		return password;
+		return Password;
 	}
-	public void setPassword(String password) {
-		this.password = password;
+	public void setPassword(String Password) {
+		this.Password = Password;
 	}
 	public Integer getRole() {
-		return role;
+		return Role;
 	}
-	public void setRole(Integer role) {
-		this.role = role;
+	public void setRole(Integer Role) {
+		this.Role = Role;
 	}
 	public Integer getLoginStatus() {
-		return loginStatus;
+		return LoginStatus;
 	}
-	public void setLoginStatus(Integer loginStatus) {
-		this.loginStatus = loginStatus;
+	public void setLoginStatus(Integer LoginStatus) {
+		this.LoginStatus = LoginStatus;
 	}
 	
 	
