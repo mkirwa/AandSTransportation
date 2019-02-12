@@ -51,6 +51,7 @@ public class AdminDaoImpl implements AdminDao{
 			admin.setPhoneNumber(rs.getInt("PhoneNumber"));
 			admin.setRace(rs.getString("Race"));
 			admin.setCitizenship(rs.getString("Citizenship"));
+			admin.setDrivingLicense(rs.getInt("DrivingLicense"));
 			return admin;
 		}
 	}

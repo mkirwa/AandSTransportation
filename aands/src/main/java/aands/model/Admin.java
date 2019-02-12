@@ -11,8 +11,9 @@ public class Admin {
 	private Integer phoneNumber;
 	private String race;
 	private String Citizenship; 
-	private Integer drivingLicenseNo;
-	private String emergencyContactName;
+	private Integer DrivingLicense;
+	private String EmergencyContactFirstName;
+	private String EmergencyContactLastName;
 	private Integer emergencyContactNumber;
 	private String username;
 	private String password;
@@ -87,17 +88,23 @@ public class Admin {
 	public void setCitizenship(String Citizenship) {
 		this.Citizenship = Citizenship;
 	}
-	public Integer getDrivingLicenseNo() {
-		return drivingLicenseNo;
+	public Integer getDrivingLicense() {
+		return DrivingLicense;
 	}
-	public void setDrivingLicenseNo(Integer drivingLicenseNo) {
-		this.drivingLicenseNo = drivingLicenseNo;
+	public void setDrivingLicense(Integer drivingLicenseNo) {
+		this.DrivingLicense = drivingLicenseNo;
 	}
-	public String getEmergencyContactName() {
-		return emergencyContactName;
+	public String getEmergencyContactFirstName() {
+		return EmergencyContactFirstName;
 	}
-	public void setEmergencyContactName(String emergencyContactName) {
-		this.emergencyContactName = emergencyContactName;
+	public void setEmergencyContactFirstName(String emergencyContactFirstName) {
+		this.EmergencyContactFirstName = emergencyContactFirstName;
+	}
+	public String getEmergencyContactLastName() {
+		return EmergencyContactLastName;
+	}
+	public void setEmergencyContactLastName(String emergencyContactLastName) {
+		this.EmergencyContactLastName = emergencyContactLastName;
 	}
 	public Integer getEmergencyContactNumber() {
 		return emergencyContactNumber;
