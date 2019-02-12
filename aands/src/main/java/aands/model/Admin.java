@@ -14,7 +14,7 @@ public class Admin {
 	private Integer DrivingLicense;
 	private String EmergencyContactFirstName;
 	private String EmergencyContactLastName;
-	private Integer emergencyContactNumber;
+	private Integer EmergencyContactPhoneNumber;
 	private String username;
 	private String password;
 	private Integer role;
@@ -106,11 +106,11 @@ public class Admin {
 	public void setEmergencyContactLastName(String emergencyContactLastName) {
 		this.EmergencyContactLastName = emergencyContactLastName;
 	}
-	public Integer getEmergencyContactNumber() {
-		return emergencyContactNumber;
+	public Integer getEmergencyContactPhoneNumber() {
+		return EmergencyContactPhoneNumber;
 	}
-	public void setEmergencyContactNumber(Integer emergencyContactNumber) {
-		this.emergencyContactNumber = emergencyContactNumber;
+	public void setEmergencyContactPhoneNumber(Integer EmergencyContactPhoneNumber) {
+		this.EmergencyContactPhoneNumber = EmergencyContactPhoneNumber;
 	}
 	public String getUsername() {
 		return username;
