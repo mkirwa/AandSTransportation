@@ -6,10 +6,10 @@ public class Admin {
 	private String firstName;
 	private String middleInitial;
 	private String lastName;
-	private String address;
-	private String emailAddress;
-	private Integer phoneNumber;
-	private String race;
+	private String Address;
+	private String Email;
+	private Integer PhoneNumber;
+	private String Race;
 	private String Citizenship; 
 	private Integer DrivingLicense;
 	private String EmergencyContactFirstName;
@@ -59,28 +59,28 @@ public class Admin {
 	}
 	
 	public String getAddress() {
-		return address;
+		return Address;
 	}
-	public void setAddress(String address) {
-		this.address = address;
+	public void setAddress(String Address) {
+		this.Address = Address;
 	}
-	public String getEmailAddress() {
-		return emailAddress;
+	public String getEmail() {
+		return Email;
 	}
-	public void setEmailAddress(String emailAddress) {
-		this.emailAddress = emailAddress;
+	public void setEmail(String Email) {
+		this.Email = Email;
 	}
 	public Integer getPhoneNumber() {
-		return phoneNumber;
+		return PhoneNumber;
 	}
-	public void setPhoneNumber(Integer phoneNumber) {
-		this.phoneNumber = phoneNumber;
+	public void setPhoneNumber(Integer PhoneNumber) {
+		this.PhoneNumber = PhoneNumber;
 	}
 	public String getRace() {
-		return race;
+		return Race;
 	}
-	public void setRace(String race) {
-		this.race = race;
+	public void setRace(String Race) {
+		this.Race = Race;
 	}
 	public String getCitizenship() {
 		return Citizenship;
