@@ -1,5 +1,6 @@
 package aands.model;
-
+//Contains POJO classes
+//
 public class Admin {
 
 	private Integer idAdmin;
@@ -19,7 +20,6 @@ public class Admin {
 	private String Password;
 	private Integer Role;
 	private Integer LoginStatus;
-	
 	
 	public Admin() {
 		super();
