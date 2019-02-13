@@ -1,6 +1,17 @@
 package aands.model;
-//Contains POJO classes
-//
+
+//This is a POJO class with setters and getters
+//As soon as you start adding methods that operate on
+//points, like vector addition or complex multiplication
+//you no longer have a POJO.
+//Properties of POJO
+//1. All properties must public setter and getter methods
+//2. All instance variables should be private
+//3. Should not Extend prespecified classes.
+//4. Should not Implement prespecified interfaces.
+//5. Should not contain prespecified annotations.
+//6. It may not have no argument constructor
+
 public class Admin {
 
 	private Integer idAdmin;
