@@ -43,6 +43,7 @@ public class AdminDaoImpl implements AdminDao{
 	//methods of the NamedParameterJdbcTemplate class.
 	private SqlParameterSource getSqlParameterByModel(Admin Admin) {
 		
+		//Create an empty MapSqlParameterSource, with values to be added.
 		MapSqlParameterSource paramSource = new MapSqlParameterSource();
 		
 		return paramSource;
