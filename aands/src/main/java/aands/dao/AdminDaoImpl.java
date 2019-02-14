@@ -37,7 +37,10 @@ public class AdminDaoImpl implements AdminDao{
 		List<Admin> list = namedParameterJdbcTemplate.query(sql, getSqlParameterByModel(null), new AdminMapper());
 		return list;
 	}
-
+	
+	//sql parameterSource is an implementation that holds a given map of parameters
+	//This class is intended for passing in a simple Map of parameter values to the
+	//methods of the NamedParameterJdbcTemplate class.
 	private SqlParameterSource getSqlParameterByModel(Admin Admin) {
 		
 		MapSqlParameterSource paramSource = new MapSqlParameterSource();
