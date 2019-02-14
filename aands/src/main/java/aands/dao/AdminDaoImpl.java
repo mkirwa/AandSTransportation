@@ -14,11 +14,17 @@ import org.springframework.stereotype.Repository;
 
 import aands.model.Admin;
 
+//@Repository is a marker for any class that fulfills a role or a stereotype(also known as 
+//Data Access Objects or DAO) of a repository
 @Repository
 public class AdminDaoImpl implements AdminDao{
-
+	
+	//template class with basic set of JDBC operations allowing the use of 
+	//named parameters rather than the traditional '?' placeholders
 	NamedParameterJdbcTemplate namedParameterJdbcTemplate;
 	
+	//@Autowired annotation provides more fine-grained control over where and how autowiring should be accomplished.
+	// Tells the application context to inject an instance of NamedParameterJdbcTemplate here
 	@Autowired
 	public void setNamedParameterJdbcTemplate(NamedParameterJdbcTemplate namedParameterJdbcTemplate) throws DataAccessException {
 		
