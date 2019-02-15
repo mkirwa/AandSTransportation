@@ -79,7 +79,7 @@ public class AdminDaoImpl implements AdminDao{
 	public void addAdmin(Admin admin) {
 		// TODO Auto-generated method stub
 		String sql = "INSERT INTO admin(Address, PhoneNumber, Race, Citizenship, DrivingLicense,EmergencyContactFirtName, EmergencyContactLastName, EmergencyContactPhone, Username, Password, Email, Role, LoginStatus, lastName, firstName, middleInitial) VALUES (:Address, :PhoneNumber, :Race, :Citizenship, :DrivingLicense, :EmergencyContactFirtName, :EmergencyContactLastName, :EmergencyContactPhone, :Username, :Password, :Email, :Role, :LoginStatus, :lastName, :firstName, :middleInitial)";
-		
+		namedParameterJdbcTemplate.update(sql, getSqlParameterByModel(admin));
 	}
 
 	public void updateAdmin(Admin admin) {
