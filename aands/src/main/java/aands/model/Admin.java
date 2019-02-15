@@ -41,7 +41,7 @@ public class Admin {
 		this.idAdmin = idAdmin;
 	}
 	
-	public Integer getId() {
+	public Integer getIdAdmin() {
 		return idAdmin;
 	}
 	

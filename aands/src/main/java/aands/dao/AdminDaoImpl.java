@@ -48,7 +48,7 @@ public class AdminDaoImpl implements AdminDao{
 		MapSqlParameterSource paramSource = new MapSqlParameterSource();
 		
 		if(Admin!=null) {
-			paramSource.addValue("idAdmin","");
+			paramSource.addValue("idAdmin",Admin.getIdAdmin());
 			paramSource.addValue("","");
 			paramSource.addValue("","");
 			paramSource.addValue("","");
