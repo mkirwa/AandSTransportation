@@ -53,12 +53,12 @@ public class AdminDaoImpl implements AdminDao{
 			paramSource.addValue("middleInitial",Admin.getmiddleInitial());
 			paramSource.addValue("lastname",Admin.getlastName());
 			paramSource.addValue("Address",Admin.getAddress());
-			paramSource.addValue("","");
-			paramSource.addValue("","");
-			paramSource.addValue("","");
-			paramSource.addValue("","");
-			paramSource.addValue("","");
-			paramSource.addValue("","");
+			paramSource.addValue("PhoneNumber",Admin.getPhoneNumber());
+			paramSource.addValue("Race",Admin.getRace());
+			paramSource.addValue("Citizenship",Admin.getCitizenship());
+			paramSource.addValue("DrivingLicense",Admin.getDrivingLicense());
+			paramSource.addValue("EmergencyContactFirstName",Admin.getEmergencyContactFirstName());
+			paramSource.addValue("EmergencyContactLastName",Admin.getEmergencyContactLastName());
 			paramSource.addValue("","");
 			paramSource.addValue("","");
 			paramSource.addValue("","");
