@@ -61,10 +61,10 @@ public class AdminDaoImpl implements AdminDao{
 			paramSource.addValue("EmergencyContactLastName",Admin.getEmergencyContactLastName());
 			paramSource.addValue("EmergencyContactPhoneNumber",Admin.getEmergencyContactPhoneNumber());
 			paramSource.addValue("Email",Admin.getEmail());
-			paramSource.addValue("","");
-			paramSource.addValue("","");
-			paramSource.addValue("","");
-			paramSource.addValue("","");
+			paramSource.addValue("Role",Admin.getRole());
+			paramSource.addValue("LoginStatus",Admin.getLoginStatus());
+			paramSource.addValue("Username",Admin.getUsername());
+			paramSource.addValue("Password",Admin.getPassword());
 		}
 		
 		return paramSource;
