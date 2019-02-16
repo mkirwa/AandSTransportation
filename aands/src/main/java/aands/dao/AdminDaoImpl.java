@@ -49,10 +49,10 @@ public class AdminDaoImpl implements AdminDao{
 		
 		if(Admin!=null) {
 			paramSource.addValue("idAdmin",Admin.getIdAdmin());
-			paramSource.addValue("","");
-			paramSource.addValue("","");
-			paramSource.addValue("","");
-			paramSource.addValue("","");
+			paramSource.addValue("firstname",Admin.getfirstName());
+			paramSource.addValue("middleInitial",Admin.getmiddleInitial());
+			paramSource.addValue("lastname",Admin.getlastName());
+			paramSource.addValue("Address",Admin.getAddress());
 			paramSource.addValue("","");
 			paramSource.addValue("","");
 			paramSource.addValue("","");
