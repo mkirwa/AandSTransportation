@@ -42,29 +42,29 @@ public class AdminDaoImpl implements AdminDao{
 	//sql parameterSource is an implementation that holds a given map of parameters
 	//This class is intended for passing in a simple Map of parameter values to the
 	//methods of the NamedParameterJdbcTemplate class.
-	private SqlParameterSource getSqlParameterByModel(Admin Admin) {
+	private SqlParameterSource getSqlParameterByModel(Admin admin) {
 		
 		//Create an empty MapSqlParameterSource, with values to be added.
 		MapSqlParameterSource paramSource = new MapSqlParameterSource();
 		
-		if(Admin!=null) {
-			paramSource.addValue("idAdmin",Admin.getIdAdmin());
-			paramSource.addValue("firstname",Admin.getfirstName());
-			paramSource.addValue("middleInitial",Admin.getmiddleInitial());
-			paramSource.addValue("lastname",Admin.getlastName());
-			paramSource.addValue("Address",Admin.getAddress());
-			paramSource.addValue("PhoneNumber",Admin.getPhoneNumber());
-			paramSource.addValue("Race",Admin.getRace());
-			paramSource.addValue("Citizenship",Admin.getCitizenship());
-			paramSource.addValue("DrivingLicense",Admin.getDrivingLicense());
-			paramSource.addValue("EmergencyContactFirstName",Admin.getEmergencyContactFirstName());
-			paramSource.addValue("EmergencyContactLastName",Admin.getEmergencyContactLastName());
-			paramSource.addValue("EmergencyContactPhoneNumber",Admin.getEmergencyContactPhoneNumber());
-			paramSource.addValue("Email",Admin.getEmail());
-			paramSource.addValue("Role",Admin.getRole());
-			paramSource.addValue("LoginStatus",Admin.getLoginStatus());
-			paramSource.addValue("Username",Admin.getUsername());
-			paramSource.addValue("Password",Admin.getPassword());
+		if(admin!=null) {
+			paramSource.addValue("idAdmin",admin.getIdAdmin());
+			paramSource.addValue("firstname",admin.getfirstName());
+			paramSource.addValue("middleInitial",admin.getmiddleInitial());
+			paramSource.addValue("lastname",admin.getlastName());
+			paramSource.addValue("Address",admin.getAddress());
+			paramSource.addValue("PhoneNumber",admin.getPhoneNumber());
+			paramSource.addValue("Race",admin.getRace());
+			paramSource.addValue("Citizenship",admin.getCitizenship());
+			paramSource.addValue("DrivingLicense",admin.getDrivingLicense());
+			paramSource.addValue("EmergencyContactFirstName",admin.getEmergencyContactFirstName());
+			paramSource.addValue("EmergencyContactLastName",admin.getEmergencyContactLastName());
+			paramSource.addValue("EmergencyContactPhoneNumber",admin.getEmergencyContactPhoneNumber());
+			paramSource.addValue("Email",admin.getEmail());
+			paramSource.addValue("Role",admin.getRole());
+			paramSource.addValue("LoginStatus",admin.getLoginStatus());
+			paramSource.addValue("Username",admin.getUsername());
+			paramSource.addValue("Password",admin.getPassword());
 		}
 		
 		return paramSource;
@@ -104,7 +104,7 @@ public class AdminDaoImpl implements AdminDao{
 
 	public void updateAdmin(Admin admin) {
 		// TODO Auto-generated method stub
-		
+		String sql = update 
 	}
 
 	public void deleteAdmin(Admin admin) {
