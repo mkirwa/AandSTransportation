@@ -98,13 +98,13 @@ public class AdminDaoImpl implements AdminDao{
 	
 	public void addAdmin(Admin admin) {
 		// TODO Auto-generated method stub
-		String sql = "INSERT INTO admin(Address, PhoneNumber, Race, Citizenship, DrivingLicense,EmergencyContactFirtName, EmergencyContactLastName, EmergencyContactPhone, Username, Password, Email, Role, LoginStatus, lastName, firstName, middleInitial) VALUES (:Address, :PhoneNumber, :Race, :Citizenship, :DrivingLicense, :EmergencyContactFirtName, :EmergencyContactLastName, :EmergencyContactPhone, :Username, :Password, :Email, :Role, :LoginStatus, :lastName, :firstName, :middleInitial)";
+		String sql = "INSERT INTO admin(Address, PhoneNumber, Race, Citizenship, DrivingLicense,EmergencyContactFirtName, EmergencyContactLastName, EmergencyContactPhoneNumber, Username, Password, Email, Role, LoginStatus, lastName, firstName, middleInitial) VALUES (:Address, :PhoneNumber, :Race, :Citizenship, :DrivingLicense, :EmergencyContactFirtName, :EmergencyContactLastName, :EmergencyContactPhone, :Username, :Password, :Email, :Role, :LoginStatus, :lastName, :firstName, :middleInitial)";
 		namedParameterJdbcTemplate.update(sql, getSqlParameterByModel(admin));
 	}
 
 	public void updateAdmin(Admin admin) {
 		// TODO Auto-generated method stub
-		String sql = update 
+		String sql = "update admins SET Address = :Address, PhoneNumber = :PhoneNumber, Race = :Race, Citizenship = :Citizenship, DrivingLicense = :DrivingLicense,EmergencyContactFirtName = :EmergencyContactFirstName, EmergencyContactLastName = :EmergencyContactLastName , EmergencyContactPhoneNumber :=EmergencyContactPhoneNumber, Username =:Username, Password =:Password, Email, Role =:Role, LoginStatus :=LoginStatus, lastName :=lastName, firstName :=firstName, middleInitial =:middleInitial WHERE idAdmin=idAdmin";
 	}
 
 	public void deleteAdmin(Admin admin) {
