@@ -104,17 +104,24 @@ public class AdminDaoImpl implements AdminDao{
 
 	public void updateAdmin(Admin admin) {
 		// TODO Auto-generated method stub
-		String sql = "update admins SET Address = :Address, PhoneNumber = :PhoneNumber, Race = :Race, Citizenship = :Citizenship, DrivingLicense = :DrivingLicense,EmergencyContactFirtName = :EmergencyContactFirstName, EmergencyContactLastName = :EmergencyContactLastName , EmergencyContactPhoneNumber :=EmergencyContactPhoneNumber, Username =:Username, Password =:Password, Email, Role =:Role, LoginStatus :=LoginStatus, lastName :=lastName, firstName :=firstName, middleInitial =:middleInitial WHERE idAdmin=idAdmin";
+		String sql = "UPDATE admins SET Address =:Address, PhoneNumber =:PhoneNumber, Race =:Race, Citizenship =:Citizenship, DrivingLicense =:DrivingLicense, EmergencyContactFirtName =:EmergencyContactFirstName, EmergencyContactLastName =:EmergencyContactLastName , EmergencyContactPhoneNumber :=EmergencyContactPhoneNumber, Username =:Username, Password =:Password, Email, Role =:Role, LoginStatus :=LoginStatus, lastName :=lastName, firstName :=firstName, middleInitial =:middleInitial WHERE idAdmin=idAdmin";
+		namedParameterJdbcTemplate.update(sql, getSqlParameterByModel(admin));
 	}
 
-	public void deleteAdmin(Admin admin) {
+	public void deleteAdmin(int idAdmin) {
 		// TODO Auto-generated method stub
-		
+		String sql = "DELETE from admins WHERE idAdmin =:idAdmin";
+		namedParameterJdbcTemplate.update(sql, getSqlParameterByModel(new Admin(idAdmin)));
 	}
 
 	public Admin findAdminbyId(int id) {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	public void deleteAdmin(Admin admin) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }
