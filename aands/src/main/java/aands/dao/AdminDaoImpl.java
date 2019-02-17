@@ -120,10 +120,6 @@ public class AdminDaoImpl implements AdminDao{
 		return namedParameterJdbcTemplate.queryForObject(sql,getSqlParameterByModel(new Admin(idAdmin)),new AdminMapper());
 	}
 
-	public void deleteAdmin(Admin admin) {
-		// TODO Auto-generated method stub
-		
-	}
 
 
 }

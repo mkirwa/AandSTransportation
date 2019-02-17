@@ -45,7 +45,7 @@ public class Admin {
 		return idAdmin;
 	}
 	
-	public void setId(Integer id) {
+	public void setId(Integer idAdmin) {
 		this.idAdmin = idAdmin;
 	}
 	public String getfirstName() {
