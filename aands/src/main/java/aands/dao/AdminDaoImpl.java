@@ -98,30 +98,32 @@ public class AdminDaoImpl implements AdminDao{
 	
 	public void addAdmin(Admin admin) {
 		// TODO Auto-generated method stub
-		String sql = "INSERT INTO admin(Address, PhoneNumber, Race, Citizenship, DrivingLicense,EmergencyContactFirtName, EmergencyContactLastName, EmergencyContactPhoneNumber, Username, Password, Email, Role, LoginStatus, lastName, firstName, middleInitial) VALUES (:Address, :PhoneNumber, :Race, :Citizenship, :DrivingLicense, :EmergencyContactFirtName, :EmergencyContactLastName, :EmergencyContactPhone, :Username, :Password, :Email, :Role, :LoginStatus, :lastName, :firstName, :middleInitial)";
+		String sql = "INSERT INTO Admin(Address, PhoneNumber, Race, Citizenship, DrivingLicense,EmergencyContactFirtName, EmergencyContactLastName, EmergencyContactPhoneNumber, Username, Password, Email, Role, LoginStatus, lastName, firstName, middleInitial) VALUES (:Address, :PhoneNumber, :Race, :Citizenship, :DrivingLicense, :EmergencyContactFirtName, :EmergencyContactLastName, :EmergencyContactPhone, :Username, :Password, :Email, :Role, :LoginStatus, :lastName, :firstName, :middleInitial)";
 		namedParameterJdbcTemplate.update(sql, getSqlParameterByModel(admin));
 	}
 
 	public void updateAdmin(Admin admin) {
 		// TODO Auto-generated method stub
-		String sql = "UPDATE admins SET Address =:Address, PhoneNumber =:PhoneNumber, Race =:Race, Citizenship =:Citizenship, DrivingLicense =:DrivingLicense, EmergencyContactFirtName =:EmergencyContactFirstName, EmergencyContactLastName =:EmergencyContactLastName , EmergencyContactPhoneNumber :=EmergencyContactPhoneNumber, Username =:Username, Password =:Password, Email, Role =:Role, LoginStatus :=LoginStatus, lastName :=lastName, firstName :=firstName, middleInitial =:middleInitial WHERE idAdmin=idAdmin";
+		String sql = "UPDATE Admin SET Address =:Address, PhoneNumber =:PhoneNumber, Race =:Race, Citizenship =:Citizenship, DrivingLicense =:DrivingLicense, EmergencyContactFirtName =:EmergencyContactFirstName, EmergencyContactLastName =:EmergencyContactLastName , EmergencyContactPhoneNumber :=EmergencyContactPhoneNumber, Username =:Username, Password =:Password, Email, Role =:Role, LoginStatus :=LoginStatus, lastName :=lastName, firstName :=firstName, middleInitial =:middleInitial WHERE idAdmin=idAdmin";
 		namedParameterJdbcTemplate.update(sql, getSqlParameterByModel(admin));
 	}
 
 	public void deleteAdmin(int idAdmin) {
 		// TODO Auto-generated method stub
-		String sql = "DELETE from admins WHERE idAdmin =:idAdmin";
+		String sql = "DELETE from Admin WHERE idAdmin =:idAdmin";
 		namedParameterJdbcTemplate.update(sql, getSqlParameterByModel(new Admin(idAdmin)));
 	}
 
-	public Admin findAdminbyId(int id) {
+	public Admin findAdminbyId(int idAdmin) {
 		// TODO Auto-generated method stub
-		return null;
+		String sql= "SELECT * FROM Admin WHERE idAmin =:idAdmin";
+		return namedParameterJdbcTemplate.queryForObject(sql,getSqlParameterByModel(new Admin(idAdmin)),new AdminMapper());
 	}
 
 	public void deleteAdmin(Admin admin) {
 		// TODO Auto-generated method stub
 		
 	}
+
 
 }
