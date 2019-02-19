@@ -40,22 +40,25 @@ public class AdminServiceImpl implements AdminService{
 
 	public void addAdmin(Admin admin) {
 		// TODO Auto-generated method stub
+		adminDao.addAdmin(admin);
 		
 	}
 
 	public void updateAdmin(Admin admin) {
 		// TODO Auto-generated method stub
+		adminDao.updateAdmin(admin);
 		
 	}
 
 	public void deleteAdmin(int idAdmin) {
 		// TODO Auto-generated method stub
-		
+		adminDao.deleteAdmin(idAdmin);
 	}
 
 	public Admin findAdminbyId(int idAdmin) {
 		// TODO Auto-generated method stub
-		return null;
+		return adminDao.findAdminbyId(idAdmin);
+		
 	}
 
 }
