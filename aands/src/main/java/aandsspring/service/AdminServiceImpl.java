@@ -5,13 +5,10 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 
 import aands.model.Admin;
-//Service annotation is used in your service layer and annotates
-//classes that perform service tasks, often you don't use it
-//but in many case you use this annotation to represent a best practice.
-//For example, you could directly call a DAO class to persist 
-//an object to your database but this is horrible. It is pretty good to
-//call a service class that calls a DAO. This is a good thing to 
-//perform the separation of concerns pattern.
+//used to mark a class as a service provider
+//used with classes that provide some functionalites
+//@service is a specialization of @Component annotation
+//can be applied only to classes
 @Service
 public class AdminServiceImpl implements AdminService{
 
