@@ -21,7 +21,13 @@ public class AdminServiceImpl implements AdminService{
 	//All spring beans are managed - they live inside a
 	//container called "application context"
 	//each application has an entry to that context. Web applications have a servlet as this entry
-	//
+	//Also, there is a place where the application context is bootstrapped and all beans - autowired.
+	//Autowiring happens by placing an instance of one bean into the desired field in an instance of
+	//another bean. Both classes should be beans, i.e. they should be defined to live in the application context.
+
+	//What is "living" in the application context? This means that the context instantiates the objects,
+	//not you. I.e. - you never make new AdminServiceImpl() - the container finds each
+	//injection point and sets an instance there.
 	@Autowired
 	public void setAdminDao(AdminDao adminDao) {
 		this.adminDao = adminDao;
