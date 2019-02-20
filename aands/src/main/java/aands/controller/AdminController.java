@@ -33,7 +33,7 @@ public class AdminController {
 		ModelAndView model = new ModelAndView("admin/admin_page");
 		
 		List<Admin> list = adminService.listAllAdmins();
-		
+		model.addObject("list",list);
 		return model;
 		
 	}
