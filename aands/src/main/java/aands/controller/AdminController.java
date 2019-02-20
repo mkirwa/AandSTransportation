@@ -1,5 +1,9 @@
 package aands.controller;
 
+import java.util.List;
+
+
+import aands.model.Admin;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -25,7 +29,12 @@ public class AdminController {
 	
 	@RequestMapping(value="",method= RequestMethod.GET)
 	public ModelAndView list() {
-		return null;
+		
+		ModelAndView model = new ModelAndView("admin/admin_page");
+		
+		List<Admin> list = adminService.listAllAdmins();
+		
+		return model;
 		
 	}
 }
