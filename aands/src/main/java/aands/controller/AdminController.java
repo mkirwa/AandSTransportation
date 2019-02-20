@@ -27,7 +27,7 @@ public class AdminController {
 	@Autowired
 	AdminService adminService;
 	
-	@RequestMapping(value="",method= RequestMethod.GET)
+	@RequestMapping(value="/list",method= RequestMethod.GET)
 	public ModelAndView list() {
 		
 		ModelAndView model = new ModelAndView("admin/admin_page");
