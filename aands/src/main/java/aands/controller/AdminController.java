@@ -61,4 +61,20 @@ public class AdminController {
 		
 	}
 	
+	@RequestMapping(value="/save",method= RequestMethod.POST)
+	public ModelAndView save(@PathVariable("adminForm")Admin admin) {
+		
+		ModelAndView model = new ModelAndView("admin/admin_form");
+		
+		if(admin !=null && admin.getIdAdmin() !=null) {
+			//update
+			adminService.updateAdmin(admin);
+		}else {
+			//add new
+			adminService.addAdmin(admin);
+		}
+		return new ModelAndView("redirect://");
+		
+	}
+	
 }
