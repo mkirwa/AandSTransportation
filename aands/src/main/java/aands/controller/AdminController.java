@@ -37,4 +37,16 @@ public class AdminController {
 		return model;
 		
 	}
+	
+	@RequestMapping(value="/add",method= RequestMethod.GET)
+	public ModelAndView add() {
+		
+		ModelAndView model = new ModelAndView("admin/admin_form");
+		
+		List<Admin> list = adminService.listAllAdmins();
+		model.addObject("listAdmin",list);
+		return model;
+		
+	}
+	
 }
