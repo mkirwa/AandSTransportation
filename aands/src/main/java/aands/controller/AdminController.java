@@ -43,7 +43,7 @@ public class AdminController {
 		
 		ModelAndView model = new ModelAndView("admin/admin_form");
 		Admin admin = new Admin();
-		model.addObject("listAdmin",admin);
+		model.addObject("adminForm",admin);
 		return model;
 		
 	}
