@@ -42,9 +42,8 @@ public class AdminController {
 	public ModelAndView add() {
 		
 		ModelAndView model = new ModelAndView("admin/admin_form");
-		
-		List<Admin> list = adminService.listAllAdmins();
-		model.addObject("listAdmin",list);
+		Admin admin = new Admin();
+		model.addObject("listAdmin",admin);
 		return model;
 		
 	}
