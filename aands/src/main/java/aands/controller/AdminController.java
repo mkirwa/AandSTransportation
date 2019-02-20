@@ -6,6 +6,7 @@ import java.util.List;
 import aands.model.Admin;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
@@ -43,6 +44,18 @@ public class AdminController {
 		
 		ModelAndView model = new ModelAndView("admin/admin_form");
 		Admin admin = new Admin();
+		model.addObject("adminForm",admin);
+		return model;
+		
+	}
+	
+	@RequestMapping(value="/update/{idAdmin}",method= RequestMethod.GET)
+	public ModelAndView update(@PathVariable("idAdmin")int idAdmin) {
+		
+		ModelAndView model = new ModelAndView("admin/admin_form");
+		
+		Admin admin = adminService.findAdminbyId(idAdmin);
+		
 		model.addObject("adminForm",admin);
 		return model;
 		
