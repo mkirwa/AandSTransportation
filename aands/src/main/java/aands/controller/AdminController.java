@@ -30,6 +30,9 @@ public class AdminController {
 	AdminService adminService;
 	
 	@RequestMapping(value="/list",method= RequestMethod.GET)
+	//ModelAndView is an object that holds both the model and view
+	//The handler returns the ModelAndView object and DispatcherServlet 
+	//Resolves the view using View resolvers and View
 	public ModelAndView list() {
 		
 		ModelAndView model = new ModelAndView("admin/admin_page");
