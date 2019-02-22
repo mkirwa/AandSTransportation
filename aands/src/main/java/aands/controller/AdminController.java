@@ -6,6 +6,7 @@ import java.util.List;
 import aands.model.Admin;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -62,10 +63,8 @@ public class AdminController {
 	}
 	
 	@RequestMapping(value="/save",method= RequestMethod.POST)
-	public ModelAndView save(@PathVariable("adminForm")Admin admin) {
-		
-		ModelAndView model = new ModelAndView("admin/admin_form");
-		
+	public ModelAndView save(@ModelAttribute("adminForm")Admin admin) {
+				
 		if(admin !=null && admin.getIdAdmin() !=null) {
 			//update
 			adminService.updateAdmin(admin);
@@ -73,7 +72,7 @@ public class AdminController {
 			//add new
 			adminService.addAdmin(admin);
 		}
-		return new ModelAndView("redirect://");
+		return new ModelAndView("redirect://list");
 		
 	}
 	
