@@ -44,6 +44,7 @@ public class WebConfig implements WebMvcConfigurer{
 		//they must be added here
 		public void addResourceHandlers(ResourceHandlerRegistry registry){
 			//TODO: add the static resources here
+			registry.addResourceHandler("/resources/***").addResourceLocations("/resources");
 			
 		}
 			
