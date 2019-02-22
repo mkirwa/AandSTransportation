@@ -33,6 +33,8 @@ public class AdminController {
 	//ModelAndView is an object that holds both the model and view
 	//The handler returns the ModelAndView object and DispatcherServlet 
 	//Resolves the view using View resolvers and View
+	//The view is the object which contains view name in the form of the spring 
+	//and model is a mapp to add multiple objects 
 	public ModelAndView list() {
 		
 		ModelAndView model = new ModelAndView("admin/admin_page");
