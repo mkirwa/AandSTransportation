@@ -49,6 +49,7 @@ public class AdminController {
 	public ModelAndView add() {
 		
 		ModelAndView model = new ModelAndView("admin/admin_form");
+		
 		Admin admin = new Admin();
 		model.addObject("adminForm",admin);
 		return model;
@@ -79,6 +80,13 @@ public class AdminController {
 		}
 		return new ModelAndView("redirect://list");
 		
+	}
+	
+	@RequestMapping(value="/delete/{idAdmin}",method= RequestMethod.GET)
+	public ModelAndView delete(@PathVariable("idAdmin")int idAdmin) {
+				
+		adminService.deleteAdmin(idAdmin);
+		return new ModelAndView("redirect://list");
 	}
 	
 }
