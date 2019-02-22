@@ -1,7 +1,13 @@
 package aands.config;
+import javax.naming.NamingException;
+import javax.sql.DataSource;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
+import org.springframework.jndi.JndiTemplate;
 import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
@@ -14,7 +20,22 @@ import org.springframework.web.servlet.view.JstlView;
 @ComponentScan(basePackages= "aands")
 
 public class WebConfig implements WebMvcConfigurer{
-	
+		@Autowired
+		DataSource dataSource;
+		@Bean
+		public NamedParameterJdbcTemplate getNamedParameterJdbcTemplate() {
+			return new NamedParameterJdbcTemplate(dataSource);
+		}
+		
+		@Bean
+		public DataSource getDataSource() throws NamingException{
+			JndiTemplate jndiTemplate = new JndiTemplate();
+			DataSource dataSource = (DataSource) jndiTemplate.lookup("java:comp/env/jdbc/springmvc");
+			
+			return dataSource;
+			
+		}
+		
 		//this method handles static resources...
 		//spring won't allow any resources to be accessed on the JSP page
 		//if it's not configured!
