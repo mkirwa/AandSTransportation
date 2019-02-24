@@ -28,7 +28,7 @@ public class WebConfig implements WebMvcConfigurer{
 			return new NamedParameterJdbcTemplate(dataSource);
 		}
 		//Datasource is a name given to the connection setup to a database from a server
-		//
+		//commonly used when creating a query to the database
 		@Bean
 		public DataSource getDataSource() throws NamingException{
 			JndiTemplate jndiTemplate = new JndiTemplate();
