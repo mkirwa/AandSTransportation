@@ -20,13 +20,15 @@ import org.springframework.web.servlet.view.JstlView;
 @ComponentScan(basePackages= "aands")
 
 public class WebConfig implements WebMvcConfigurer{
+	
 		@Autowired
 		DataSource dataSource;
 		@Bean
 		public NamedParameterJdbcTemplate getNamedParameterJdbcTemplate() {
 			return new NamedParameterJdbcTemplate(dataSource);
 		}
-		
+		//Datasource is a name given to the connection setup to a database from a server
+		//
 		@Bean
 		public DataSource getDataSource() throws NamingException{
 			JndiTemplate jndiTemplate = new JndiTemplate();
