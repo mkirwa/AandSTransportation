@@ -31,6 +31,9 @@ public class WebConfig implements WebMvcConfigurer{
 		//commonly used when creating a query to the database
 		@Bean
 		public DataSource getDataSource() throws NamingException{
+			//Java Naming and Directory Interface is an Application Programming Interface(API)
+			//that provides naming and directory functionality to applications written using java
+			//
 			JndiTemplate jndiTemplate = new JndiTemplate();
 			DataSource dataSource = (DataSource) jndiTemplate.lookup("java:comp/env/jdbc/springmvc");
 			
