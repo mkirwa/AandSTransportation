@@ -53,7 +53,7 @@ public class WebConfig implements WebMvcConfigurer{
 		}
 			
 		@Bean
-		public ViewResolver viewResolver() {
+		public InternalResourceViewResolver viewResolver() {
 			//internal resource refer to the resources available inside the 
 			//private location.
 			//the private directory is your web information folder. 
