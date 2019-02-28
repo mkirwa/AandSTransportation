@@ -50,8 +50,7 @@ public class WebConfig implements WebMvcConfigurer{
 			//TODO: add the static resources here
 			registry.addResourceHandler("/resources/***").addResourceLocations("/resources");
 			
-		}
-			
+		}	
 		@Bean
 		public InternalResourceViewResolver viewResolver() {
 			//internal resource refer to the resources available inside the 
