@@ -38,8 +38,14 @@
 				<td>phoneNumber:</td>
 				<td><form:input path="PhoneNumber"/>
 			</tr>
-			
-			
+			<tr>
+				<td>race:</td>
+				<td><form:input path="Race"/>
+			</tr>
+			<tr>
+				<td>citizenship:</td>
+				<td><form:input path="Citizenship"/>
+			</tr>
 		</table>
 	
 	</form:form>
