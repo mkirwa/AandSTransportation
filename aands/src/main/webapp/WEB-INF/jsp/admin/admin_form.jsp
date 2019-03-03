@@ -9,10 +9,10 @@
 <title>admin form</title>
 </head>
 <body>
-	<spring:url value="/save" var="saveURL"/>
+<spring:url value="/save" var="saveURL"/>
 	
 	<form:form modelAttribute="adminForm" method="POST" action="${saveURL }">
-	
+		<form:hidden path="idAdmin"/>
 		<table>
 			<tr>
 				<td>FirstName:</td>
@@ -75,8 +75,8 @@
 				<td><form:input path="Role"/>
 			</tr>
 			<tr>
-				<td>loginStatus:</td>
-				<td><form:input path="LoginStatus"/>
+				<td></td>
+				<td><button type="submit">Save</button>
 			</tr>
 		</table>
 	
