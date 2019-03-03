@@ -16,7 +16,21 @@
 	<tr>
 		<th>ID</th>
 		<th>First Name</th>
+		<th>Middle Initial</th>
 		<th>Last Name</th>
+		<th>Address</th>
+		<th>Email</th>
+		<th>Phone Number</th>
+		<th>Race</th>
+		<th>Citizenship</th>
+		<th>Emergency Contact First Name</th>
+		<th>Emergency Contact Last Name</th>
+		<th>Emergency Contact Phone Number</th>
+		<th>User Name</th>
+		<th>Password</th>
+		<th>Re Enter Password</th>
+		<th>Role</th>
+		<th>Login Status</th>
 		<th colspan="2">Action</th>
 	</tr>
 	<c:forEach items="${listAdmin}" var="admin">
@@ -30,7 +44,13 @@
 			<td>${admin.PhoneNumber}</td>
 			<td>${admin.Race}</td>
 			<td>${admin.Citizenship}</td>
-			<td>${admin.DrivingLicense}</td>
+			<td>${admin.EmergencyContactFirstName}</td>
+			<td>${admin.EmergencyContactLastName}</td>
+			<td>${admin.EmergencyContactPhoneNumber}</td>
+			<td>${admin.Username}</td>
+			<td>${admin.Password}</td>
+			<td>${admin.Role}</td>
+			<td>${admin.LoginStatus}</td>
 		</tr>
 	</c:forEach>
 </table>
