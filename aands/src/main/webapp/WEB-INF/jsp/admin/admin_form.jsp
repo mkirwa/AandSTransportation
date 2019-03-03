@@ -62,6 +62,22 @@
 				<td>emergencyContactPhoneNumber:</td>
 				<td><form:input path="EmergencyContactPhoneNumber"/>
 			</tr>
+			<tr>
+				<td>username:</td>
+				<td><form:input path="Username"/>
+			</tr>
+			<tr>
+				<td>password:</td>
+				<td><form:input path="Password"/>
+			</tr>
+			<tr>
+				<td>role:</td>
+				<td><form:input path="Role"/>
+			</tr>
+			<tr>
+				<td>loginStatus:</td>
+				<td><form:input path="LoginStatus"/>
+			</tr>
 		</table>
 	
 	</form:form>
