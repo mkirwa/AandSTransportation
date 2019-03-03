@@ -19,6 +19,13 @@
 		<th>Last Name</th>
 		<th colspan="2">Action</th>
 	</tr>
+	<c:forEach items="${listAdmin}" var="admin">
+		<tr>
+			<td>${admin.id}</td>
+			<td>${admin.id}</td>
+			<td>${admin.id}</td>
+		</tr>
+	</c:forEach>
 </table>
 </body>
 </html>
