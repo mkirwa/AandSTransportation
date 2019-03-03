@@ -46,6 +46,22 @@
 				<td>citizenship:</td>
 				<td><form:input path="Citizenship"/>
 			</tr>
+			<tr>
+				<td>drivingLicense:</td>
+				<td><form:input path="DrivingLicense"/>
+			</tr>
+			<tr>
+				<td>emergencyContactFirstName:</td>
+				<td><form:input path="EmergencyContactFirstName"/>
+			</tr>
+			<tr>
+				<td>emergencyContactLastName:</td>
+				<td><form:input path="EmergencyContactLastName"/>
+			</tr>
+			<tr>
+				<td>emergencyContactPhoneNumber:</td>
+				<td><form:input path="EmergencyContactPhoneNumber"/>
+			</tr>
 		</table>
 	
 	</form:form>
