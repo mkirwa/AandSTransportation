@@ -11,5 +11,12 @@
 </head>
 <body>
 
+<h1>Admin List</h1>
+<table width="100%" border="1">
+	<th>ID</th>
+	<th>First Name</th>
+	<th>Last Name</th>
+	<th colspan="2">Action</th>
+</table>
 </body>
 </html>
