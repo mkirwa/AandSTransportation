@@ -57,8 +57,8 @@
 				<a href="${updateURL }">Update</a>
 			</td>
 			<td>
-				<spring:url value="/update/${admin.idAdmin }" var="deleteURL"/>
-				<a href="${updateURL }">Delete</a>
+				<spring:url value="/delete/${admin.idAdmin }" var="deleteURL"/>
+				<a href="${deleteURL }">Delete</a>
 			</td>
 		</tr>
 	</c:forEach>
