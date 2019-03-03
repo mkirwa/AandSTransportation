@@ -15,9 +15,31 @@
 	
 		<table>
 			<tr>
-				<td>firstName:</td>
+				<td>FirstName:</td>
 				<td><form:input path="firstName"/>
 			</tr>
+			<tr>
+				<td>MiddleInitial:</td>
+				<td><form:input path="middleInitial"/>
+			</tr>
+			<tr>
+				<td>LastName:</td>
+				<td><form:input path="lastName"/>
+			</tr>
+			<tr>
+				<td>address:</td>
+				<td><form:input path="Address"/>
+			</tr>
+			<tr>
+				<td>email:</td>
+				<td><form:input path="Email"/>
+			</tr>
+			<tr>
+				<td>phoneNumber:</td>
+				<td><form:input path="PhoneNumber"/>
+			</tr>
+			
+			
 		</table>
 	
 	</form:form>
