@@ -51,6 +51,15 @@
 			<td>${admin.Password}</td>
 			<td>${admin.Role}</td>
 			<td>${admin.LoginStatus}</td>
+			
+			<td>
+				<spring:url value="/update/${admin.idAdmin }" var="updateURL"/>
+				<a href="${updateURL }">Update</a>
+			</td>
+			<td>
+				<spring:url value="/update/${admin.idAdmin }" var="deleteURL"/>
+				<a href="${updateURL }">Delete</a>
+			</td>
 		</tr>
 	</c:forEach>
 </table>
