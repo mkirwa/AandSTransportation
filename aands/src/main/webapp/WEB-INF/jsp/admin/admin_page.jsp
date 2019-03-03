@@ -21,9 +21,16 @@
 	</tr>
 	<c:forEach items="${listAdmin}" var="admin">
 		<tr>
-			<td>${admin.id}</td>
-			<td>${admin.id}</td>
-			<td>${admin.id}</td>
+			<td>${admin.idAdmin}</td>
+			<td>${admin.firstName}</td>
+			<td>${admin.middleInitial}</td>
+			<td>${admin.lastName}</td>
+			<td>${admin.Address}</td>
+			<td>${admin.Email}</td>
+			<td>${admin.PhoneNumber}</td>
+			<td>${admin.Race}</td>
+			<td>${admin.Citizenship}</td>
+			<td>${admin.DrivingLicense}</td>
 		</tr>
 	</c:forEach>
 </table>
