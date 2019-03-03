@@ -7,7 +7,7 @@ public class WebInitializer extends AbstractAnnotationConfigDispatcherServletIni
 	@Override
 	protected Class<?>[] getRootConfigClasses() {
 		// TODO Auto-generated method stub
-		return new Class[]{WebConfig};
+		return new Class[]{WebConfig.class};
 	}
 
 	@Override
