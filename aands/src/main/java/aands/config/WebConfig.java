@@ -58,13 +58,13 @@ public class WebConfig implements WebMvcConfigurer{
 			//the private directory is your web information folder. 
 			//because no one can access the contents from the browser directly
 
-			InternalResourceViewResolver vr = new InternalResourceViewResolver();
-			vr.setViewClass(JstlView.class);
+			InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
+			viewResolver.setViewClass(JstlView.class);
 			//prefix defines the location where JSPs are available
-			vr.setPrefix("WEB-INF/view/");
+			viewResolver.setPrefix("WEB-INF/view/");
 			//suffix is the extension of your view
-			vr.setSuffix(".jsp");
-			return vr;
+			viewResolver.setSuffix(".jsp");
+			return viewResolver;
 		}
 
 }
