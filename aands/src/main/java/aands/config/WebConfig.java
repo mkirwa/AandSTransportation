@@ -24,7 +24,7 @@ public class WebConfig implements WebMvcConfigurer{
 		@Autowired
 		DataSource dataSource;
 		@Bean
-		public NamedParameterJdbcTemplate getNamedParameterJdbcTemplate() {
+		public NamedParameterJdbcTemplate getNamedParameterJdbcTemplate(){
 			return new NamedParameterJdbcTemplate(dataSource);
 		}
 		//Datasource is a name given to the connection setup to a database from a server
@@ -46,6 +46,7 @@ public class WebConfig implements WebMvcConfigurer{
 		//so to access static resources like style CSS files
 		//JavaScript files or some other static resources
 		//they must be added here
+		@Override
 		public void addResourceHandlers(ResourceHandlerRegistry registry){
 			//TODO: add the static resources here
 			registry.addResourceHandler("/resources/***").addResourceLocations("/resources");
