@@ -23,7 +23,7 @@ import aandsspring.service.AdminService;
 //The Controller receives an input from the users via the View,
 //then processes the user's data with the help of Model and passes the results back to the View.
 @Controller
-@RequestMapping(value="/Admin")
+@RequestMapping(value="/admin")
 public class AdminController {
 
 	@Autowired
@@ -39,7 +39,7 @@ public class AdminController {
 		
 		ModelAndView model = new ModelAndView("admin/admin_page");
 		
-		List<Admin> list = adminService.listAllAdmins();
+		List list = adminService.listAllAdmins();
 		model.addObject("listAdmin",list);
 		return model;
 		
@@ -78,7 +78,7 @@ public class AdminController {
 			//add new
 			adminService.addAdmin(admin);
 		}
-		return new ModelAndView("redirect://list");
+		return new ModelAndView("redirect:/admin/list");
 		
 	}
 	
@@ -86,7 +86,7 @@ public class AdminController {
 	public ModelAndView delete(@PathVariable("idAdmin")int idAdmin) {
 				
 		adminService.deleteAdmin(idAdmin);
-		return new ModelAndView("redirect://list");
+		return new ModelAndView("redirect:/admin/list");
 	}
 	
 }
