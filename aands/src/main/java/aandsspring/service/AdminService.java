@@ -6,7 +6,7 @@ import aands.model.Admin;
 
 public interface AdminService {
 
-	public List <Admin> listAllAdmins();
+	public List listAllAdmins();
 	
 	public void addAdmin(Admin admin);
 	
