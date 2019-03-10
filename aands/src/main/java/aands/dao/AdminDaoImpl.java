@@ -45,26 +45,26 @@ public class AdminDaoImpl implements AdminDao{
 	private SqlParameterSource getSqlParameterByModel(Admin admin) {
 		
 		//Create an empty MapSqlParameterSource, with values to be added.
-		MapSqlParameterSource paramSource = new MapSqlParameterSource();
+		MapSqlParameterSource parameterSource = new MapSqlParameterSource();
 		
 		if(admin!=null) {
-			paramSource.addValue("idAdmin",admin.getIdAdmin());
-			paramSource.addValue("firstname",admin.getfirstName());
-			paramSource.addValue("middleInitial",admin.getmiddleInitial());
-			paramSource.addValue("lastname",admin.getlastName());
-			paramSource.addValue("Address",admin.getAddress());
-			paramSource.addValue("PhoneNumber",admin.getPhoneNumber());
-			paramSource.addValue("Race",admin.getRace());
-			paramSource.addValue("Citizenship",admin.getCitizenship());
-			paramSource.addValue("DrivingLicense",admin.getDrivingLicense());
-			paramSource.addValue("EmergencyContactFirstName",admin.getEmergencyContactFirstName());
-			paramSource.addValue("EmergencyContactLastName",admin.getEmergencyContactLastName());
-			paramSource.addValue("EmergencyContactPhoneNumber",admin.getEmergencyContactPhoneNumber());
-			paramSource.addValue("Email",admin.getEmail());
-			paramSource.addValue("Role",admin.getRole());
-			paramSource.addValue("LoginStatus",admin.getLoginStatus());
-			paramSource.addValue("Username",admin.getUsername());
-			paramSource.addValue("Password",admin.getPassword());
+			parameterSource.addValue("idAdmin",admin.getIdAdmin());
+			parameterSource.addValue("firstname",admin.getfirstName());
+			parameterSource.addValue("middleInitial",admin.getmiddleInitial());
+			parameterSource.addValue("lastname",admin.getlastName());
+			parameterSource.addValue("Address",admin.getAddress());
+			parameterSource.addValue("PhoneNumber",admin.getPhoneNumber());
+			parameterSource.addValue("Race",admin.getRace());
+			parameterSource.addValue("Citizenship",admin.getCitizenship());
+			parameterSource.addValue("DrivingLicense",admin.getDrivingLicense());
+			parameterSource.addValue("EmergencyContactFirstName",admin.getEmergencyContactFirstName());
+			parameterSource.addValue("EmergencyContactLastName",admin.getEmergencyContactLastName());
+			parameterSource.addValue("EmergencyContactPhoneNumber",admin.getEmergencyContactPhoneNumber());
+			parameterSource.addValue("Email",admin.getEmail());
+			parameterSource.addValue("Role",admin.getRole());
+			parameterSource.addValue("LoginStatus",admin.getLoginStatus());
+			parameterSource.addValue("Username",admin.getUsername());
+			parameterSource.addValue("Password",admin.getPassword());
 		}
 		
 		return paramSource;
