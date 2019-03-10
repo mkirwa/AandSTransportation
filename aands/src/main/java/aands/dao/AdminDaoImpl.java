@@ -67,11 +67,11 @@ public class AdminDaoImpl implements AdminDao{
 			parameterSource.addValue("Password",admin.getPassword());
 		}
 		
-		return paramSource;
+		return parameterSource;
 	}
 	
 	//Rowmapper is used by JDBCTemplate for mapping rows 
-	private static final class AdminMapper implements RowMapper<Admin> {
+	private static final class AdminMapper implements RowMapper {
 		
 		public Admin mapRow(ResultSet rs, int rowNum)throws SQLException{
 			Admin admin = new Admin();
@@ -99,24 +99,28 @@ public class AdminDaoImpl implements AdminDao{
 	public void addAdmin(Admin admin) {
 		// TODO Auto-generated method stub
 		String sql = "INSERT INTO Admin(Address, PhoneNumber, Race, Citizenship, DrivingLicense,EmergencyContactFirtName, EmergencyContactLastName, EmergencyContactPhoneNumber, Username, Password, Email, Role, LoginStatus, lastName, firstName, middleInitial) VALUES (:Address, :PhoneNumber, :Race, :Citizenship, :DrivingLicense, :EmergencyContactFirtName, :EmergencyContactLastName, :EmergencyContactPhone, :Username, :Password, :Email, :Role, :LoginStatus, :lastName, :firstName, :middleInitial)";
+		
 		namedParameterJdbcTemplate.update(sql, getSqlParameterByModel(admin));
 	}
 
 	public void updateAdmin(Admin admin) {
 		// TODO Auto-generated method stub
 		String sql = "UPDATE Admin SET Address =:Address, PhoneNumber =:PhoneNumber, Race =:Race, Citizenship =:Citizenship, DrivingLicense =:DrivingLicense, EmergencyContactFirtName =:EmergencyContactFirstName, EmergencyContactLastName =:EmergencyContactLastName , EmergencyContactPhoneNumber :=EmergencyContactPhoneNumber, Username =:Username, Password =:Password, Email, Role =:Role, LoginStatus :=LoginStatus, lastName :=lastName, firstName :=firstName, middleInitial =:middleInitial WHERE idAdmin=idAdmin";
+		
 		namedParameterJdbcTemplate.update(sql, getSqlParameterByModel(admin));
 	}
 
 	public void deleteAdmin(int idAdmin) {
 		// TODO Auto-generated method stub
 		String sql = "DELETE from Admin WHERE idAdmin =:idAdmin";
+		
 		namedParameterJdbcTemplate.update(sql, getSqlParameterByModel(new Admin(idAdmin)));
 	}
 
 	public Admin findAdminbyId(int idAdmin) {
 		// TODO Auto-generated method stub
-		String sql= "SELECT * FROM Admin WHERE idAmin =:idAdmin";
+		String sql= "SELECT * FROM admin WHERE idAmin =:idAdmin";
+		
 		return namedParameterJdbcTemplate.queryForObject(sql,getSqlParameterByModel(new Admin(idAdmin)),new AdminMapper());
 	}
 
