@@ -26,7 +26,7 @@ public class AdminDaoImpl implements AdminDao{
 	//@Autowired annotation provides more fine-grained control over where and how autowiring should be accomplished.
 	// Tells the application context to inject an instance of NamedParameterJdbcTemplate here
 	@Autowired
-	public void setNamedParameterJdbcTemplate(NamedParameterJdbcTemplate namedParameterJdbcTemplate) throws DataAccessException {
+	public void setNamedParameterJdbcTemplate(NamedParameterJdbcTemplate namedParameterJdbcTemplate) {
 		
 		this.namedParameterJdbcTemplate = namedParameterJdbcTemplate;
 	
