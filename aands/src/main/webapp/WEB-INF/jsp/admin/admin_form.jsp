@@ -6,10 +6,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>admin form</title>
+<title>Admin form</title>
 </head>
 <body>
-<spring:url value="/save" var="saveURL"/>
+<spring:url value="/admin/save" var="saveURL"/>
 	
 	<form:form modelAttribute="adminForm" method="POST" action="${saveURL }">
 		<form:hidden path="idAdmin"/>
@@ -76,7 +76,9 @@
 			</tr>
 			<tr>
 				<td></td>
-				<td><button type="submit">Save</button>
+				<td>
+				<button type="submit">Save</button>
+				</td>
 			</tr>
 		</table>
 	
