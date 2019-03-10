@@ -33,9 +33,9 @@ public class AdminDaoImpl implements AdminDao{
 	}
 	
 	//a method that returns a list after querying the database
-	public List<Admin> listAllAdmins() {
+	public List listAllAdmins() {
 		String sql ="SELECT idAdmin, Address, PhoneNumber, Race, Citizenship, DrivingLicense,EmergencyContactFirtName, EmergencyContactLastName, EmergencyContactPhone, Username, Password, Email, Role, LoginStatus, lastName, firstName, middleInitial FROM Admin;";
-		List<Admin> list = namedParameterJdbcTemplate.query(sql, getSqlParameterByModel(null), new AdminMapper());
+		List list = namedParameterJdbcTemplate.query(sql, getSqlParameterByModel(null), new AdminMapper());
 		return list;
 	}
 	
