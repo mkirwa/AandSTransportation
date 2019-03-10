@@ -1,5 +1,6 @@
 package aands.config;
 import javax.naming.NamingException;
+
 import javax.sql.DataSource;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -41,12 +42,6 @@ public class WebConfig implements WebMvcConfigurer{
 		}
 		
 		//this method handles static resources...
-		//spring won't allow any resources to be accessed on the JSP page
-		//if it's not configured!
-		//so to access static resources like style CSS files
-		//JavaScript files or some other static resources
-		//they must be added here
-		@Override
 		public void addResourceHandlers(ResourceHandlerRegistry registry){
 			//TODO: add the static resources here
 			registry.addResourceHandler("/resources/***").addResourceLocations("/resources");
