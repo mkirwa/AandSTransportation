@@ -9,7 +9,7 @@ import aands.model.Admin;
 //Used to achieve total abstraction and loose coupling
 public interface AdminDao {
 		
-	public List listAllAdmins();
+	public List<Admin> listAllAdmins();
 	
 	public void addAdmin(Admin admin);
 	

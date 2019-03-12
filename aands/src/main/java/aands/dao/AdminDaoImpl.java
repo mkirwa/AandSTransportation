@@ -20,6 +20,7 @@ import aands.model.Admin;
 @Repository
 public class AdminDaoImpl implements AdminDao{
 	
+	
 	//template class with basic set of JDBC operations allowing the use of 
 	//named parameters rather than the traditional '?' placeholders
 	NamedParameterJdbcTemplate namedParameterJdbcTemplate;
@@ -34,9 +35,9 @@ public class AdminDaoImpl implements AdminDao{
 	}
 	
 	//a method that returns a list after querying the database
-	public List listAllAdmins() {
+	public List<Admin> listAllAdmins() {
 		String sql ="SELECT idAdmin, Address, PhoneNumber, Race, Citizenship, DrivingLicense,EmergencyContactFirtName, EmergencyContactLastName, EmergencyContactPhone, Username, Password, Email, Role, LoginStatus, lastName, firstName, middleInitial FROM Admin;";
-		List list = namedParameterJdbcTemplate.query(sql, getSqlParameterByModel(null), new AdminMapper());
+		List<Admin> list = namedParameterJdbcTemplate.query(sql, getSqlParameterByModel(null), new AdminMapper());
 		return list;
 	}
 	
