@@ -1,6 +1,7 @@
 package aands.dao;
 
 import java.sql.ResultSet;
+
 import java.sql.SQLException;
 import java.util.List;
 
@@ -19,7 +20,6 @@ import aands.model.Admin;
 //Data Access Objects or DAO) of a repository
 @Repository
 public class AdminDaoImpl implements AdminDao{
-	
 	
 	//template class with basic set of JDBC operations allowing the use of 
 	//named parameters rather than the traditional '?' placeholders
