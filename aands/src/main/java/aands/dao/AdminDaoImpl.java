@@ -73,10 +73,12 @@ public class AdminDaoImpl implements AdminDao{
 	}
 	
 	//Rowmapper is used by JDBCTemplate for mapping rows 
-	private static final class AdminMapper implements RowMapper {
+	private static final class AdminMapper implements RowMapper<Admin> {
+		
 		
 		public Admin mapRow(ResultSet rs, int rowNum)throws SQLException{
 			Admin admin = new Admin();
+			
 			admin.setId(rs.getInt("idAdmin"));
 			admin.setfirstName(rs.getString("firstName"));
 			admin.setmiddleInitial(rs.getString("middleInitial"));
