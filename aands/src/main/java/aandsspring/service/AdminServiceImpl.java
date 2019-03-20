@@ -34,7 +34,7 @@ public class AdminServiceImpl implements AdminService{
 		this.adminDao = adminDao;
 	}
 
-	public List listAllAdmins() {
+	public List<Admin> listAllAdmins() {
 		// TODO Auto-generated method stub
 		return adminDao.listAllAdmins();
 	}
