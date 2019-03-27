@@ -11,7 +11,7 @@
 <body>
 <spring:url value="/admin/save" var="saveURL"/>
 	
-	<form:form modelAttribute="adminForm" method="POST" action="${saveURL }">
+	<form:form modelAttribute="adminForm" method="POST" action="${saveURL}">
 		<form:hidden path="idAdmin"/>
 		<table>
 			<tr>
