@@ -2,7 +2,6 @@ package aands.dao;
 
 import java.util.List;
 
-
 import aands.model.Admin;
 
 
