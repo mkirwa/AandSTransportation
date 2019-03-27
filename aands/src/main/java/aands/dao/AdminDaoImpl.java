@@ -1,7 +1,6 @@
 package aands.dao;
 
 import java.sql.ResultSet;
-
 import java.sql.SQLException;
 import java.util.List;
 
@@ -13,8 +12,6 @@ import org.springframework.jdbc.core.namedparam.SqlParameterSource;
 import org.springframework.stereotype.Repository;
 
 import aands.model.Admin;
-
-
 
 //@Repository is a marker for any class that fulfills a role or a stereotype(also known as 
 //Data Access Objects or DAO) of a repository
