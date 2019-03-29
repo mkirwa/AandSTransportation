@@ -3,7 +3,6 @@ package aands.controller;
 import java.util.List;
 
 
-import aands.model.Admin;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -12,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+import aands.model.Admin;
 import aandsspring.service.AdminService;
 //when a request is made to a spring application, 
 //the controller is responsible for returning the response
@@ -39,7 +39,7 @@ public class AdminController {
 		
 		ModelAndView model = new ModelAndView("admin/admin_page");
 		
-		List<Admin> list = adminService.listAllAdmins();
+		List list = adminService.listAllAdmins();
 		model.addObject("listAdmin",list);
 		return model;
 		

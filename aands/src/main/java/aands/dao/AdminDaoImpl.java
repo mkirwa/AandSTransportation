@@ -1,6 +1,7 @@
 package aands.dao;
 
 import java.sql.ResultSet;
+
 import java.sql.SQLException;
 import java.util.List;
 
@@ -34,7 +35,7 @@ public class AdminDaoImpl implements AdminDao{
 	//a method that returns a list after querying the database
 	public List<Admin> listAllAdmins() {
 		String sql ="SELECT idAdmin, Address, PhoneNumber, Race, Citizenship, DrivingLicense,EmergencyContactFirtName, EmergencyContactLastName, EmergencyContactPhone, Username, Password, Email, Role, LoginStatus, lastName, firstName, middleInitial FROM Admin;";
-		List<Admin> list = namedParameterJdbcTemplate.query(sql, getSqlParameterByModel(null), new AdminMapper());
+		List list = namedParameterJdbcTemplate.query(sql, getSqlParameterByModel(null), new AdminMapper());
 		return list;
 	}
 	
@@ -70,7 +71,7 @@ public class AdminDaoImpl implements AdminDao{
 	}
 	
 	//Rowmapper is used by JDBCTemplate for mapping rows 
-	private static final class AdminMapper implements RowMapper<Admin> {
+	private static final class AdminMapper implements RowMapper{
 		
 		
 		public Admin mapRow(ResultSet rs, int rowNum)throws SQLException{

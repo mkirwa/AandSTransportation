@@ -2,6 +2,7 @@ package aands.dao;
 
 import java.util.List;
 
+
 import aands.model.Admin;
 
 
@@ -10,7 +11,7 @@ import aands.model.Admin;
 //Used to achieve total abstraction and loose coupling
 public interface AdminDao {
 		
-	public List<Admin> listAllAdmins();
+	public List listAllAdmins();
 	
 	public void addAdmin(Admin admin);
 	

@@ -11,16 +11,20 @@
 <body>
 <spring:url value="/admin/save" var="saveURL"/>
 	
-	<form:form modelAttribute="adminForm" method="POST" action="${saveURL}">
+	<form:form modelAttribute="adminForm" method="post" action="${saveURL}">
 		<form:hidden path="idAdmin"/>
 		<table>
 			<tr>
 				<td>FirstName:</td>
-				<td><form:input path="firstName"/>
+				<td>
+				<form:input path="firstName"/>
+				</td>
 			</tr>
 			<tr>
 				<td>MiddleInitial:</td>
-				<td><form:input path="middleInitial"/>
+				<td>
+				<form:input path="middleInitial"/>
+				</td>
 			</tr>
 			<tr>
 				<td>LastName:</td>
@@ -28,51 +32,74 @@
 			</tr>
 			<tr>
 				<td>address:</td>
-				<td><form:input path="Address"/>
+				<td>
+				<form:input path="Address"/>
+				</td>
 			</tr>
 			<tr>
 				<td>email:</td>
-				<td><form:input path="Email"/>
+				<td>
+				<form:input path="Email"/>
+				</td>
 			</tr>
 			<tr>
 				<td>phoneNumber:</td>
 				<td><form:input path="PhoneNumber"/>
+				</td>
 			</tr>
 			<tr>
 				<td>race:</td>
-				<td><form:input path="Race"/>
+				<td>
+				<form:input path="Race"/>
+				</td>
 			</tr>
 			<tr>
 				<td>citizenship:</td>
-				<td><form:input path="Citizenship"/>
+				<td>
+				<form:input path="Citizenship"/>
+				</td>
 			</tr>
 			<tr>
 				<td>drivingLicense:</td>
-				<td><form:input path="DrivingLicense"/>
+				<td>
+				<form:input path="DrivingLicense"/>
+				</td>
 			</tr>
 			<tr>
 				<td>emergencyContactFirstName:</td>
-				<td><form:input path="EmergencyContactFirstName"/>
+				<td>
+				<form:input path="EmergencyContactFirstName"/>
+				</td>
 			</tr>
 			<tr>
 				<td>emergencyContactLastName:</td>
-				<td><form:input path="EmergencyContactLastName"/>
+				<td>
+				<form:input path="EmergencyContactLastName"/>
+				</td>
 			</tr>
 			<tr>
 				<td>emergencyContactPhoneNumber:</td>
-				<td><form:input path="EmergencyContactPhoneNumber"/>
+				<td>
+				<form:input path="EmergencyContactPhoneNumber"/>
+				</td>
 			</tr>
 			<tr>
 				<td>username:</td>
-				<td><form:input path="Username"/>
+				<td>
+				<form:input path="Username"/>
+				</td>
 			</tr>
 			<tr>
 				<td>password:</td>
-				<td><form:input path="Password"/>
+				<td>
+				<form:input path="Password"/>
+				</td>
 			</tr>
 			<tr>
 				<td>role:</td>
-				<td><form:input path="Role"/>
+				<td>
+				<form:input path="Role"/>
+				</td>
 			</tr>
 			<tr>
 				<td></td>

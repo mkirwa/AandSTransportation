@@ -2,6 +2,7 @@ package aandsspring.service;
 
 import java.util.List;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -34,7 +35,7 @@ public class AdminServiceImpl implements AdminService{
 		this.adminDao = adminDao;
 	}
 
-	public List<Admin> listAllAdmins() {
+	public List listAllAdmins() {
 		// TODO Auto-generated method stub
 		return adminDao.listAllAdmins();
 	}
