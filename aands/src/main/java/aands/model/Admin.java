@@ -12,7 +12,7 @@ package aands.model;
 //5. Should not contain prespecified annotations.
 //6. It may not have no argument constructor
 
-public class Admin {
+public class Admin{
 
 	private Integer idAdmin;
 	private String firstName;
