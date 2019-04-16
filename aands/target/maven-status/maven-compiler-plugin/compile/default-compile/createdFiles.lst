@@ -1,3 +1,6 @@
+aands/dao/AdminDaoImpl$1.class
+aandsspring/service/AdminService.class
+aands/config/WebInitializer.class
 aands/controller/AdminController.class
 aands/model/Admin.class
-aandsspring/service/AdminService.class
+aands/config/WebConfig.class

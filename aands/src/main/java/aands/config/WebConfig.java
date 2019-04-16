@@ -1,7 +1,5 @@
 package aands.config;
 import javax.naming.NamingException;
-
-
 import javax.sql.DataSource;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -54,6 +52,7 @@ public class WebConfig implements WebMvcConfigurer{
 			//because no one can access the contents from the browser directly
 
 			InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
+			
 			viewResolver.setViewClass(JstlView.class);
 			//prefix defines the location where JSPs are available
 			viewResolver.setPrefix("WEB-INF/view/");

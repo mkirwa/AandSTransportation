@@ -1,7 +1,6 @@
 package aands.dao;
 
 import java.sql.ResultSet;
-
 import java.sql.SQLException;
 import java.util.List;
 
@@ -13,7 +12,6 @@ import org.springframework.jdbc.core.namedparam.SqlParameterSource;
 import org.springframework.stereotype.Repository;
 
 import aands.model.Admin;
-
 //@Repository is a marker for any class that fulfills a role or a stereotype(also known as 
 //Data Access Objects or DAO) of a repository
 @Repository
@@ -33,7 +31,7 @@ public class AdminDaoImpl implements AdminDao{
 	}
 	
 	//a method that returns a list after querying the database
-	public List<Admin> listAllAdmins() {
+	public List listAllAdmins() {
 		String sql ="SELECT idAdmin, Address, PhoneNumber, Race, Citizenship, DrivingLicense,EmergencyContactFirtName, EmergencyContactLastName, EmergencyContactPhone, Username, Password, Email, Role, LoginStatus, lastName, firstName, middleInitial FROM Admin;";
 		List list = namedParameterJdbcTemplate.query(sql, getSqlParameterByModel(null), new AdminMapper());
 		return list;
@@ -71,7 +69,7 @@ public class AdminDaoImpl implements AdminDao{
 	}
 	
 	//Rowmapper is used by JDBCTemplate for mapping rows 
-	private static final class AdminMapper implements RowMapper{
+	private static final class AdminMapper implements RowMapper<Admin>{
 		
 		
 		public Admin mapRow(ResultSet rs, int rowNum)throws SQLException{
@@ -118,12 +116,11 @@ public class AdminDaoImpl implements AdminDao{
 		
 		namedParameterJdbcTemplate.update(sql, getSqlParameterByModel(new Admin(idAdmin)));
 	}
-
 	public Admin findAdminbyId(int idAdmin) {
 		// TODO Auto-generated method stub
 		String sql= "SELECT * FROM admin WHERE idAmin =:idAdmin";
 		
-		return namedParameterJdbcTemplate.queryForObject(sql,getSqlParameterByModel(new Admin(idAdmin)),new AdminMapper());
+		return namedParameterJdbcTemplate.queryForObject(sql, getSqlParameterByModel(new Admin(idAdmin)), new AdminMapper());
 	}
 
 

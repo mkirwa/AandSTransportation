@@ -2,8 +2,6 @@
 package aandsspring.service;
 
 import java.util.List;
-
-
 import aands.model.Admin;
 
 public interface AdminService {

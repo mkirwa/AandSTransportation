@@ -1,5 +1,4 @@
 package aands.model;
-
 //This is a POJO class with setters and getters
 //As soon as you start adding methods that operate on
 //points, like vector addition or complex multiplication
