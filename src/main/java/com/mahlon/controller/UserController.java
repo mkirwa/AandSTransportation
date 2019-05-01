@@ -18,6 +18,55 @@ import com.jackrutorial.service.UserService;
 
 public class UserController {
 	
-	
+	@Autowired
+	 UserService userService;
+	 
+	 @RequestMapping(value="/list", method=RequestMethod.GET)
+	 public ModelAndView list(){
+	  ModelAndView model = new ModelAndView("user/user_page");
+	  
+	  List list = userService.listAllUsers();
+	  model.addObject("listUser", list);
+	  
+	  return model;
+	 }
+	 
+	 @RequestMapping(value="/add", method=RequestMethod.GET)
+	 public ModelAndView add(){
+	  ModelAndView model = new ModelAndView("user/user_form");
+	  
+	  User user = new User();
+	  model.addObject("userForm", user);
+	  
+	  return model;
+	 }
+	 
+	 @RequestMapping(value="/update/{id}", method=RequestMethod.GET)
+	 public ModelAndView update(@PathVariable("id") int id){
+	  ModelAndView model = new ModelAndView("user/user_form");
+	  
+	  User user = userService.findUserById(id);
+	  model.addObject("userForm", user);
+	  
+	  return model;
+	 }
+	 
+	 @RequestMapping(value="/save", method=RequestMethod.POST)
+	 public ModelAndView save(@ModelAttribute("userForm") User user){
+	  if(user != null && user.getId() != null){
+	   userService.updateUser(user);
+	  } else {
+	   userService.addUser(user);
+	  }
+	  
+	  return new ModelAndView("redirect:/user/list");
+	 }
+	 
+	 @RequestMapping(value="/delete/{id}", method=RequestMethod.GET)
+	 public ModelAndView delete(@PathVariable("id") int id){
+	  userService.deleteUser(id);
+	  
+	  return new ModelAndView("redirect:/user/list");
+	 }
 
 }
