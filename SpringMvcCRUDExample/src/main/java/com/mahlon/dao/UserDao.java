@@ -2,6 +2,8 @@ package com.mahlon.dao;
 
 import java.util.List;
 
+import com.mahlon.model.User;
+
 public interface UserDao {
 
 	public List listAllUsers();

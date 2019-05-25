@@ -2,14 +2,13 @@ package com.mahlon.service;
 
 import java.util.List;
 
-import javax.xml.ws.ServiceMode;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.mahlon.dao.UserDao;
 import com.mahlon.model.User;
-@ServiceModel
+@Service
 public class UserServiceImpl implements UserService{
 
 	UserDao userDao;

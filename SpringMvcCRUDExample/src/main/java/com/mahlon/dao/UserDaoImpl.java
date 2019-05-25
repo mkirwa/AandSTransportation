@@ -1,4 +1,4 @@
-ppackage com.mahlon.dao;
+package com.mahlon.dao;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
