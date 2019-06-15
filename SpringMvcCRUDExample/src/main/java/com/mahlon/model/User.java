@@ -1,5 +1,4 @@
 package com.mahlon.model;
-
 public class User {
 
 	private Integer id;
