@@ -44,7 +44,7 @@ public class UserDaoImpl implements UserDao{
 	  return parameterSource;
 	 }
 	 
-	private static final class UserMapper implements RowMapper{
+	private static final class UserMapper implements RowMapper<Object>{
 
 	  public User mapRow(ResultSet rs, int rowNum) throws SQLException {
 	   User user = new User();
@@ -79,7 +79,7 @@ public class UserDaoImpl implements UserDao{
 	public User findUserById(int id) {
 	  String sql = "SELECT * FROM users WHERE id = :id";
 	  
-	  return namedParameterJdbcTemplate.queryForObject(sql, getSqlParameterByModel(new User(id)), new UserMapper());
+	  return (User) namedParameterJdbcTemplate.queryForObject(sql, getSqlParameterByModel(new User(id)), new UserMapper());
 	 }
 
 }
