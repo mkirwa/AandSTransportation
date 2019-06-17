@@ -38,6 +38,7 @@ public class WebConfig implements WebMvcConfigurer{
 	  return dataSource;
 	 }
 	 //check this out if what does resource handles do. See if it affects anything
+	 //missing @override
 	 public void addResourceHandlers(ResourceHandlerRegistry registry) {
 	  registry.addResourceHandler("/resources/**").addResourceLocations("/resources/");
 	 }
