@@ -43,6 +43,7 @@ public class UserDaoImpl implements UserDao{
 	  }
 	  return parameterSource;
 	 }
+	 
 	//added <--object to get rid of the compilation error.
 	private static final class UserMapper implements RowMapper<Object>{
 
