@@ -34,6 +34,7 @@ public class UserController {
 	 @RequestMapping(value="/add", method=RequestMethod.GET)
 	 public ModelAndView add(){
 	  ModelAndView model = new ModelAndView("user/user_form");
+	  
 	  User user = new User();
 	  model.addObject("userForm", user);
 	  
