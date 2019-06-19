@@ -20,6 +20,7 @@ import org.springframework.web.servlet.view.JstlView;
 @EnableWebMvc
 @ComponentScan(basePackages = { "com.mahlon" })
 
+//This is the class that is creating error 404
 public class WebConfig implements WebMvcConfigurer{
 
 	@Autowired
