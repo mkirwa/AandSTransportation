@@ -23,6 +23,9 @@ import org.springframework.web.servlet.view.JstlView;
 //This is the class that is creating error 404
 //Error creating bean with name 'webConfig' unsatisfied dependency expressed
 //Through field 'dataSource'; 
+//nested exception is 
+//Error creating bean with getDataSource defined in com.mahlon.config.WebConfig
+//Bean instantiation via factory method failed
 public class WebConfig implements WebMvcConfigurer{
 
 	@Autowired
