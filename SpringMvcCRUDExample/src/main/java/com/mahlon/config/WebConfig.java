@@ -21,6 +21,8 @@ import org.springframework.web.servlet.view.JstlView;
 @ComponentScan(basePackages = { "com.mahlon" })
 
 //This is the class that is creating error 404
+//Error creating bean with name 'webConfig' unsatisfied dependency expressed
+//Through field 'dataSource'; 
 public class WebConfig implements WebMvcConfigurer{
 
 	@Autowired
