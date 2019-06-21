@@ -26,7 +26,6 @@ import org.springframework.web.servlet.view.JstlView;
 //nested exception is 
 //Error creating bean with getDataSource defined in com.mahlon.config.WebConfig
 //Bean instantiation via factory method failed
-
 public class WebConfig implements WebMvcConfigurer{
 
 	@Autowired
