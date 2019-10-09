@@ -1,17 +1,16 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
 import NavBar from "./components/navbar";
-import AddUser from "./components/adduser";
-import Dispatch from "./components/drivers";
-import Drivers from "./components/drivers";
+import AddUser from "./components/admins/adduser";
+import Dispatch from "./components/dispatchs/dispatch";
+import Drivers from "./components/driver/drivers";
 import Loads from "./components/loads";
 import Users from "./components/users";
-import Admin from "./components/admin";
+import Admin from "./components/admins/admin";
 import Allcomponents from "./components/allcomponents";
 import FormSearch from "./components/formsearch";
-import "./App.css";
-import Accountant from "./components/accountant";
-import Home from "./components/home";
+//import "../App.css";
+import Accountant from "./components/accountants/accountant";
 
 class App extends Allcomponents {
   state = {
@@ -117,16 +116,15 @@ class App extends Allcomponents {
         </main>
         <div className="content">
           <Switch>
-            <Route path="/admin" component={Admin} />
-            <Route path="/accountant" component={Accountant} />
-            <Route path="/adduser" component={AddUser} />
-            <Route path="/dispatch" component={Dispatch} />
-            <Route path="/drivers" component={Drivers} />
+            <Route path="/admins/admin" component={Admin} />
+            <Route path="/accountants/accountant" component={Accountant} />
+            <Route path="/admins/adduser" component={AddUser} />
+            <Route path="/dispatchs/dispatch" component={Dispatch} />
+            <Route path="/driver/drivers" component={Drivers} />
             <Route path="/formsearch" component={FormSearch} />
             <Route path="/loads" component={Loads} />
             <Route path="/navbar" component={NavBar} />
             <Route path="/users" component={Users} />
-            <Route path="/" component={Home} />
           </Switch>
         </div>
       </React.Fragment>
