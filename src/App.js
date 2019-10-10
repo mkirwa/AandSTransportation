@@ -100,12 +100,6 @@ class App extends Allcomponents {
 
     return (
       <React.Fragment>
-        <NavBar
-          totalCounters={
-            this.state.allcomponents.filter(c => c.value > 0).length
-          }
-        />
-
         <main className="container">
           <Allcomponents
             counters={this.state.allcomponents}
@@ -133,3 +127,9 @@ class App extends Allcomponents {
 }
 
 export default App;
+
+//<NavBar
+// totalCounters={
+// this.state.allcomponents.filter(c => c.value > 0).length
+// }
+///>

@@ -16,6 +16,7 @@ class Admin extends Component {
   render() {
     return (
       <div>
+        <NavBar />
         <h1>This is the admin page</h1>
       </div>
     );
