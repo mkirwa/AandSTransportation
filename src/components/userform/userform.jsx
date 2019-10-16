@@ -29,7 +29,12 @@ class UserForm extends Component {
 
   //handle fields change
   //each input will have their own state which would be the firstName etc
+  //event parameter attached to it
   handleChange = input => e => {
+    //take whatever the input is
+    //set it to whatever the value is
+    //we can get that using the event parameter and using target.value
+    //be it firstName, lastName, whatever value is entered
     this.setState({ [input]: e.target.value });
   };
 
