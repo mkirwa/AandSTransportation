@@ -45,7 +45,9 @@ class UserForm extends Component {
     //pull the step out of the state by destructuring
     const { step } = this.state;
     const { firstName, lastName, email, occupation, city, bio } = this.state;
-    const values = this.state;
+    //this is how we can pass the values into the components and
+    //render them into the inputs
+    const values = { firstName, lastName, email, occupation, city, bio };
 
     return <div>This is the user form</div>;
   }
