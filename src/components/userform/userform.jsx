@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Loads from "../loads";
 
 class UserForm extends Component {
   state = {
@@ -38,7 +39,14 @@ class UserForm extends Component {
     this.setState({ [input]: e.target.value });
   };
 
+  //figure out what step we are on and depending on what step we are on
+  //that's going to decide on which component we want to display
   render() {
+    //pull the step out of the state by destructuring
+    const { step } = this.state;
+    const { firstName, lastName, email, occupation, city, bio } = this.state;
+    const values = this.state;
+
     return <div>This is the user form</div>;
   }
 }
