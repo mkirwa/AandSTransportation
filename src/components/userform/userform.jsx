@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Loads from "../loads";
+import FormUserDetails from "./formuserdetails";
 
 class UserForm extends Component {
   state = {
@@ -49,7 +50,17 @@ class UserForm extends Component {
     //render them into the inputs
     const values = { firstName, lastName, email, occupation, city, bio };
 
-    return <div>This is the user form</div>;
+    //we are making a case for each number so we use a switch instead
+    //of return
+    switch (step) {
+      //case 1 returns the form user details component
+      case 1:
+        return (
+          //it will take in a couple of props
+          //when you add attributes
+          <FormUserDetails />
+        );
+    }
   }
 }
 
