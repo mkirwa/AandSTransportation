@@ -57,8 +57,14 @@ class UserForm extends Component {
       case 1:
         return (
           //it will take in a couple of props
-          //when you add attributes
-          <FormUserDetails />
+          //when you add attributes to a component,
+          //those are props. We need to do that because we need to access
+          //next step and handle change
+          <FormUserDetails
+            nextStep={this.nextStep}
+            handleChange={this.handleChange}
+            values={values}
+          />
         );
     }
   }
