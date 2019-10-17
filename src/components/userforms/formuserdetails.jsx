@@ -27,6 +27,7 @@ class FormUserDetails extends Component {
             //of onChange.....You will have firstName in brackets coz
             //handleChange takes in an input
             onChange={handleChange("firstName")}
+            defaultValue={values.firstName}
           />
         </React.Fragment>
       </MuiThemeProvider>
