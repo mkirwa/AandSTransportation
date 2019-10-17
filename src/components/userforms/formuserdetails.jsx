@@ -29,10 +29,49 @@ class FormUserDetails extends Component {
             onChange={handleChange("firstName")}
             defaultValue={values.firstName}
           />
+          <br />
+          <TextField
+            hintText="Enter Your Last Name"
+            floatingLabelText="Last Name"
+            //How react works, everytime the textfield changes
+            //everytime we type in it, it will fire off an event
+            //of onChange.....You will have firstName in brackets coz
+            //handleChange takes in an input
+            onChange={handleChange("lastName")}
+            defaultValue={values.lastName}
+          />
+          <br />
+          <TextField
+            hintText="Enter Your Email"
+            floatingLabelText="Email"
+            //How react works, everytime the textfield changes
+            //everytime we type in it, it will fire off an event
+            //of onChange.....You will have firstName in brackets coz
+            //handleChange takes in an input
+            onChange={handleChange("email")}
+            defaultValue={values.email}
+          />
+          <br />
+          <RaisedButton
+            label="Continue"
+            //makes the button blue
+            primary={true}
+            style={styles.button}
+            //we put contiue up above and what contiunue does
+            //is call the next step of userForm and we do that through
+            //props
+            onClick={this.continue}
+          />
         </React.Fragment>
       </MuiThemeProvider>
     );
   }
 }
+
+const styles = {
+  button: {
+    margin: 15
+  }
+};
 
 export default FormUserDetails;
