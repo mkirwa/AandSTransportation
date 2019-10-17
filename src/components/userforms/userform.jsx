@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import Loads from "../loads";
 import FormUserDetails from "./formuserdetails";
 import FormPersonalDetails from "./formpersonaldetails";
+import Confirm from "./confirm";
+import Success from "./success";
 
 class UserForm extends Component {
   state = {
@@ -68,11 +70,33 @@ class UserForm extends Component {
           />
         );
       case 2:
-        return <h1>FormPersonalDetails</h1>;
+        return (
+          //it will take in a couple of props
+          //when you add attributes to a component,
+          //those are props. We need to do that because we need to access
+          //next step and handle change
+          <FormPersonalDetails
+            nextStep={this.nextStep}
+            prevStep={this.prevStep}
+            handleChange={this.handleChange}
+            values={values}
+          />
+        );
       case 3:
-        return <h1>Confirm</h1>;
+        return (
+          //it will take in a couple of props
+          //when you add attributes to a component,
+          //those are props. We need to do that because we need to access
+          //next step and handle change
+          <Confirm
+            nextStep={this.nextStep}
+            prevStep={this.prevStep}
+            handleChange={this.handleChange}
+            values={values}
+          />
+        );
       case 4:
-        return <h1>Success</h1>;
+        return <Success />;
     }
   }
 }
