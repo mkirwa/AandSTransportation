@@ -14,7 +14,7 @@ class FormUserDetails extends Component {
   render() {
     //pulling values from the props in continue
     //doing this so you can use values as a variable
-    const { values } = this.props;
+    const { values, handleChange } = this.props;
     return (
       <MuiThemeProvider>
         <React.Fragment>
@@ -22,6 +22,11 @@ class FormUserDetails extends Component {
           <TextField
             hintText="Enter Your First Name"
             floatingLabelText="First Name"
+            //How react works, everytime the textfield changes
+            //everytime we type in it, it will fire off an event
+            //of onChange.....You will have firstName in brackets coz
+            //handleChange takes in an input
+            onChange={handleChange("firstName")}
           />
         </React.Fragment>
       </MuiThemeProvider>
