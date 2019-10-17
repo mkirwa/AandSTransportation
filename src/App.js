@@ -9,7 +9,7 @@ import Users from "./components/users";
 import Admin from "./components/admins/admin";
 import Allcomponents from "./components/allcomponents";
 import FormSearch from "./components/formsearch";
-import { Link } from "react-router-dom";
+import UserForm from "./components/userforms/userform";
 //import "../App.css";
 import Accountant from "./components/accountants/accountant";
 
@@ -108,6 +108,7 @@ class App extends Allcomponents {
             onIncrement={this.handleIncrement}
             onDelete={this.handleDelete}
           />
+          <UserForm />
         </main>
         <div className="content">
           <Switch>
