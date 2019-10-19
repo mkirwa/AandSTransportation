@@ -1,4 +1,9 @@
 import React from "react";
+import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
+import AppBar from "material-ui/AppBar";
+import TextField from "material-ui/TextField";
+import RaisedButton from "material-ui/RaisedButton";
+
 import { Route, Switch } from "react-router-dom";
 import NavBar from "./components/admins/navbaradmin";
 import AddUser from "./components/admins/adduser";
@@ -10,6 +15,7 @@ import Admin from "./components/admins/admin";
 import Allcomponents from "./components/allcomponents";
 import FormSearch from "./components/formsearch";
 import UserForm from "./components/userforms/userform";
+import UsersForm from "./components/userforms/usersform";
 //import "../App.css";
 import Accountant from "./components/accountants/accountant";
 
@@ -30,7 +36,34 @@ class App extends Allcomponents {
       { id: 2, value: 0 },
       { id: 3, value: 0 },
       { id: 4, value: 0 }
-    ]
+    ],
+    step: 1,
+    firstName: "",
+    lastName: "",
+    email: "",
+    occupation: "",
+    city: "",
+    bio: ""
+  };
+
+  //has a method to proceed to the next step
+  nextStep = () => {
+    const { step } = this.state;
+    this.setState({
+      step: step + 1
+    });
+  };
+
+  back = e => {
+    //prevent default
+    e.preventDefault();
+    this.props.prevStep();
+  };
+
+  continue = e => {
+    //prevent default
+    e.preventDefault();
+    this.props.nextStep();
   };
 
   //1st lifecycle hooks
@@ -94,6 +127,7 @@ class App extends Allcomponents {
     event.preventDefault();
     this.setState({ [event.target.name]: event.target.value });
   };
+
   render() {
     //render method
     console.log("App-rendered");
@@ -108,7 +142,6 @@ class App extends Allcomponents {
             onIncrement={this.handleIncrement}
             onDelete={this.handleDelete}
           />
-          <UserForm />
         </main>
         <div className="content">
           <Switch>

@@ -1,17 +1,25 @@
 import React, { Component } from "react";
+import UserForm from "../userforms/userform";
+import UsersForm from "../userforms/usersform";
 import NavBarAdmin from "./navbaradmin";
 
 class Adduser extends Component {
-  state = {};
   render() {
     return (
       <div>
         <NavBarAdmin />
-        <h1>This is the add user page </h1>
+        <UserForm />
+        <UsersForm />
       </div>
     );
   }
 }
+
+const styles = {
+  button: {
+    margin: 15
+  }
+};
 
 export default Adduser;
 

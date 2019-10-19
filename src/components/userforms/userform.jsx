@@ -67,6 +67,7 @@ class UserForm extends Component {
             nextStep={this.nextStep}
             handleChange={this.handleChange}
             values={values}
+            styles={styles}
           />
         );
       case 2:
@@ -80,6 +81,7 @@ class UserForm extends Component {
             prevStep={this.prevStep}
             handleChange={this.handleChange}
             values={values}
+            styles={styles}
           />
         );
       case 3:
@@ -93,6 +95,7 @@ class UserForm extends Component {
             prevStep={this.prevStep}
             handleChange={this.handleChange}
             values={values}
+            styles={styles}
           />
         );
       case 4:
@@ -100,5 +103,11 @@ class UserForm extends Component {
     }
   }
 }
+
+const styles = {
+  button: {
+    margin: 15
+  }
+};
 
 export default UserForm;
