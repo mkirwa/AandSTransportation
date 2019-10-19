@@ -4,23 +4,31 @@ import FormControl from "react-bootstrap/lib/FormControl";
 class UsersForm extends Component {
   render() {
     return (
-      <main>
+      <main role="main" className="container">
         <div>
           <br />
           <form className>
             <div className="form-row">
-              <div className="col-md-5 mb-3">
+              <div className="col-md-4 mb-3">
                 <input
                   type="text"
                   className="form-control"
                   placeholder="First name"
                 />
               </div>
-              <div className="col-md-5 mb-3">
+
+              <div className="col-md-4 mb-3">
                 <input
                   type="text"
                   className="form-control"
                   placeholder="Last name"
+                />
+              </div>
+              <div className="col-md-4 mb-3">
+                <input
+                  type="text"
+                  className="form-control"
+                  placeholder="Email"
                 />
               </div>
             </div>
