@@ -15,7 +15,7 @@ class UsersForm extends Component {
                 placeholder="First name"
               />
             </div>
-            <div>
+            <div className="col">
               <input
                 type="text"
                 className="form-control"
