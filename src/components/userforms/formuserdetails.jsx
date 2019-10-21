@@ -17,7 +17,7 @@ class FormUserDetails extends Component {
     const { values, handleChange } = this.props;
     return (
       <main role="main" className="container">
-        <div className="d-flex justify-content-center">
+        <div className="d-flex align-items-center">
           <MuiThemeProvider>
             <React.Fragment>
               <TextField
