@@ -5,7 +5,7 @@ class UsersForm extends Component {
   render() {
     return (
       <main role="main" className="container">
-        <div className="jss1">
+        <div className="d-flex align-content-center">
           <br />
           <form className>
             <div className="form-row">
