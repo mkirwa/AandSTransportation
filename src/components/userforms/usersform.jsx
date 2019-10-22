@@ -5,7 +5,7 @@ class UsersForm extends Component {
   render() {
     return (
       <main role="main" className="container">
-        <div className="d-flex align-content-center">
+        <div className="d-flex align-content-center flex-wrap">
           <br />
           <form className>
             <div className="form-row">
