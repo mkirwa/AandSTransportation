@@ -6,7 +6,7 @@ import RaisedButton from "material-ui/RaisedButton";
 
 import { Route, Switch } from "react-router-dom";
 import NavBar from "./components/admins/navbaradmin";
-import AddUser from "./components/admins/adduser";
+import AddAdmin from "./components/admins/addadmin";
 import Dispatch from "./components/dispatchs/dispatch";
 import Drivers from "./components/driver/drivers";
 import Loads from "./components/loads";
@@ -147,7 +147,7 @@ class App extends Allcomponents {
           <Switch>
             <Route path="/admins/admin" component={Admin} />
             <Route path="/accountants/accountant" component={Accountant} />
-            <Route path="/admins/adduser" component={AddUser} />
+            <Route path="/admins/adduser" component={AddAdmin} />
             <Route path="/dispatchs/dispatch" component={Dispatch} />
             <Route path="/driver/drivers" component={Drivers} />
             <Route path="/formsearch" component={FormSearch} />

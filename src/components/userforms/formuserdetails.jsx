@@ -20,23 +20,11 @@ class FormUserDetails extends Component {
         <div>
           <MuiThemeProvider>
             <React.Fragment>
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center"
-                }}
-              >
-                <TextField variant="Driver's Details" />
+              <div style={style}>
+                <h4>Driver's Details</h4>
               </div>
 
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center"
-                }}
-              >
+              <div style={style}>
                 <TextField
                   hintText="Enter Your First Name"
                   floatingLabelText="First Name"
@@ -49,13 +37,7 @@ class FormUserDetails extends Component {
                 />
               </div>
 
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center"
-                }}
-              >
+              <div style={style}>
                 <TextField
                   hintText="Enter Your Last Name"
                   floatingLabelText="Last Name"
@@ -68,13 +50,7 @@ class FormUserDetails extends Component {
                 />
               </div>
 
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center"
-                }}
-              >
+              <div style={style}>
                 <TextField
                   hintText="Enter Your Email"
                   floatingLabelText="Email"
@@ -87,13 +63,7 @@ class FormUserDetails extends Component {
                 />
               </div>
 
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center"
-                }}
-              >
+              <div style={style}>
                 <RaisedButton
                   label="Continue"
                   //makes the button blue
@@ -117,6 +87,12 @@ const styles = {
   button: {
     margin: 15
   }
+};
+
+const style = {
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center"
 };
 
 export default FormUserDetails;
