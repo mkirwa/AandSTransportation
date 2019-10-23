@@ -27,6 +27,16 @@ class FormUserDetails extends Component {
                   alignItems: "center"
                 }}
               >
+                <TextField variant="Driver's Details" />
+              </div>
+
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center"
+                }}
+              >
                 <TextField
                   hintText="Enter Your First Name"
                   floatingLabelText="First Name"
