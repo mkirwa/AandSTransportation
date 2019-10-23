@@ -9,7 +9,6 @@ class Adduser extends Component {
       <div>
         <NavBarAdmin />
         <UserForm />
-        <UsersForm />
       </div>
     );
   }
@@ -24,3 +23,4 @@ const styles = {
 export default Adduser;
 
 //In this page, I have to create
+// <UsersForm />
