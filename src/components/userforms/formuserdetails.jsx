@@ -17,48 +17,65 @@ class FormUserDetails extends Component {
     const { values, handleChange } = this.props;
     return (
       <main role="main" className="container align-content-center flex-wrap">
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center"
-          }}
-        >
+        <div>
           <MuiThemeProvider>
             <React.Fragment>
-              <TextField
-                hintText="Enter Your First Name"
-                floatingLabelText="First Name"
-                //How react works, everytime the textfield changes
-                //everytime we type in it, it will fire off an event
-                //of onChange.....You will have firstName in brackets coz
-                //handleChange takes in an input
-                onChange={handleChange("firstName")}
-                defaultValue={values.firstName}
-              />
-              <br />
-              <TextField
-                hintText="Enter Your Last Name"
-                floatingLabelText="Last Name"
-                //How react works, everytime the textfield changes
-                //everytime we type in it, it will fire off an event
-                //of onChange.....You will have firstName in brackets coz
-                //handleChange takes in an input
-                onChange={handleChange("lastName")}
-                defaultValue={values.lastName}
-              />
-              <br />
-              <TextField
-                hintText="Enter Your Email"
-                floatingLabelText="Email"
-                //How react works, everytime the textfield changes
-                //everytime we type in it, it will fire off an event
-                //of onChange.....You will have firstName in brackets coz
-                //handleChange takes in an input
-                onChange={handleChange("email")}
-                defaultValue={values.email}
-              />
-              <br />
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center"
+                }}
+              >
+                <TextField
+                  hintText="Enter Your First Name"
+                  floatingLabelText="First Name"
+                  //How react works, everytime the textfield changes
+                  //everytime we type in it, it will fire off an event
+                  //of onChange.....You will have firstName in brackets coz
+                  //handleChange takes in an input
+                  onChange={handleChange("firstName")}
+                  defaultValue={values.firstName}
+                />
+              </div>
+
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center"
+                }}
+              >
+                <TextField
+                  hintText="Enter Your Last Name"
+                  floatingLabelText="Last Name"
+                  //How react works, everytime the textfield changes
+                  //everytime we type in it, it will fire off an event
+                  //of onChange.....You will have firstName in brackets coz
+                  //handleChange takes in an input
+                  onChange={handleChange("lastName")}
+                  defaultValue={values.lastName}
+                />
+              </div>
+
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center"
+                }}
+              >
+                <TextField
+                  hintText="Enter Your Email"
+                  floatingLabelText="Email"
+                  //How react works, everytime the textfield changes
+                  //everytime we type in it, it will fire off an event
+                  //of onChange.....You will have firstName in brackets coz
+                  //handleChange takes in an input
+                  onChange={handleChange("email")}
+                  defaultValue={values.email}
+                />
+              </div>
               <RaisedButton
                 label="Continue"
                 //makes the button blue
