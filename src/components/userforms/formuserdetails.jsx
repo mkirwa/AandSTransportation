@@ -76,16 +76,25 @@ class FormUserDetails extends Component {
                   defaultValue={values.email}
                 />
               </div>
-              <RaisedButton
-                label="Continue"
-                //makes the button blue
-                primary={true}
-                style={styles.button}
-                //we put contiue up above and what contiunue does
-                //is call the next step of userForm and we do that through
-                //props
-                onClick={this.continue}
-              />
+
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center"
+                }}
+              >
+                <RaisedButton
+                  label="Continue"
+                  //makes the button blue
+                  primary={true}
+                  style={styles.button}
+                  //we put contiue up above and what contiunue does
+                  //is call the next step of userForm and we do that through
+                  //props
+                  onClick={this.continue}
+                />
+              </div>
             </React.Fragment>
           </MuiThemeProvider>
         </div>
