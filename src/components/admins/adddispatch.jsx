@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import { Navbar } from "react-bootstrap";
+import NavBarAdmin from "./navbaradmin";
 
 class AddDispatch extends Component {
   state = {};
   render() {
-    return <Navbar />;
+    return <NavBarAdmin />;
   }
 }
 

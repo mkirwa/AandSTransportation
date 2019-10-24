@@ -1,7 +1,10 @@
 import React, { Component } from "react";
 import UserForm from "../userforms/userform";
+import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
+
 import UsersForm from "../userforms/usersform";
 import NavBarAdmin from "./navbaradmin";
+import RaisedButton from "material-ui/RaisedButton";
 
 class AddAdmin extends Component {
   render() {
@@ -12,6 +15,20 @@ class AddAdmin extends Component {
           <h4>Add Admin</h4>
         </div>
         <UserForm />
+        <div style={style}>
+          <MuiThemeProvider>
+            <RaisedButton
+              label="Send Email"
+              //makes the button blue
+              primary={true}
+              //we put contiue up above and what contiunue does
+              //is call the next step of userForm and we do that through
+              //props
+              //onClick it should be sending an email
+              //onClick={this.continue}
+            />
+          </MuiThemeProvider>
+        </div>
       </div>
     );
   }
