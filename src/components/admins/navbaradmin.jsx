@@ -27,12 +27,12 @@ class NavBar extends Component {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav mr-auto">
             <li className="nav-item active">
-              <Link className="nav-link" to="/loads">
+              <Link className="nav-link" to="/admins/loadsadmin">
                 Loads<span className="sr-only">(current)</span>
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/users">
+              <Link className="nav-link" to="/admins/usersadmin">
                 Users
               </Link>
             </li>
@@ -50,16 +50,16 @@ class NavBar extends Component {
                 Add User
               </Link>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <Link class="dropdown-item" to="/admins/adduser">
+                <Link class="dropdown-item" to="/admins/addadmin">
                   Admin
                 </Link>
-                <Link class="dropdown-item" to="/admins/adduser">
+                <Link class="dropdown-item" to="/admins/addaccountant">
                   Accountant
                 </Link>
-                <Link class="dropdown-item" to="/admins/adduser">
+                <Link class="dropdown-item" to="/admins/adddispatch">
                   Dispatch
                 </Link>
-                <Link class="dropdown-item" to="/admins/adduser">
+                <Link class="dropdown-item" to="/admins/adddriver">
                   Driver
                 </Link>
                 <div class="dropdown-divider"></div>

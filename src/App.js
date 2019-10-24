@@ -10,6 +10,7 @@ import AddAdmin from "./components/admins/addadmin";
 import AddDriver from "./components/admins/adddriver";
 import AddAccountant from "./components/admins/addaccountant";
 import AddDispatch from "./components/admins/adddispatch";
+import LoadsAdmin from "./components/admins/loadsadmin";
 
 import Dispatch from "./components/dispatchs/dispatch";
 import Drivers from "./components/driver/drivers";
@@ -22,6 +23,7 @@ import UserForm from "./components/userforms/userform";
 import UsersForm from "./components/userforms/usersform";
 //import "../App.css";
 import Accountant from "./components/accountants/accountant";
+import UsersAdmin from "./components/admins/usersadmin";
 
 class App extends Allcomponents {
   state = {
@@ -155,6 +157,8 @@ class App extends Allcomponents {
             <Route path="/admins/addaccountant" component={AddAccountant} />
             <Route path="/admins/adddispatch" component={AddDispatch} />
             <Route path="/admins/adddriver" component={AddDriver} />
+            <Route path="/admins/loadsadmin" component={LoadsAdmin} />
+            <Route path="/admins/usersadmin" component={UsersAdmin} />
             <Route path="/dispatchs/dispatch" component={Dispatch} />
             <Route path="/driver/drivers" component={Drivers} />
             <Route path="/formsearch" component={FormSearch} />

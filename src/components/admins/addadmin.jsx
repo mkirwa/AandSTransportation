@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import UserForm from "../userforms/userform";
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 
-import UsersForm from "../userforms/usersform";
 import NavBarAdmin from "./navbaradmin";
 import RaisedButton from "material-ui/RaisedButton";
 
