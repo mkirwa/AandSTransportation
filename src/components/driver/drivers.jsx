@@ -1,11 +1,12 @@
 import React, { Component } from "react";
+import NavBarDriver from "./navbardriver";
 
 class Drivers extends Component {
   state = {};
   render() {
     return (
       <div>
-        <h1>This is the drivers page</h1>
+        <NavBarDriver />
       </div>
     );
   }
