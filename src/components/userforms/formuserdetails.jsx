@@ -21,10 +21,6 @@ class FormUserDetails extends Component {
           <MuiThemeProvider>
             <React.Fragment>
               <div style={style}>
-                <h4>Driver's Details</h4>
-              </div>
-
-              <div style={style}>
                 <TextField
                   hintText="Enter Your First Name"
                   floatingLabelText="First Name"

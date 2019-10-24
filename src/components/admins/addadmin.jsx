@@ -8,11 +8,21 @@ class AddAdmin extends Component {
     return (
       <div>
         <NavBarAdmin />
+        <div style={style}>
+          <h4>Add Admin</h4>
+        </div>
         <UserForm />
       </div>
     );
   }
 }
+
+const style = {
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  margin: "30px auto"
+};
 
 export default AddAdmin;
 
