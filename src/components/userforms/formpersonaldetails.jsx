@@ -5,20 +5,9 @@ import TextField from "material-ui/TextField";
 import RaisedButton from "material-ui/RaisedButton";
 
 class FormPersonalDetails extends Component {
-  continue = e => {
-    //prevent default
-    e.preventDefault();
-    this.props.nextStep();
-  };
-
-  back = e => {
-    //prevent default
-    e.preventDefault();
-    this.props.prevStep();
-  };
-
   render() {
     const { values, handleChange } = this.props;
+
     return (
       <MuiThemeProvider>
         <React.Fragment>

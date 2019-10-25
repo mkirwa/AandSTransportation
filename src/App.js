@@ -134,6 +134,14 @@ class App extends Allcomponents {
     this.setState({ [event.target.name]: event.target.value });
   };
 
+  handleChange = input => e => {
+    //take whatever the input is
+    //set it to whatever the value is
+    //we can get that using the event parameter and using target.value
+    //be it firstName, lastName, whatever value is entered
+    this.setState({ [input]: e.target.value });
+  };
+
   render() {
     //render method
     console.log("App-rendered");
