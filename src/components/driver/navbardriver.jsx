@@ -26,12 +26,12 @@ class NavBarDriver extends Component {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav mr-auto">
             <li className="nav-item active">
-              <Link className="nav-link" to="/admins/loadsadmin">
+              <Link className="nav-link" to="/driver/driverloads">
                 Loads<span className="sr-only">(current)</span>
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/admins/usersadmin">
+              <Link className="nav-link" to="/driver/driverpaystubs">
                 Paystubs
               </Link>
             </li>
@@ -49,10 +49,10 @@ class NavBarDriver extends Component {
                 Receipts
               </Link>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <Link class="dropdown-item" to="/admins/addadmin">
+                <Link class="dropdown-item" to="/driver/card1">
                   Card 1
                 </Link>
-                <Link class="dropdown-item" to="/admins/addaccountant">
+                <Link class="dropdown-item" to="/driver/card2">
                   Card 2
                 </Link>
               </div>
@@ -71,10 +71,10 @@ class NavBarDriver extends Component {
                 Bill of Landing
               </Link>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <Link class="dropdown-item" to="/admins/addadmin">
+                <Link class="dropdown-item" to="/driver/departurebol">
                   Departure Bill of Landing
                 </Link>
-                <Link class="dropdown-item" to="/admins/addaccountant">
+                <Link class="dropdown-item" to="/driver/arrivalbol">
                   Arrival Bill of Landing
                 </Link>
               </div>

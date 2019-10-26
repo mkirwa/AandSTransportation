@@ -12,6 +12,13 @@ import AddAccountant from "./components/admins/addaccountant";
 import AddDispatch from "./components/admins/adddispatch";
 import LoadsAdmin from "./components/admins/loadsadmin";
 
+import DriverPayStubs from "./components/driver/driverpaystubs";
+import Card1 from "./components/driver/card1";
+import Card2 from "./components/driver/card2";
+import DepartureBoL from "./components/driver/departurebol";
+import ArrivalBoL from "./components/driver/arrivalbol";
+import DriverLoads from "./components/driver/driverloads";
+
 import Dispatch from "./components/dispatchs/dispatch";
 import Drivers from "./components/driver/drivers";
 import Loads from "./components/loads";
@@ -170,6 +177,12 @@ class App extends Allcomponents {
             <Route path="/dispatchs/dispatch" component={Dispatch} />
             <Route path="/driver/drivers" component={Drivers} />
             <Route path="/formsearch" component={FormSearch} />
+            <Route path="/driver/driverpaystubs" component={DriverPayStubs} />
+            <Route path="/driver/card1" component={Card1} />
+            <Route path="/driver/card2" component={Card2} />
+            <Route path="/driver/departurebol" component={DepartureBoL} />
+            <Route path="/driver/arrivalbol" component={ArrivalBoL} />
+            <Route path="/driver/driverloads" component={DriverLoads} />
             <Route path="/loads" component={Loads} />
             <Route path="/navbar" component={NavBar} />
             <Route path="/users" component={Users} />
@@ -187,3 +200,11 @@ export default App;
 // this.state.allcomponents.filter(c => c.value > 0).length
 // }
 ///>
+
+//handleChange = input => e => {
+//take whatever the input is
+//set it to whatever the value is
+//we can get that using the event parameter and using target.value
+//be it firstName, lastName, whatever value is entered
+//this.setState({ [input]: e.target.value });
+//};

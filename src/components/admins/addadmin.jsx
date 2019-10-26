@@ -5,6 +5,8 @@ import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import NavBarAdmin from "./navbaradmin";
 import RaisedButton from "material-ui/RaisedButton";
 
+import FormPersonalDetails from "../userforms/formpersonaldetails";
+
 class AddAdmin extends Component {
   render() {
     return (
@@ -14,6 +16,7 @@ class AddAdmin extends Component {
           <h4>Add Admin</h4>
         </div>
         <UserForm />
+
         <div style={style}>
           <MuiThemeProvider>
             <RaisedButton
