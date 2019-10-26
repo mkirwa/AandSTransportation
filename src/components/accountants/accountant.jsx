@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 
 class Accountant extends Component {
-  state = {};
   render() {
     return (
       <div>
