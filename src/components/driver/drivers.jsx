@@ -5,7 +5,6 @@ import FormPersonalDetails from "../userforms/formpersonaldetails";
 import UserForm from "../userforms/userform";
 
 class Drivers extends Component {
-  state = {};
   render() {
     return (
       <div>
