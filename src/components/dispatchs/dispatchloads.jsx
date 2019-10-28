@@ -1,17 +1,16 @@
 import React, { Component } from "react";
+import Loads from "../loads";
 import DispatchNavbar from "./dispatchnavbar";
-import Users from "../users";
 
-class Dispatch extends Component {
-  state = {};
+class DispatchLoads extends Component {
   render() {
     return (
       <div>
         <DispatchNavbar />
-        <Users />
+        <Loads />
       </div>
     );
   }
 }
 
-export default Dispatch;
+export default DispatchLoads;

@@ -20,6 +20,9 @@ import ArrivalBoL from "./components/driver/arrivalbol";
 import DriverLoads from "./components/driver/driverloads";
 
 import Dispatch from "./components/dispatchs/dispatch";
+import DispatchLoads from "./components/dispatchs/dispatchloads";
+import DispatchNavbar from "./components/dispatchs/dispatchnavbar";
+
 import Drivers from "./components/driver/drivers";
 import Loads from "./components/loads";
 import Users from "./components/users";
@@ -31,6 +34,8 @@ import UsersForm from "./components/userforms/usersform";
 //import "../App.css";
 import Accountant from "./components/accountants/accountant";
 import UsersAdmin from "./components/admins/usersadmin";
+import DispatchUsers from "./components/dispatchs/dispatchusers";
+import DispatchLoad from "./components/dispatchs/dispatchload";
 
 class App extends Allcomponents {
   state = {
@@ -175,6 +180,11 @@ class App extends Allcomponents {
             <Route path="/admins/loadsadmin" component={LoadsAdmin} />
             <Route path="/admins/usersadmin" component={UsersAdmin} />
             <Route path="/dispatchs/dispatch" component={Dispatch} />
+            <Route
+              path="/dispatchs/dispatchnavbar"
+              component={DispatchNavbar}
+            />
+
             <Route path="/driver/drivers" component={Drivers} />
             <Route path="/formsearch" component={FormSearch} />
             <Route path="/driver/driverpaystubs" component={DriverPayStubs} />
@@ -183,6 +193,11 @@ class App extends Allcomponents {
             <Route path="/driver/departurebol" component={DepartureBoL} />
             <Route path="/driver/arrivalbol" component={ArrivalBoL} />
             <Route path="/driver/driverloads" component={DriverLoads} />
+            <Route path="/loadsadmin" component={LoadsAdmin} />
+            <Route path="/dispatchs/dispatchusers" component={DispatchUsers} />
+            <Route path="/dispatchs/dispatchloads" component={DispatchLoads} />
+            <Route path="/dispatchs/dispatchload" component={DispatchLoad} />
+
             <Route path="/loads" component={Loads} />
             <Route path="/navbar" component={NavBar} />
             <Route path="/users" component={Users} />

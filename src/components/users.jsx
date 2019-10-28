@@ -5,7 +5,7 @@ class users extends Component {
   render() {
     return (
       <div>
-        <h1>This is the users page</h1>
+        <h1>This is the main users page</h1>
       </div>
     );
   }
