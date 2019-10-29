@@ -4,7 +4,6 @@ import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 class NavBarDriver extends Component {
-  state = {};
   render() {
     return (
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark ">
