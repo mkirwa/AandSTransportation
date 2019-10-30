@@ -9,10 +9,13 @@ class MainDispatchLoad extends Component {
 
     return (
       <MuiThemeProvider>
-        <React.Fragment>
+        <div styles={styles}>
           <div style={style}>
             <h5>Pick Up Address</h5>
           </div>
+        </div>
+
+        <React.Fragment>
           <div style={style}>
             <TextField
               hintText="Company name"
@@ -123,9 +126,7 @@ class MainDispatchLoad extends Component {
 }
 
 const styles = {
-  button: {
-    margin: 15
-  }
+  margin: "30px auto"
 };
 
 const style = {

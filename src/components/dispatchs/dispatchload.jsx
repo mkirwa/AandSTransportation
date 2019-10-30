@@ -10,9 +10,6 @@ class DispatchLoad extends Component {
     return (
       <div>
         <DispatchNavbar />
-        <div style={style}>
-          <h4>Dispatch Load</h4>
-        </div>
         <MainDispatchLoad />
       </div>
     );
