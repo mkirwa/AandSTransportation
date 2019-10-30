@@ -3,6 +3,7 @@ import FormPersonalDetails from "../userforms/formpersonaldetails";
 
 import UserForm from "../userforms/userform";
 import DispatchNavbar from "./dispatchnavbar";
+import MainDispatchLoad from "../maindispatchload";
 
 class DispatchLoad extends Component {
   render() {
@@ -12,6 +13,7 @@ class DispatchLoad extends Component {
         <div style={style}>
           <h4>Dispatch Load</h4>
         </div>
+        <MainDispatchLoad />
       </div>
     );
   }

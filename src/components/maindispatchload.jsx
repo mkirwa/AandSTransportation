@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
-import AppBar from "material-ui/AppBar";
 import TextField from "material-ui/TextField";
 import RaisedButton from "material-ui/RaisedButton";
 
@@ -12,9 +11,12 @@ class MainDispatchLoad extends Component {
       <MuiThemeProvider>
         <React.Fragment>
           <div style={style}>
+            <h5>Pick Up Address</h5>
+          </div>
+          <div style={style}>
             <TextField
-              hintText="Enter Your First Name"
-              floatingLabelText="First Name"
+              hintText="Company name"
+              floatingLabelText="Company Name"
               //How react works, everytime the textfield changes
               //everytime we type in it, it will fire off an event
               //of onChange.....You will have firstName in brackets coz
@@ -23,23 +25,13 @@ class MainDispatchLoad extends Component {
               //defaultValue={values.occupation}
             />
           </div>
-
-          <div style={style}>
-            <TextField
-              hintText="Enter Your Last Name"
-              floatingLabelText="Last Name"
-              //How react works, everytime the textfield changes
-              //everytime we type in it, it will fire off an event
-              //of onChange.....You will have firstName in brackets coz
-              //handleChange takes in an input
-              //onChange={this.handleChange("city")}
-              //defaultValue={values.city}
-            />
+          <div>
+            <h4></h4>
           </div>
 
           <div style={style}>
             <TextField
-              hintText="Enter Your Street Address"
+              hintText="Enter Company Street Address"
               floatingLabelText="Street Address"
               //How react works, everytime the textfield changes
               //everytime we type in it, it will fire off an event
@@ -52,8 +44,8 @@ class MainDispatchLoad extends Component {
 
           <div style={style}>
             <TextField
-              hintText="Enter Your Apt Number"
-              floatingLabelText="Apt"
+              hintText="Enter Suite Number"
+              floatingLabelText="Suite Number"
               //How react works, everytime the textfield changes
               //everytime we type in it, it will fire off an event
               //of onChange.....You will have firstName in brackets coz
@@ -91,8 +83,8 @@ class MainDispatchLoad extends Component {
 
           <div style={style}>
             <TextField
-              hintText="Enter Your Social Security Number"
-              floatingLabelText="SSN"
+              hintText="Zip Code"
+              floatingLabelText="Zip Code"
               //How react works, everytime the textfield changes
               //everytime we type in it, it will fire off an event
               //of onChange.....You will have firstName in brackets coz
@@ -104,7 +96,7 @@ class MainDispatchLoad extends Component {
 
           <div style={style}>
             <RaisedButton
-              label="Continue"
+              label="Continue to Drop off Address"
               primary={true}
               style={styles.button}
               //we put contiue up above and what contiunue does
