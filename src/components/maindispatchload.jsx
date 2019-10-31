@@ -6,7 +6,6 @@ import RaisedButton from "material-ui/RaisedButton";
 class MainDispatchLoad extends Component {
   render() {
     const { values, handleChange } = this.props;
-
     return (
       <MuiThemeProvider>
         <div styles={styles}>
@@ -24,8 +23,8 @@ class MainDispatchLoad extends Component {
               //everytime we type in it, it will fire off an event
               //of onChange.....You will have firstName in brackets coz
               //handleChange takes in an input
-              //onChange={this.handleChange("occupation")}
-              //defaultValue={values.occupation}
+              onChange={handleChange("occupation")}
+              defaultValue={values.occupation}
             />
           </div>
           <div>
@@ -99,7 +98,7 @@ class MainDispatchLoad extends Component {
 
           <div style={style}>
             <RaisedButton
-              label="Continue to Drop off Address"
+              label="Continue"
               primary={true}
               style={styles.button}
               //we put contiue up above and what contiunue does

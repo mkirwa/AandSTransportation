@@ -50,10 +50,10 @@ class App extends Allcomponents {
       //counter objects
       //we use id to uniquely identify each counter
       //value property sets the intial value for each counter
-      { id: 1, value: 4 },
-      { id: 2, value: 0 },
-      { id: 3, value: 0 },
-      { id: 4, value: 0 }
+      { id: 1, valuee: 4 },
+      { id: 2, valuee: 0 },
+      { id: 3, valuee: 0 },
+      { id: 4, valuee: 0 }
     ],
     step: 1,
     firstName: "",
@@ -111,7 +111,7 @@ class App extends Allcomponents {
     const counters = [...this.state.allcomponents];
     const index = counters.indexOf(counter);
     counters[index] = { ...counter };
-    counters[index].value++;
+    counters[index].valuee++;
     this.setState({ allcomponents: counters });
   };
 
@@ -124,7 +124,7 @@ class App extends Allcomponents {
     //You store them in counters.
     //
     const counters = this.state.allcomponents.map(c => {
-      c.value = 0;
+      c.valuee = 0;
       return c;
     });
     //here you call this.setState with this new array
@@ -143,7 +143,7 @@ class App extends Allcomponents {
 
   handleInputChange = event => {
     event.preventDefault();
-    this.setState({ [event.target.name]: event.target.value });
+    this.setState({ [event.target.name]: event.target.valuee });
   };
 
   handleChange = input => e => {
