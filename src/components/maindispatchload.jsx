@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import TextField from "material-ui/TextField";
 import RaisedButton from "material-ui/RaisedButton";
-import { List, ListItem, ListItemText } from "@material-ui/core/";
 
 class MainDispatchLoad extends Component {
   render() {
@@ -17,9 +16,6 @@ class MainDispatchLoad extends Component {
 
         <React.Fragment>
           <div style={style}>
-            <ListItem>
-              <ListItemText primary="First Name" />
-            </ListItem>
             <TextField
               hintText="Company name"
               floatingLabelText="Company Name"
