@@ -23,8 +23,91 @@ class MainDispatchLoad extends Component {
               //everytime we type in it, it will fire off an event
               //of onChange.....You will have firstName in brackets coz
               //handleChange takes in an input
-              onChange={handleChange("occupation")}
-              defaultValue={values.occupation}
+              //onChange={handleChange("occupation")}
+              //defaultValue={values.occupation}
+            />
+          </div>
+          <div>
+            <h4></h4>
+          </div>
+
+          <div style={style}>
+            <TextField
+              hintText="Enter Company Street Address"
+              floatingLabelText="Street Address"
+              //How react works, everytime the textfield changes
+              //everytime we type in it, it will fire off an event
+              //of onChange.....You will have firstName in brackets coz
+              //handleChange takes in an input
+              //onChange={this.handleChange("bio")}
+              //defaultValue={values.bio}
+            />
+          </div>
+
+          <div style={style}>
+            <TextField
+              hintText="Enter Suite Number"
+              floatingLabelText="Suite Number"
+              //How react works, everytime the textfield changes
+              //everytime we type in it, it will fire off an event
+              //of onChange.....You will have firstName in brackets coz
+              //handleChange takes in an input
+              //onChange={this.handleChange("bio")}
+              //defaultValue={values.bio}
+            />
+          </div>
+
+          <div style={style}>
+            <TextField
+              hintText="Enter Your City"
+              floatingLabelText="City"
+              //How react works, everytime the textfield changes
+              //everytime we type in it, it will fire off an event
+              //of onChange.....You will have firstName in brackets coz
+              //handleChange takes in an input
+              //onChange={this.handleChange("bio")}
+              //defaultValue={values.bio}
+            />
+          </div>
+
+          <div style={style}>
+            <TextField
+              hintText="Enter Your State"
+              floatingLabelText="State"
+              //How react works, everytime the textfield changes
+              //everytime we type in it, it will fire off an event
+              //of onChange.....You will have firstName in brackets coz
+              //handleChange takes in an input
+              //onChange={this.handleChange("bio")}
+              //defaultValue={values.bio}
+            />
+          </div>
+
+          <div style={style}>
+            <TextField
+              hintText="Zip Code"
+              floatingLabelText="Zip Code"
+              //How react works, everytime the textfield changes
+              //everytime we type in it, it will fire off an event
+              //of onChange.....You will have firstName in brackets coz
+              //handleChange takes in an input
+              //onChange={this.handleChange("bio")}
+              //defaultValue={values.bio}
+            />
+          </div>
+          <div style={style}>
+            <h5>Drop of Address</h5>
+          </div>
+          <div style={style}>
+            <TextField
+              hintText="Company name"
+              floatingLabelText="Company Name"
+              //How react works, everytime the textfield changes
+              //everytime we type in it, it will fire off an event
+              //of onChange.....You will have firstName in brackets coz
+              //handleChange takes in an input
+              //onChange={handleChange("occupation")}
+              //defaultValue={values.occupation}
             />
           </div>
           <div>
