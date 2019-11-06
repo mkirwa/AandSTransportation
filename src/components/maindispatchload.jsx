@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import TextField from "material-ui/TextField";
 import RaisedButton from "material-ui/RaisedButton";
+import AppBar from "material-ui/AppBar";
 
 class MainDispatchLoad extends Component {
   render() {
@@ -20,7 +21,7 @@ class MainDispatchLoad extends Component {
               //everytime we type in it, it will fire off an event
               //of onChange.....You will have firstName in brackets coz
               //handleChange takes in an input
-              //onChange={handleChange("occupation")}
+              onChange={this.handleChange("Company Name").bind(this)}
               //defaultValue={values.occupation}
             />
           </div>
