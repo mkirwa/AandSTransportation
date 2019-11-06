@@ -176,7 +176,7 @@ class MainDispatchLoad extends Component {
             />
           </div>
 
-          <div style={style}>
+          <div style={styles}>
             <RaisedButton
               label="Continue"
               primary={true}
