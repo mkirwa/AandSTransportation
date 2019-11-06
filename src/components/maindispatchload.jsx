@@ -8,12 +8,9 @@ class MainDispatchLoad extends Component {
     const { values, handleChange } = this.props;
     return (
       <MuiThemeProvider>
-        <div styles={styles}>
-          <div style={style}>
-            <h5>Pick Up Address</h5>
-          </div>
+        <div style={styles}>
+          <h5>Pick Up Address</h5>
         </div>
-
         <React.Fragment>
           <div style={style}>
             <TextField
@@ -95,7 +92,7 @@ class MainDispatchLoad extends Component {
               //defaultValue={values.bio}
             />
           </div>
-          <div style={style}>
+          <div style={styles}>
             <h5>Drop of Address</h5>
           </div>
           <div style={style}>
@@ -208,7 +205,10 @@ class MainDispatchLoad extends Component {
 }
 
 const styles = {
-  margin: "30px auto"
+  margin: "30px auto",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center"
 };
 
 const style = {
