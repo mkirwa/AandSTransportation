@@ -50,8 +50,8 @@ class App extends Allcomponents {
       //counter objects
       //we use id to uniquely identify each counter
       //value property sets the intial value for each counter
-      { id: 1, valuee: 4 },
-      { id: 2, valuee: 0 },
+      { id: 1, value: 4 },
+      { id: 2, value: 0 },
       { id: 3, valuee: 0 },
       { id: 4, valuee: 0 }
     ],
@@ -61,7 +61,8 @@ class App extends Allcomponents {
     email: "",
     occupation: "",
     city: "",
-    bio: ""
+    bio: "",
+    companyName: ""
   };
 
   //has a method to proceed to the next step
