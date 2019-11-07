@@ -112,7 +112,7 @@ class App extends Allcomponents {
     const counters = [...this.state.allcomponents];
     const index = counters.indexOf(counter);
     counters[index] = { ...counter };
-    counters[index].valuee++;
+    counters[index].value++;
     this.setState({ allcomponents: counters });
   };
 
@@ -125,7 +125,7 @@ class App extends Allcomponents {
     //You store them in counters.
     //
     const counters = this.state.allcomponents.map(c => {
-      c.valuee = 0;
+      c.value = 0;
       return c;
     });
     //here you call this.setState with this new array
@@ -144,7 +144,7 @@ class App extends Allcomponents {
 
   handleInputChange = event => {
     event.preventDefault();
-    this.setState({ [event.target.name]: event.target.valuee });
+    this.setState({ [event.target.name]: event.target.value });
   };
 
   handleChange = input => e => {
