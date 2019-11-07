@@ -52,8 +52,8 @@ class App extends Allcomponents {
       //value property sets the intial value for each counter
       { id: 1, value: 4 },
       { id: 2, value: 0 },
-      { id: 3, valuee: 0 },
-      { id: 4, valuee: 0 }
+      { id: 3, value: 0 },
+      { id: 4, value: 0 }
     ],
     step: 1,
     firstName: "",
