@@ -1,15 +1,17 @@
 import React, { Component } from "react";
 import NavBarAccountant from "./navbaraccountant";
+import Loads from "../loads";
 
-class Accountant extends Component {
+class LoadsAccountant extends Component {
   render() {
     return (
       <div>
         <NavBarAccountant />
-        <h1>This is the accountant page</h1>
+        <Loads />
+        <h1>This is loads from the accounant page</h1>
       </div>
     );
   }
 }
 
-export default Accountant;
+export default LoadsAccountant;

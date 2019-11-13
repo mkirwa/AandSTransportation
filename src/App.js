@@ -3,14 +3,29 @@ import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import AppBar from "material-ui/AppBar";
 import TextField from "material-ui/TextField";
 import RaisedButton from "material-ui/RaisedButton";
-
 import { Route, Switch } from "react-router-dom";
+
+import Loads from "./components/loads";
+import Users from "./components/users";
+import AllDrivers from "./components/alldrivers";
+import Allcomponents from "./components/allcomponents";
+import FormSearch from "./components/formsearch";
+import UserForm from "./components/userforms/userform";
+import UsersForm from "./components/userforms/usersform";
+
+import Accountant from "./components/accountants/accountant";
+import LoadsAccountant from "./components/accountants/loadsaccountant";
+import AccountantDrivers from "./components/accountants/accountantdrivers";
+import AccountantDispatchers from "./components/accountants/accountantdispatchers";
+
+import Admin from "./components/admins/admin";
 import NavBar from "./components/admins/navbaradmin";
 import AddAdmin from "./components/admins/addadmin";
 import AddDriver from "./components/admins/adddriver";
 import AddAccountant from "./components/admins/addaccountant";
 import AddDispatch from "./components/admins/adddispatch";
 import LoadsAdmin from "./components/admins/loadsadmin";
+import UsersAdmin from "./components/admins/usersadmin";
 
 import DriverPayStubs from "./components/driver/driverpaystubs";
 import Card1 from "./components/driver/card1";
@@ -18,24 +33,16 @@ import Card2 from "./components/driver/card2";
 import DepartureBoL from "./components/driver/departurebol";
 import ArrivalBoL from "./components/driver/arrivalbol";
 import DriverLoads from "./components/driver/driverloads";
+import Drivers from "./components/driver/drivers";
 
 import Dispatch from "./components/dispatchs/dispatch";
 import DispatchLoads from "./components/dispatchs/dispatchloads";
 import DispatchNavbar from "./components/dispatchs/dispatchnavbar";
-
-import Drivers from "./components/driver/drivers";
-import Loads from "./components/loads";
-import Users from "./components/users";
-import Admin from "./components/admins/admin";
-import Allcomponents from "./components/allcomponents";
-import FormSearch from "./components/formsearch";
-import UserForm from "./components/userforms/userform";
-import UsersForm from "./components/userforms/usersform";
-//import "../App.css";
-import Accountant from "./components/accountants/accountant";
-import UsersAdmin from "./components/admins/usersadmin";
 import DispatchUsers from "./components/dispatchs/dispatchusers";
 import DispatchLoad from "./components/dispatchs/dispatchload";
+import Dispatchers from "./components/dispatchers";
+
+//import "../App.css";
 
 class App extends Allcomponents {
   state = {
@@ -172,36 +179,52 @@ class App extends Allcomponents {
         </main>
         <div className="content">
           <Switch>
+            <Route path="/loads" component={Loads} />
+            <Route path="/navbar" component={NavBar} />
+            <Route path="/users" component={Users} />
+            <Route path="/dispatchers" component={Dispatchers} />
+            <Route path="/formsearch" component={FormSearch} />
+            <Route path="/alldrivers" component={AllDrivers} />
+            <Route path="/loadsadmin" component={LoadsAdmin} />
+
             <Route path="/admins/admin" component={Admin} />
-            <Route path="/accountants/accountant" component={Accountant} />
             <Route path="/admins/addadmin" component={AddAdmin} />
             <Route path="/admins/addaccountant" component={AddAccountant} />
             <Route path="/admins/adddispatch" component={AddDispatch} />
             <Route path="/admins/adddriver" component={AddDriver} />
             <Route path="/admins/loadsadmin" component={LoadsAdmin} />
             <Route path="/admins/usersadmin" component={UsersAdmin} />
+
+            <Route path="/accountants/accountant" component={Accountant} />
+            <Route
+              path="/accountants/loadsaccountant"
+              component={LoadsAccountant}
+            />
+            <Route
+              path="/accountants/accountantdrivers"
+              component={AccountantDrivers}
+            />
+            <Route
+              path="/accountants/accountantdispatchers"
+              component={AccountantDispatchers}
+            />
+
             <Route path="/dispatchs/dispatch" component={Dispatch} />
             <Route
               path="/dispatchs/dispatchnavbar"
               component={DispatchNavbar}
             />
+            <Route path="/dispatchs/dispatchusers" component={DispatchUsers} />
+            <Route path="/dispatchs/dispatchloads" component={DispatchLoads} />
+            <Route path="/dispatchs/dispatchload" component={DispatchLoad} />
 
             <Route path="/driver/drivers" component={Drivers} />
-            <Route path="/formsearch" component={FormSearch} />
             <Route path="/driver/driverpaystubs" component={DriverPayStubs} />
             <Route path="/driver/card1" component={Card1} />
             <Route path="/driver/card2" component={Card2} />
             <Route path="/driver/departurebol" component={DepartureBoL} />
             <Route path="/driver/arrivalbol" component={ArrivalBoL} />
             <Route path="/driver/driverloads" component={DriverLoads} />
-            <Route path="/loadsadmin" component={LoadsAdmin} />
-            <Route path="/dispatchs/dispatchusers" component={DispatchUsers} />
-            <Route path="/dispatchs/dispatchloads" component={DispatchLoads} />
-            <Route path="/dispatchs/dispatchload" component={DispatchLoad} />
-
-            <Route path="/loads" component={Loads} />
-            <Route path="/navbar" component={NavBar} />
-            <Route path="/users" component={Users} />
           </Switch>
         </div>
       </React.Fragment>

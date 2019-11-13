@@ -5,11 +5,14 @@ import { Link } from "react-router-dom";
 
 //import Dropdown from "./dropdown";
 
-class NavBar extends Component {
+class NavBarAccountant extends Component {
   render() {
     return (
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark ">
-        <Link className="navbar-brand mr-auto mr-lg-0" to="/admins/admin">
+        <Link
+          className="navbar-brand mr-auto mr-lg-0"
+          to="/accountants/accountant"
+        >
           Home
         </Link>
         <button
@@ -27,15 +30,10 @@ class NavBar extends Component {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav mr-auto">
             <li className="nav-item active">
-              <Link className="nav-link" to="/admins/loadsadmin">
+              <Link className="nav-link" to="/accountants/loadsaccountant">
                 Loads<span className="sr-only">(current)</span>
               </Link>
             </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/admins/usersadmin">
-                Users
-              </Link>
-            </li>
 
             <li class="nav-item dropdown">
               <Link
@@ -50,48 +48,16 @@ class NavBar extends Component {
                 Users
               </Link>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <Link class="dropdown-item" to="/admins/addaccountant">
-                  Accountants
-                </Link>
-                <Link class="dropdown-item" to="/admins/adddispatch">
+                <Link
+                  class="dropdown-item"
+                  to="/accountants/accountantdispatchers"
+                >
                   Dispatchers
                 </Link>
-                <Link class="dropdown-item" to="/AllDrivers">
+                <Link class="dropdown-item" to="/accountants/accountantdrivers">
                   Drivers
                 </Link>
                 <div class="dropdown-divider"></div>
-              </div>
-            </li>
-
-            <li class="nav-item dropdown">
-              <Link
-                class="nav-link dropdown-toggle"
-                to="#"
-                id="navbarDropdown"
-                role="button"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                Add User
-              </Link>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <Link class="dropdown-item" to="/admins/addadmin">
-                  Admin
-                </Link>
-                <Link class="dropdown-item" to="/admins/addaccountant">
-                  Accountant
-                </Link>
-                <Link class="dropdown-item" to="/admins/adddispatch">
-                  Dispatch
-                </Link>
-                <Link class="dropdown-item" to="/admins/adddriver">
-                  Driver
-                </Link>
-                <div class="dropdown-divider"></div>
-                <Link class="dropdown-item" to="#">
-                  Something else here
-                </Link>
               </div>
             </li>
           </ul>
@@ -105,7 +71,7 @@ class NavBar extends Component {
   }
 }
 
-export default NavBar;
+export default NavBarAccountant;
 //Stateless Functional Component
 //const NavBar = ({totalCounters}) =>{
 //return (
