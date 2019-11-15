@@ -19,7 +19,7 @@ class FormPersonalDetails extends Component {
               //everytime we type in it, it will fire off an event
               //of onChange.....You will have firstName in brackets coz
               //handleChange takes in an input
-              onChange={this.handleChange("occupation")}
+              //onChange={this.handleChange("occupation")}
               //defaultValue={values.occupation}
             />
           </div>
