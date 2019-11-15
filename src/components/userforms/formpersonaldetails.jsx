@@ -3,8 +3,6 @@ import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import AppBar from "material-ui/AppBar";
 import TextField from "material-ui/TextField";
 import RaisedButton from "material-ui/RaisedButton";
-import Button from "@material-ui/core/Button";
-import Dialog from "@material-ui/core/Dialog";
 
 class FormPersonalDetails extends Component {
   render() {
@@ -21,7 +19,7 @@ class FormPersonalDetails extends Component {
               //everytime we type in it, it will fire off an event
               //of onChange.....You will have firstName in brackets coz
               //handleChange takes in an input
-              //onChange={this.handleChange("occupation")}
+              onChange={this.handleChange("occupation")}
               //defaultValue={values.occupation}
             />
           </div>
@@ -126,45 +124,6 @@ class FormPersonalDetails extends Component {
             //props
             onClick={this.back}
           />
-
-          <Dialog open="true" fullWidth="true" maxWidth="sm">
-            <AppBar title="Enter Personal Details" />
-            <TextField
-              placeholder="Enter Your Occupation"
-              label="Occupation"
-              onChange={handleChange("occupation")}
-              defaultValue={values.occupation}
-              margin="normal"
-              fullWidth="true"
-            />
-            <br />
-            <TextField
-              placeholder="Enter Your City"
-              label="City"
-              onChange={handleChange("city")}
-              defaultValue={values.city}
-              margin="normal"
-              fullWidth="true"
-            />
-            <br />
-            <TextField
-              placeholder="Enter Your Bio"
-              label="Bio"
-              onChange={handleChange("bio")}
-              defaultValue={values.bio}
-              margin="normal"
-              fullWidth="true"
-            />
-            <br />
-
-            <Button color="secondary" variant="contained" onClick={this.back}>
-              Back
-            </Button>
-
-            <Button color="primary" variant="contained" onClick={this.continue}>
-              Continue
-            </Button>
-          </Dialog>
         </React.Fragment>
       </MuiThemeProvider>
     );

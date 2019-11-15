@@ -4,8 +4,6 @@ import AppBar from "material-ui/AppBar";
 import TextField from "material-ui/TextField";
 import RaisedButton from "material-ui/RaisedButton";
 import { Route, Switch } from "react-router-dom";
-import Button from "@material-ui/core/Button";
-import Dialog from "@material-ui/core/Dialog";
 
 import Loads from "./components/loads";
 import Users from "./components/users";
