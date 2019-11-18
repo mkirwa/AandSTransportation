@@ -12,11 +12,13 @@ import Allcomponents from "./components/allcomponents";
 import FormSearch from "./components/formsearch";
 import UserForm from "./components/userforms/userform";
 import UsersForm from "./components/userforms/usersform";
+import AllAccountants from "./components/allaccountants";
 
 import Accountant from "./components/accountants/accountant";
 import LoadsAccountant from "./components/accountants/loadsaccountant";
 import AccountantDrivers from "./components/accountants/accountantdrivers";
 import AccountantDispatchers from "./components/accountants/accountantdispatchers";
+import AdminAllAccountants from "./components/admins/adminallaccountants";
 
 import Admin from "./components/admins/admin";
 import NavBar from "./components/admins/navbaradmin";
@@ -26,6 +28,7 @@ import AddAccountant from "./components/admins/addaccountant";
 import AddDispatch from "./components/admins/adddispatch";
 import LoadsAdmin from "./components/admins/loadsadmin";
 import UsersAdmin from "./components/admins/usersadmin";
+import AdminAlldrivers from "./components/admins/adminalldrivers";
 
 import DriverPayStubs from "./components/driver/driverpaystubs";
 import Card1 from "./components/driver/card1";
@@ -186,6 +189,7 @@ class App extends Allcomponents {
             <Route path="/formsearch" component={FormSearch} />
             <Route path="/alldrivers" component={AllDrivers} />
             <Route path="/loadsadmin" component={LoadsAdmin} />
+            <Route path="/allaccountants" component={AllAccountants} />
 
             <Route path="/admins/admin" component={Admin} />
             <Route path="/admins/addadmin" component={AddAdmin} />
@@ -194,6 +198,11 @@ class App extends Allcomponents {
             <Route path="/admins/adddriver" component={AddDriver} />
             <Route path="/admins/loadsadmin" component={LoadsAdmin} />
             <Route path="/admins/usersadmin" component={UsersAdmin} />
+            <Route
+              path="/admins/adminallaccountants"
+              component={AdminAllAccountants}
+            />
+            <Route path="/admins/adminalldrivers" component={AdminAlldrivers} />
 
             <Route path="/accountants/accountant" component={Accountant} />
             <Route

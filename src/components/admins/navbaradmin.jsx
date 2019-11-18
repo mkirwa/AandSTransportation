@@ -31,12 +31,6 @@ class NavBar extends Component {
                 Loads<span className="sr-only">(current)</span>
               </Link>
             </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/admins/usersadmin">
-                Users
-              </Link>
-            </li>
-
             <li class="nav-item dropdown">
               <Link
                 class="nav-link dropdown-toggle"
@@ -50,8 +44,11 @@ class NavBar extends Component {
                 Users
               </Link>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <Link class="dropdown-item" to="/admins/addaccountant">
+                <Link class="dropdown-item" to="/admins/adminallaccountants">
                   Accountants
+                </Link>
+                <Link class="dropdown-item" to="/admins/adminallaccountants">
+                  Admins
                 </Link>
                 <Link class="dropdown-item" to="/admins/adddispatch">
                   Dispatchers
