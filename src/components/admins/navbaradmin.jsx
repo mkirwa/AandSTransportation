@@ -53,7 +53,7 @@ class NavBar extends Component {
                 <Link class="dropdown-item" to="/admins/adddispatch">
                   Dispatchers
                 </Link>
-                <Link class="dropdown-item" to="/AllDrivers">
+                <Link class="dropdown-item" to="/admins/adminalldrivers">
                   Drivers
                 </Link>
                 <div class="dropdown-divider"></div>
