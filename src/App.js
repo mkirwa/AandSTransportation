@@ -47,6 +47,8 @@ import DispatchLoad from "./components/dispatchs/dispatchload";
 import Dispatchers from "./components/dispatchers";
 
 //import "../App.css";
+import AllAdmins from "./components/alladmins";
+import AdminAllDispatch from "./components/admins/adminalldispatch";
 
 class App extends Allcomponents {
   state = {
@@ -184,6 +186,7 @@ class App extends Allcomponents {
         <div className="content">
           <Switch>
             <Route path="/loads" component={Loads} />
+            <Route path="/alladmins" component={AllAdmins} />
             <Route path="/navbar" component={NavBar} />
             <Route path="/users" component={Users} />
             <Route path="/dispatchers" component={Dispatchers} />
@@ -205,6 +208,10 @@ class App extends Allcomponents {
             />
             <Route path="/admins/adminalldrivers" component={AdminAlldrivers} />
             <Route path="/admins/adminalladmins" component={AdminAllAdmins} />
+            <Route
+              path="/admins/adminalldispatch"
+              component={AdminAllDispatch}
+            />
 
             <Route path="/accountants/accountant" component={Accountant} />
             <Route

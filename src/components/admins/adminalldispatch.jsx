@@ -1,16 +1,16 @@
 import React, { Component } from "react";
 import NavBarAdmin from "./navbaradmin";
-import AllAdmins from "../alladmins";
+import Dispatchers from "../dispatchers";
 
-class AdminAllAdmins extends Component {
+class AdminAllDispatch extends Component {
   render() {
     return (
       <div>
         <NavBarAdmin />
-        <AllAdmins />
+        <Dispatchers />
       </div>
     );
   }
 }
 
-export default AdminAllAdmins;
+export default AdminAllDispatch;

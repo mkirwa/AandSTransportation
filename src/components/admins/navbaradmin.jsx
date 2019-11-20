@@ -47,10 +47,10 @@ class NavBar extends Component {
                 <Link class="dropdown-item" to="/admins/adminallaccountants">
                   Accountants
                 </Link>
-                <Link class="dropdown-item" to="/admins/adminallaccountants">
+                <Link class="dropdown-item" to="/admins/adminalladmins">
                   Admins
                 </Link>
-                <Link class="dropdown-item" to="/admins/adddispatch">
+                <Link class="dropdown-item" to="/admins/adminalldispatch">
                   Dispatchers
                 </Link>
                 <Link class="dropdown-item" to="/admins/adminalldrivers">
