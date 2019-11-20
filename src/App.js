@@ -18,7 +18,6 @@ import Accountant from "./components/accountants/accountant";
 import LoadsAccountant from "./components/accountants/loadsaccountant";
 import AccountantDrivers from "./components/accountants/accountantdrivers";
 import AccountantDispatchers from "./components/accountants/accountantdispatchers";
-import AdminAllAccountants from "./components/admins/adminallaccountants";
 
 import Admin from "./components/admins/admin";
 import NavBar from "./components/admins/navbaradmin";
@@ -29,6 +28,8 @@ import AddDispatch from "./components/admins/adddispatch";
 import LoadsAdmin from "./components/admins/loadsadmin";
 import UsersAdmin from "./components/admins/usersadmin";
 import AdminAlldrivers from "./components/admins/adminalldrivers";
+import AdminAllAdmins from "./components/admins/adminalladmins";
+import AdminAllAccountants from "./components/admins/adminallaccountants";
 
 import DriverPayStubs from "./components/driver/driverpaystubs";
 import Card1 from "./components/driver/card1";
@@ -203,6 +204,7 @@ class App extends Allcomponents {
               component={AdminAllAccountants}
             />
             <Route path="/admins/adminalldrivers" component={AdminAlldrivers} />
+            <Route path="/admins/adminalladmins" component={AdminAllAdmins} />
 
             <Route path="/accountants/accountant" component={Accountant} />
             <Route
