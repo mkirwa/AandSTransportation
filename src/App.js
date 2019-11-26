@@ -4,6 +4,8 @@ import AppBar from "material-ui/AppBar";
 import TextField from "material-ui/TextField";
 import RaisedButton from "material-ui/RaisedButton";
 import { Route, Switch } from "react-router-dom";
+import LoginBox from "./components/login/loginbox";
+import RegisterBox from "./components/login/registerbox";
 
 import Loads from "./components/loads";
 import Users from "./components/users";
@@ -102,6 +104,10 @@ class App extends Allcomponents {
   constructor(props) {
     super(props);
     console.log("App-Constructor", this.props);
+    this.state = {
+      isLoginOpen: true,
+      isRegisterOpen: false
+    };
   }
 
   //2nd lifecycle hooks
@@ -175,6 +181,40 @@ class App extends Allcomponents {
 
     return (
       <React.Fragment>
+        <div className="box-container">
+          {this.state.isLoginOpen && <LoginBox />}
+          {this.state.isRegisterOpen && <RegisterBox />}
+        </div>
+
+        <div className="box-controller">
+          <div
+            className={
+              "controller " +
+              (this.state.isLoginOpen ? "selected-controller" : "")
+            }
+            onClick={this.showLoginBox.bind(this)}
+          >
+            Login
+          </div>
+          <div
+            className={
+              "controller " +
+              (this.state.isRegisterOpen ? "selected-controller" : "")
+            }
+            onClick={this.showRegisterBox.bind(this)}
+          >
+            Register
+          </div>
+        </div>
+
+        showLoginBox() {
+    this.setState({isLoginOpen: true, isRegisterOpen: false});
+  }
+
+  showRegisterBox() {
+    this.setState({isRegisterOpen: true, isLoginOpen: false});
+  }
+
         <main className="container">
           <Allcomponents
             counters={this.state.allcomponents}
