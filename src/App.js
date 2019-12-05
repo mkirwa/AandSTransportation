@@ -51,6 +51,7 @@ import Dispatchers from "./components/dispatchers";
 //import "../App.css";
 import AllAdmins from "./components/alladmins";
 import AdminAllDispatch from "./components/admins/adminalldispatch";
+import LoginPage from "./components/login/loginpage";
 
 class App extends Allcomponents {
   state = {
@@ -275,6 +276,8 @@ class App extends Allcomponents {
             <Route path="/driver/departurebol" component={DepartureBoL} />
             <Route path="/driver/arrivalbol" component={ArrivalBoL} />
             <Route path="/driver/driverloads" component={DriverLoads} />
+
+            <Route path="/login/loginpage" component={LoginPage} />
           </Switch>
         </div>
       </React.Fragment>
