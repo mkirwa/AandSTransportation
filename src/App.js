@@ -101,16 +101,6 @@ class App extends Allcomponents {
     this.props.nextStep();
   };
 
-  //1st lifecycle hooks
-  constructor(props) {
-    super(props);
-    console.log("App-Constructor", this.props);
-    this.state = {
-      isLoginOpen: true,
-      isRegisterOpen: false
-    };
-  }
-
   //2nd lifecycle hooks
   //called after the component is rendered into the DOM
   //this is the perfect place to make Ajax calls to get data from the server
@@ -182,32 +172,6 @@ class App extends Allcomponents {
 
     return (
       <React.Fragment>
-        <div className="box-container">
-          {this.state.isLoginOpen && <LoginBox />}
-          {this.state.isRegisterOpen && <RegisterBox />}
-        </div>
-
-        <div className="box-controller">
-          <div
-            className={
-              "controller " +
-              (this.state.isLoginOpen ? "selected-controller" : "")
-            }
-            onClick={this.showLoginBox.bind(this)}
-          >
-            Login
-          </div>
-          <div
-            className={
-              "controller " +
-              (this.state.isRegisterOpen ? "selected-controller" : "")
-            }
-            onClick={this.showRegisterBox.bind(this)}
-          >
-            Register
-          </div>
-        </div>
-
         <main className="container">
           <Allcomponents
             counters={this.state.allcomponents}
