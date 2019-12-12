@@ -23,7 +23,12 @@ class LoginBox extends React.Component {
   }
   render() {
     <div className="inner-container">
-      <div className="box"></div>
+      <div className="box">
+        <div className="input-group">
+          <label htmlFor="Username">Username</label>
+          <input type="text" name="username" placeholder="Username" />
+        </div>
+      </div>
     </div>;
   }
 }
