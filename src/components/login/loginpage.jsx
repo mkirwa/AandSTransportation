@@ -17,7 +17,19 @@ class LoginPage extends Component {
 }
 
 class LoginBox extends from React.Component{
-  
+
+  constructor(props){
+    super(props);
+    this.state={};
+  }
+  render(){
+    <div className="inner-container">
+      <div className="box">
+
+      </div>
+    </div>
+  }
+
 }
 
 export default LoginPage;
