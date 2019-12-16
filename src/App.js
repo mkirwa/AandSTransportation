@@ -164,6 +164,12 @@ class App extends Allcomponents {
     //be it firstName, lastName, whatever value is entered
     this.setState({ [input]: e.target.value });
   };
+  showLoginBox() {
+    this.setState({ isLoginOpen: true, isRegisterOpen: false });
+  }
+  showRegisterBox() {
+    this.setState({ isRegisterOpen: true, isLoginOpen: false });
+  }
 
   render() {
     //render method
