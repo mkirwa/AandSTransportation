@@ -171,6 +171,14 @@ class App extends Allcomponents {
     this.setState({ isRegisterOpen: true, isLoginOpen: false });
   }
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      isLoginOpen: true,
+      isRegisterOpen: false
+    };
+  }
+
   render() {
     //render method
     console.log("App-rendered");
@@ -186,6 +194,7 @@ class App extends Allcomponents {
             onDelete={this.handleDelete}
           />
         </main>
+        <div className="root-container"></div>
         <div className="content">
           <Switch>
             <Route path="/loads" component={Loads} />
