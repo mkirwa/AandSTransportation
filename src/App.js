@@ -194,6 +194,7 @@ class App extends Allcomponents {
             onDelete={this.handleDelete}
           />
         </main>
+
         <div className="root-container"></div>
         <div className="content">
           <Switch>
