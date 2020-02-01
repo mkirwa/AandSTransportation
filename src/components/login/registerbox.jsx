@@ -3,7 +3,7 @@ import React, { Component } from "react";
 class RegisterBox extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.setState = {};
   }
 
   submitRegister(e) {}
