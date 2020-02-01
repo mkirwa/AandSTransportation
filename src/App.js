@@ -173,7 +173,7 @@ class App extends Allcomponents {
 
   constructor(props) {
     super(props);
-    this.state = {
+    this.setState = {
       isLoginOpen: true,
       isRegisterOpen: false
     };
