@@ -48,7 +48,7 @@ import DispatchUsers from "./components/dispatchs/dispatchusers";
 import DispatchLoad from "./components/dispatchs/dispatchload";
 import Dispatchers from "./components/dispatchers";
 
-//import "../App.css";
+import "./App.css";
 import AllAdmins from "./components/alladmins";
 import AdminAllDispatch from "./components/admins/adminalldispatch";
 import LoginPage from "./components/login/loginpage";
@@ -165,10 +165,10 @@ class App extends Allcomponents {
     this.setState({ [input]: e.target.value });
   };
   showLoginBox() {
-    this.setState({ isLoginOpen: true, isRegisterOpen: false });
+    this.state({ isLoginOpen: true, isRegisterOpen: false }).bind(this);
   }
   showRegisterBox() {
-    this.setState({ isRegisterOpen: true, isLoginOpen: false });
+    this.state({ isRegisterOpen: true, isLoginOpen: false }).bind(this);
   }
 
   constructor(props) {
@@ -194,7 +194,30 @@ class App extends Allcomponents {
             onDelete={this.handleDelete}
           />
         </main>
-
+        <div className="box-controller">
+          <div
+            className={
+              "controller " +
+              (this.setState.isLoginOpen ? "selected-controller" : "")
+            }
+            onClick={this.showLoginBox.bind(this)}
+          >
+            Login
+          </div>
+          <div
+            className={
+              "controller " +
+              (this.setState.isRegisterOpen ? "selected-controller" : "")
+            }
+            onClick={this.showRegisterBox.bind(this)}
+          >
+            Register
+          </div>
+        </div>
+        <div className="box-container">
+          {this.setState.isLoginOpen && <LoginBox />}
+          {this.setState.isRegisterOpen && <RegisterBox />}
+        </div>
         <div className="root-container"></div>
         <div className="content">
           <Switch>
