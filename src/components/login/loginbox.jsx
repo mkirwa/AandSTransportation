@@ -31,15 +31,14 @@ class LoginBox extends React.Component {
               className="login-input"
               placeholder="Password"
             />
+            <button
+              type="button"
+              className="login-btn"
+              onClick={this.submitLogin.bind(this)}
+            >
+              Login
+            </button>
           </div>
-
-          <button
-            type="button"
-            className="login-btn"
-            onClick={this.submitLogin.bind(this)}
-          >
-            Login
-          </button>
         </div>
       </div>
     );

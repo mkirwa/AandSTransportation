@@ -32,7 +32,6 @@ import UsersAdmin from "./components/admins/usersadmin";
 import AdminAlldrivers from "./components/admins/adminalldrivers";
 import AdminAllAdmins from "./components/admins/adminalladmins";
 import AdminAllAccountants from "./components/admins/adminallaccountants";
-import Renderer from "./components/login/renderer";
 
 import DriverPayStubs from "./components/driver/driverpaystubs";
 import Card1 from "./components/driver/card1";
@@ -205,6 +204,7 @@ class App extends Allcomponents {
           >
             Login
           </div>
+
           <div
             className={
               "controller " +
@@ -282,7 +282,6 @@ class App extends Allcomponents {
             <Route path="/driver/driverloads" component={DriverLoads} />
 
             <Route path="/login/loginpage" component={LoginPage} />
-            <Route path="/login/renderer" component={Renderer} />
           </Switch>
         </div>
       </React.Fragment>
