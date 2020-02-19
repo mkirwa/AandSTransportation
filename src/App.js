@@ -167,16 +167,16 @@ class App extends Allcomponents {
 
   constructor(props) {
     super(props);
-    this.state = {
+    this.setState = {
       isLoginOpen: true,
       isRegisterOpen: false
     };
   }
   showLoginBox() {
-    this.state({ isLoginOpen: true, isRegisterOpen: false });
+    this.setState({ isLoginOpen: true, isRegisterOpen: false });
   }
   showRegisterBox() {
-    this.state({ isRegisterOpen: true, isLoginOpen: false });
+    this.setState({ isRegisterOpen: true, isLoginOpen: false });
   }
 
   render() {
