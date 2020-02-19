@@ -41,14 +41,14 @@ class RegisterBox extends React.Component {
               className="login-input"
               placeholder="Password"
             />
+            <button
+              type="button"
+              className="login-btn"
+              onClick={this.submitRegister.bind(this)}
+            >
+              Register
+            </button>
           </div>
-          <button
-            type="button"
-            className="login-btn"
-            onClick={this.submitRegister.bind(this)}
-          >
-            Register
-          </button>
         </div>
       </div>
     );

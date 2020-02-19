@@ -164,19 +164,19 @@ class App extends Allcomponents {
     //be it firstName, lastName, whatever value is entered
     this.setState({ [input]: e.target.value });
   };
-  showLoginBox() {
-    this.state({ isLoginOpen: true, isRegisterOpen: false }).bind(this);
-  }
-  showRegisterBox() {
-    this.state({ isRegisterOpen: true, isLoginOpen: false }).bind(this);
-  }
 
   constructor(props) {
     super(props);
-    this.setState = {
+    this.state = {
       isLoginOpen: true,
       isRegisterOpen: false
     };
+  }
+  showLoginBox() {
+    this.state({ isLoginOpen: true, isRegisterOpen: false });
+  }
+  showRegisterBox() {
+    this.state({ isRegisterOpen: true, isLoginOpen: false });
   }
 
   render() {
