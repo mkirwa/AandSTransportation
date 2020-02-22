@@ -6,8 +6,6 @@ class RegisterBox extends React.Component {
     this.setState = {};
   }
 
-  submitRegister(e) {}
-
   render() {
     return (
       <div className="inner-container">

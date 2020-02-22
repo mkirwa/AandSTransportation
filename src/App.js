@@ -10,7 +10,6 @@ import RegisterBox from "./components/login/registerbox";
 import Loads from "./components/loads";
 import Users from "./components/users";
 import AllDrivers from "./components/alldrivers";
-import Allcomponents from "./components/allcomponents";
 import FormSearch from "./components/formsearch";
 import UserForm from "./components/userforms/userform";
 import UsersForm from "./components/userforms/usersform";
@@ -53,7 +52,7 @@ import AllAdmins from "./components/alladmins";
 import AdminAllDispatch from "./components/admins/adminalldispatch";
 import LoginPage from "./components/login/loginpage";
 
-class App extends Allcomponents {
+class App extends React.Component {
   state = {
     //instead of hard coding all the counters in the render method
     //div section,
@@ -62,15 +61,6 @@ class App extends Allcomponents {
     //add a new property allcomponents
     // Use this to uniquely identify each
     //counter
-    allcomponents: [
-      //counter objects
-      //we use id to uniquely identify each counter
-      //value property sets the intial value for each counter
-      { id: 1, value: 4 },
-      { id: 2, value: 0 },
-      { id: 3, value: 0 },
-      { id: 4, value: 0 }
-    ],
     step: 1,
     firstName: "",
     lastName: "",
@@ -81,71 +71,8 @@ class App extends Allcomponents {
     companyName: ""
   };
 
-  //has a method to proceed to the next step
-  nextStep = () => {
-    const { step } = this.state;
-    this.setState({
-      step: step + 1
-    });
-  };
-
-  back = e => {
-    //prevent default
-    e.preventDefault();
-    this.props.prevStep();
-  };
-
-  continue = e => {
-    //prevent default
-    e.preventDefault();
-    this.props.nextStep();
-  };
-
-  //2nd lifecycle hooks
-  //called after the component is rendered into the DOM
-  //this is the perfect place to make Ajax calls to get data from the server
-
-  componentDidMount() {
-    //ajax call
-    console.log("App-Constructor", this.props);
-  }
-
-  handleIncrement = counter => {
-    //creating a new counters array and giving it
-    //to the set state method and have react update
-    //the state
-    //... this is the spread operator clones
-    //this.state.allcomponents
-    //with these, you will get a new array of counters
-    //the object in the new array(counters) are the same
-    //objects we have in allcomponents
-    const counters = [...this.state.allcomponents];
-    const index = counters.indexOf(counter);
-    counters[index] = { ...counter };
-    counters[index].value++;
-    this.setState({ allcomponents: counters });
-  };
-
-  handleReset = () => {
-    //this.state.allcomponents - this refers to the existing
-    //counters
-    //we use the map method to get each counter and reset
-    //its value to zero and then return it
-    //this give you a new array of counters
-    //You store them in counters.
-    //
-    const counters = this.state.allcomponents.map(c => {
-      c.value = 0;
-      return c;
-    });
-    //here you call this.setState with this new array
-    this.setState({ allcomponents: counters });
-  };
-
-  handleDelete = counterId => {
-    const counters = this.state.allcomponents.filter(c => c.id !== counterId);
-    this.setState({ allcomponents: counters });
-  };
+  submitRegister(e) {}
+  submitLogin(e) {}
 
   handleSubmit = event => {
     event.preventDefault();
@@ -186,14 +113,6 @@ class App extends Allcomponents {
 
     return (
       <React.Fragment>
-        <main className="container">
-          <Allcomponents
-            counters={this.state.allcomponents}
-            onReset={this.handleReset}
-            onIncrement={this.handleIncrement}
-            onDelete={this.handleDelete}
-          />
-        </main>
         <div className="box-controller">
           <div
             className={
@@ -204,7 +123,6 @@ class App extends Allcomponents {
           >
             Login
           </div>
-
           <div
             className={
               "controller " +

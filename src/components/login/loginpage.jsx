@@ -23,7 +23,6 @@ class LoginBox extends React.Component {
     this.state = {};
   }
 
-  submitLogin(e) {}
   render() {
     return (
       <div className="inner-container">
@@ -67,7 +66,6 @@ class RegisterBox extends React.Component {
     this.state = {};
   }
 
-  submitRegister(e) {}
   render() {
     return (
       <div className="inner-container">
