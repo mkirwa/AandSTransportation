@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+///check on how imports work in react!!Begin here tomorrow!!
+
 //import LoginBox from "./loginbox";
 //import RegisterBox from './registerbox';
 

@@ -93,20 +93,6 @@ class App extends React.Component {
     this.setState({ [input]: e.target.value });
   };
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      isLoginOpen: true,
-      isRegisterOpen: false
-    };
-  }
-  showLoginBox() {
-    this.setState({ isLoginOpen: true, isRegisterOpen: false });
-  }
-  showRegisterBox() {
-    this.setState({ isRegisterOpen: true, isLoginOpen: false });
-  }
-
   render() {
     //render method
     console.log("App-rendered");
@@ -114,31 +100,6 @@ class App extends React.Component {
 
     return (
       <React.Fragment>
-        <div className="box-controller">
-          <div
-            className={
-              "controller " +
-              (this.setState.isLoginOpen ? "selected-controller" : "")
-            }
-            onClick={this.showLoginBox.bind(this)}
-          >
-            Login
-          </div>
-          <div
-            className={
-              "controller " +
-              (this.setState.isRegisterOpen ? "selected-controller" : "")
-            }
-            onClick={this.showRegisterBox.bind(this)}
-          >
-            Register
-          </div>
-        </div>
-        <div className="box-container">
-          {this.setState.isLoginOpen && <LoginBox />}
-          {this.setState.isRegisterOpen && <RegisterBox />}
-        </div>
-        <div className="root-container"></div>
         <div className="content">
           <Switch>
             <Route path="/loads" component={Loads} />
