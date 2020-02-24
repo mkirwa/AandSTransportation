@@ -51,6 +51,7 @@ import "./App.css";
 import AllAdmins from "./components/alladmins";
 import AdminAllDispatch from "./components/admins/adminalldispatch";
 import LoginPage from "./components/login/loginpage";
+import { reactDOM } from "react-dom";
 
 class App extends React.Component {
   state = {
