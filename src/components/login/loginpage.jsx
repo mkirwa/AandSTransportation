@@ -3,14 +3,34 @@ import React, { Component } from "react";
 //import RegisterBox from './registerbox';
 
 class LoginPage extends Component {
-  state = {};
+  constructor(props) {
+    super(props);
+    this.state = {
+      isLoginOpen: true,
+      isRegisterOpen: false
+    };
+  }
+  showLoginBox() {
+    this.setState({ isLoginOpen: true, isRegisterOpen: false });
+  }
+  showRegisterBox() {
+    this.setState({ isRegisterOpen: true, isLoginOpen: false });
+  }
   render() {
     return (
       <div className="root-container">
         <div className="box-container">
           <div className="box-controller">
-            <div className="controller">Login</div>
-            <div className="controller">Register</div>
+            <div className="controller" onClick={this.showLoginBox.bind(this)}>
+              Login
+            </div>
+            <div className="controller" onClick={this.showLoginBox.bind(this)}>
+              Register
+            </div>
+          </div>
+          <div className="box-container">
+            {this.state.isLoginOpen && <LoginBox />}
+            {this.state.isRegisterOpen && <RegisterBox />}
           </div>
         </div>
       </div>
@@ -23,6 +43,9 @@ class LoginBox extends React.Component {
     super(props);
     this.state = {};
   }
+
+  //submitLogin(e)
+  submitLogin(e) {}
 
   render() {
     return (
@@ -66,7 +89,7 @@ class RegisterBox extends React.Component {
     super(props);
     this.state = {};
   }
-
+  submitRegister(e) {}
   render() {
     return (
       <div className="inner-container">
