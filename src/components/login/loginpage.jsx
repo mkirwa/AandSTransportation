@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./loginSty.scss";
+import "./App.css";
 ///check on how imports work in react!!Begin here tomorrow!!
 
 //import LoginBox from "./loginbox";
