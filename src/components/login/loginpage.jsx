@@ -3,6 +3,7 @@ import React, { Component } from "react";
 
 //import LoginBox from "./loginbox";
 //import RegisterBox from './registerbox';
+//switching from login to register is called toggle
 
 class LoginPage extends Component {
   constructor(props) {
@@ -55,7 +56,7 @@ class LoginBox extends React.Component {
         <div className="header">Login</div>
         <div className="box">
           <div className="input-group">
-            <label htmlFor="Username">Username</label>
+            <label htmlFor="Username">Usernames</label>
             <input
               type="text"
               name="username"
