@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./loginSty.scss";
 ///check on how imports work in react!!Begin here tomorrow!!
 
 //import LoginBox from "./loginbox";
@@ -32,7 +33,7 @@ class LoginPage extends Component {
             </div>
           </div>
           <div className="box-container">
-            {this.state.isLoginOpen && <LoginBox />}
+            {this.state.isLoginOpen && <LoginBoxs />}
             {this.state.isRegisterOpen && <RegisterBox />}
           </div>
         </div>
@@ -41,7 +42,7 @@ class LoginPage extends Component {
   }
 }
 
-class LoginBox extends React.Component {
+class LoginBoxs extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
@@ -56,7 +57,7 @@ class LoginBox extends React.Component {
         <div className="header">Login</div>
         <div className="box">
           <div className="input-group">
-            <label htmlFor="Username">Usernames</label>
+            <label htmlFor="Username">Username</label>
             <input
               type="text"
               name="username"
