@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import "./App.css";
 ///check on how imports work in react!!Begin here tomorrow!!
 
 //import LoginBox from "./loginbox";
