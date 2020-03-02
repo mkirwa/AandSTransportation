@@ -1,11 +1,13 @@
 import React, { Component } from "react";
 ///check on how imports work in react!!Begin here tomorrow!!
 
-//import LoginBox from "./loginbox";
+import LoginBox from "./loginbox";
+import RegisterBox from "./registerbox";
 //import RegisterBox from './registerbox';
+//import LoginPage from './loginpage';
 //switching from login to register is called toggle
 
-class LoginPage extends Component {
+class LoginPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -21,109 +23,28 @@ class LoginPage extends Component {
   }
   render() {
     return (
-      <div className="root-container">
-        <div className="box-container">
-          <div className="box-controller">
-            <div className="controller" onClick={this.showLoginBox.bind(this)}>
-              Login
-            </div>
-            <div className="controller" onClick={this.showLoginBox.bind(this)}>
-              Register
-            </div>
-          </div>
+      <div>
+        <div className="root-container">
           <div className="box-container">
-            {this.state.isLoginOpen && <LoginBoxs />}
-            {this.state.isRegisterOpen && <RegisterBox />}
+            <div className="box-controller">
+              <div
+                className="controller"
+                onClick={this.showLoginBox.bind(this)}
+              >
+                Login
+              </div>
+              <div
+                className="controller"
+                onClick={this.showRegisterBox.bind(this)}
+              >
+                Register
+              </div>
+            </div>
+            <div className="box-container">
+              {this.state.isLoginOpen && <LoginBox />}
+              {this.state.isRegisterOpen && <RegisterBox />}
+            </div>
           </div>
-        </div>
-      </div>
-    );
-  }
-}
-
-class LoginBoxs extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-
-  //submitLogin(e)
-  submitLogin(e) {}
-
-  render() {
-    return (
-      <div className="inner-container">
-        <div className="header">Login</div>
-        <div className="box">
-          <div className="input-group">
-            <label htmlFor="Username">Username</label>
-            <input
-              type="text"
-              name="username"
-              className="login-input"
-              placeholder="Username"
-            />
-          </div>
-          <div className="input-group">
-            <label htmlFor="Password">Password</label>
-            <input
-              type="password"
-              name="password"
-              className="login-input"
-              placeholder="Password"
-            />
-          </div>
-
-          <button
-            type="button"
-            className="login-btn"
-            onClick={this.submitLogin.bind(this)}
-          >
-            Login
-          </button>
-        </div>
-      </div>
-    );
-  }
-}
-
-class RegisterBox extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-  submitRegister(e) {}
-  render() {
-    return (
-      <div className="inner-container">
-        <div className="header">Register</div>
-        <div className="box">
-          <div className="input-group">
-            <label htmlFor="Username">Username</label>
-            <input
-              type="text"
-              name="username"
-              className="login-input"
-              placeholder="Username"
-            />
-          </div>
-          <div className="input-group">
-            <label htmlFor="Password">Password</label>
-            <input
-              type="password"
-              name="password"
-              className="login-input"
-              placeholder="Password"
-            />
-          </div>
-
-          <button
-            type="button"
-            className="login-btn"
-            onClick={this.submitRegister.bind(this)}
-          >
-            Register
-          </button>
         </div>
       </div>
     );
