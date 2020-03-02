@@ -102,7 +102,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: auto;
+  margin-top: 150px;
 }
 
 .login-label {
