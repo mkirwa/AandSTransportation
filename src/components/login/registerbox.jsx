@@ -1,10 +1,32 @@
 import React, { Component } from "react";
 
 class RegisterBox extends React.Component {
+  usertypes = {
+    //instead of hard coding all the counters in the render method
+    //div section,
+    //just use an array instead and render them using the map method
+    //array will have counter objects
+    //add a new property allcomponents
+    // Use this to uniquely identify each
+    //counter
+    step: 1,
+    label: "Driver",
+
+    step: 2,
+    label: "Admin",
+
+    step: 3,
+    label: "Dispatch",
+
+    step: 4,
+    label: "Accountant"
+  };
+
   constructor(props) {
     super(props);
     this.setState = {};
   }
+
   submitRegister(e) {}
 
   render() {
@@ -21,6 +43,7 @@ class RegisterBox extends React.Component {
               placeholder="Company Code"
             />
           </div>
+
           <div className="input-group">
             <label htmlFor="RandomGeneratedCode">Random Generated Code</label>
             <input
