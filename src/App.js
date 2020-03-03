@@ -52,6 +52,8 @@ import AllAdmins from "./components/alladmins";
 import AdminAllDispatch from "./components/admins/adminalldispatch";
 import LoginPage from "./components/login/loginpage";
 import { reactDOM } from "react-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Select from "react-select";
 
 class App extends React.Component {
   state = {

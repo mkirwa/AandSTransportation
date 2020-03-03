@@ -1,26 +1,22 @@
 import React, { Component } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Select from "react-select";
+
+const usertypes = [
+  { label: "Driver", value: 1 },
+  { label: "Admin", value: 2 },
+  { label: "Accountant", value: 3 },
+  { label: "Dispatch", value: 4 }
+];
 
 class RegisterBox extends React.Component {
-  usertypes = {
-    //instead of hard coding all the counters in the render method
-    //div section,
-    //just use an array instead and render them using the map method
-    //array will have counter objects
-    //add a new property allcomponents
-    // Use this to uniquely identify each
-    //counter
-    step: 1,
-    label: "Driver",
-
-    step: 2,
-    label: "Admin",
-
-    step: 3,
-    label: "Dispatch",
-
-    step: 4,
-    label: "Accountant"
-  };
+  //instead of hard coding all the counters in the render method
+  //div section,
+  //just use an array instead and render them using the map method
+  //array will have counter objects
+  //add a new property allcomponents
+  // Use this to uniquely identify each
+  //counter
 
   constructor(props) {
     super(props);
@@ -53,6 +49,11 @@ class RegisterBox extends React.Component {
               placeholder="Random Generated Code"
             />
           </div>
+
+          <div className="input-group">
+            <Select options={usertypes} />
+          </div>
+
           <div className="input-group">
             <label htmlFor="username">Username</label>
             <input
@@ -76,7 +77,7 @@ class RegisterBox extends React.Component {
           <div className="input-group">
             <label htmlFor="password">Password</label>
             <input
-              type="text"
+              type="password"
               name="password"
               className="login-input"
               placeholder="Password"
@@ -89,7 +90,7 @@ class RegisterBox extends React.Component {
               type="password"
               name="password"
               className="login-input"
-              placeholder="Password"
+              placeholder="Confirm Password"
             />
             <button
               type="button"
