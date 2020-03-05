@@ -74,9 +74,6 @@ class App extends React.Component {
     companyName: ""
   };
 
-  //submitRegister(e) {}
-  // submitLogin(e) {}
-
   handleSubmit = event => {
     event.preventDefault();
     const data = this.state;

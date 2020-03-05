@@ -15,6 +15,7 @@ class LoginPage extends React.Component {
       isRegisterOpen: false
     };
   }
+  submitLogin(e) {}
   showLoginBox() {
     this.setState({ isLoginOpen: true, isRegisterOpen: false });
   }

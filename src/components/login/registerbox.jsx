@@ -18,11 +18,6 @@ class RegisterBox extends React.Component {
   // Use this to uniquely identify each
   //counter
 
-  constructor(props) {
-    super(props);
-    this.setState = {};
-  }
-
   submitRegister(e) {}
 
   render() {
