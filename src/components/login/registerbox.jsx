@@ -36,16 +36,6 @@ class RegisterBox extends React.Component {
           </div>
 
           <div className="input-group">
-            <label htmlFor="RandomGeneratedCode">Random Generated Code</label>
-            <input
-              type="text"
-              name="RandomGeneratedCode"
-              className="login-input"
-              placeholder="Random Generated Code"
-            />
-          </div>
-
-          <div className="input-group">
             <Select options={usertypes} />
           </div>
 
