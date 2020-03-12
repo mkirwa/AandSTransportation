@@ -94,7 +94,6 @@ class UserForm extends Component {
           <Confirm
             nextStep={this.nextStep}
             prevStep={this.prevStep}
-            handleChange={this.handleChange}
             values={values}
             styles={styles}
           />
