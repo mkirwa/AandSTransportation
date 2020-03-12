@@ -5,6 +5,10 @@ import TextField from "material-ui/TextField";
 import RaisedButton from "material-ui/RaisedButton";
 
 class FormUserDetails extends Component {
+  continue = e => {
+    e.preventDefault();
+    this.props.nextStep();
+  };
   render() {
     //pulling values from the props in continue
     //doing this so you can use values as a variable
