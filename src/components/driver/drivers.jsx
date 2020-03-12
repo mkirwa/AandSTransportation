@@ -12,7 +12,7 @@ class Drivers extends Component {
         <div style={style}>
           <h4>Driver Details</h4>
         </div>
-        <FormPersonalDetails />
+        <UserForm />
       </div>
     );
   }

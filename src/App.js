@@ -99,8 +99,6 @@ class App extends React.Component {
 
     return (
       <React.Fragment>
-        <UserForm />
-
         <div className="content">
           <Switch>
             <Route path="/loads" component={Loads} />
