@@ -7,6 +7,8 @@ import RaisedButton from "material-ui/RaisedButton";
 class FormUserDetails extends Component {
   continue = e => {
     e.preventDefault();
+    //this is where we will process our forms
+    //send the data to the back end platform firebase php blah blah blha
     this.props.nextStep();
   };
   render() {

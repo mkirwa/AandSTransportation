@@ -43,7 +43,8 @@ class UserForm extends Component {
     this.setState({ [input]: e.target.value });
   };
 
-  //figure out what step we are on and depending on what step we are on
+  //figure out what
+  //step we are on and depending on what step we are on
   //that's going to decide on which component we want to display
   render() {
     //pull the step out of the state by destructuring
