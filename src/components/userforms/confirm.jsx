@@ -23,44 +23,72 @@ class Confirm extends Component {
     //pulling values from the props in continue
     //doing this so you can use values as a variable
     const {
-      values: { firstName, lastName, email, occupation, city, bio }
+      values: {
+        firstName,
+        lastName,
+        streetAddress,
+        email,
+        apt,
+        city,
+        state,
+        zipCode,
+        sSN,
+        drivingLicense,
+        age
+      }
     } = this.props;
     return (
-      <MuiThemeProvider>
-        <React.Fragment>
-          <AppBar title="Confirm User Data" />
-          <List>
-            <ListItem primaryText="First Name" secondaryText={firstName} />
-            <ListItem primaryText="Last Name" secondaryText={lastName} />
-            <ListItem primaryText="Email" secondaryText={email} />
-            <ListItem primaryText="Occupation" secondaryText={occupation} />
-            <ListItem primaryText="City" secondaryText={city} />
-            <ListItem primaryText="Bio" secondaryText={bio} />
-          </List>
+      <div className="box-container">
+        <MuiThemeProvider>
+          <React.Fragment>
+            <div className="header">Confirm User Data</div>
+            <List>
+              <ListItem primaryText="First Name" secondaryText={firstName} />
+              <ListItem primaryText="Last Name" secondaryText={lastName} />
+              <ListItem primaryText="Email" secondaryText={email} />
+              <ListItem
+                primaryText="Street Address"
+                secondaryText={streetAddress}
+              />
+              <ListItem primaryText="Apartment" secondaryText={apt} />
+              <ListItem primaryText="City" secondaryText={city} />
+              <ListItem primaryText="State" secondaryText={state} />
+              <ListItem primaryText="zipCode" secondaryText={zipCode} />
+              <ListItem
+                primaryText="Social Security Number"
+                secondaryText={sSN}
+              />
+              <ListItem
+                primaryText="Driving License"
+                secondaryText={drivingLicense}
+              />
+              <ListItem primaryText="Age" secondaryText={age} />
+            </List>
 
-          <br />
-          <RaisedButton
-            label="Confirm & Continue"
-            //makes the button blue
-            primary={true}
-            style={styles.button}
-            //we put contiue up above and what contiunue does
-            //is call the next step of userForm and we do that through
-            //props
-            onClick={this.continue}
-          />
-          <RaisedButton
-            label="Back"
-            //makes the button a white
-            primary={false}
-            style={styles.button}
-            //we put contiue up above and what contiunue does
-            //is call the next step of userForm and we do that through
-            //props
-            onClick={this.back}
-          />
-        </React.Fragment>
-      </MuiThemeProvider>
+            <br />
+            <RaisedButton
+              label="Confirm & Continue"
+              //makes the button blue
+              primary={true}
+              style={styles.button}
+              //we put contiue up above and what contiunue does
+              //is call the next step of userForm and we do that through
+              //props
+              onClick={this.continue}
+            />
+            <RaisedButton
+              label="Back"
+              //makes the button a white
+              primary={false}
+              style={styles.button}
+              //we put contiue up above and what contiunue does
+              //is call the next step of userForm and we do that through
+              //props
+              onClick={this.back}
+            />
+          </React.Fragment>
+        </MuiThemeProvider>
+      </div>
     );
   }
 }

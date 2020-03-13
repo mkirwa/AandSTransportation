@@ -5,15 +5,19 @@ import AppBar from "material-ui/AppBar";
 class Success extends Component {
   render() {
     return (
-      <MuiThemeProvider>
-        <React.Fragment>
-          <AppBar title="Success" />
-          <h1>Thank Your Submission</h1>
-          <p>You will get an email with further instruction</p>
-        </React.Fragment>
-      </MuiThemeProvider>
+      <div className="box-container">
+        <MuiThemeProvider>
+          <React.Fragment>
+            <div className="header">Success !</div>
+          </React.Fragment>
+        </MuiThemeProvider>
+      </div>
     );
   }
 }
-
+const style = {
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center"
+};
 export default Success;
