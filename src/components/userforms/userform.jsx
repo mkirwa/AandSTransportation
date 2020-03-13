@@ -11,9 +11,14 @@ class UserForm extends Component {
     firstName: "",
     lastName: "",
     email: "",
-    occupation: "",
+    streetAddress: "",
+    apt: "",
     city: "",
-    bio: ""
+    state: "",
+    zipCode: "",
+    sSN: "",
+    drivingLicense: "",
+    age: ""
   };
 
   //has a method to proceed to the next step
@@ -49,10 +54,34 @@ class UserForm extends Component {
   render() {
     //pull the step out of the state by destructuring
     const { step } = this.state;
-    const { firstName, lastName, email, occupation, city, bio } = this.state;
+    const {
+      firstName,
+      lastName,
+      streetAddress,
+      email,
+      apt,
+      city,
+      state,
+      zipCode,
+      sSN,
+      drivingLicense,
+      age
+    } = this.state;
     //this is how we can pass the values into the components and
     //render them into the inputs
-    const values = { firstName, lastName, email, occupation, city, bio };
+    const values = {
+      firstName,
+      lastName,
+      streetAddress,
+      email,
+      apt,
+      city,
+      state,
+      zipCode,
+      sSN,
+      drivingLicense,
+      age
+    };
 
     //we are making a case for each number so we use a switch instead
     //of return
