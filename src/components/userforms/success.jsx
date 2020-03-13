@@ -8,7 +8,7 @@ class Success extends Component {
       <div className="box-container">
         <MuiThemeProvider>
           <React.Fragment>
-            <div className="header">Success !</div>
+            <div className="header">Success!</div>
           </React.Fragment>
         </MuiThemeProvider>
       </div>
