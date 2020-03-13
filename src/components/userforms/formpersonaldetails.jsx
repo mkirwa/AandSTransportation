@@ -28,7 +28,7 @@ class FormPersonalDetails extends Component {
               //everytime we type in it, it will fire off an event
               //of onChange.....You will have firstName in brackets coz
               //handleChange takes in an input
-              onChange={this.handleChange("streetAddress")}
+              onChange={handleChange("streetAddress")}
               defaultValue={values.streetAddress}
             />
           </div>
@@ -41,7 +41,7 @@ class FormPersonalDetails extends Component {
               //everytime we type in it, it will fire off an event
               //of onChange.....You will have firstName in brackets coz
               //handleChange takes in an input
-              onChange={this.handleChange("apt")}
+              onChange={handleChange("apt")}
               defaultValue={values.apt}
             />
           </div>
@@ -54,7 +54,7 @@ class FormPersonalDetails extends Component {
               //everytime we type in it, it will fire off an event
               //of onChange.....You will have firstName in brackets coz
               //handleChange takes in an input
-              onChange={this.handleChange("city")}
+              onChange={handleChange("city")}
               defaultValue={values.city}
             />
           </div>
@@ -67,7 +67,7 @@ class FormPersonalDetails extends Component {
               //everytime we type in it, it will fire off an event
               //of onChange.....You will have firstName in brackets coz
               //handleChange takes in an input
-              onChange={this.handleChange("state")}
+              onChange={handleChange("state")}
               defaultValue={values.state}
             />
           </div>
@@ -79,7 +79,7 @@ class FormPersonalDetails extends Component {
               //everytime we type in it, it will fire off an event
               //of onChange.....You will have firstName in brackets coz
               //handleChange takes in an input
-              onChange={this.handleChange("zipCode")}
+              onChange={handleChange("zipCode")}
               defaultValue={values.zipCode}
             />
           </div>
@@ -92,7 +92,7 @@ class FormPersonalDetails extends Component {
               //everytime we type in it, it will fire off an event
               //of onChange.....You will have firstName in brackets coz
               //handleChange takes in an input
-              onChange={this.handleChange("sSN")}
+              onChange={handleChange("sSN")}
               defaultValue={values.sSN}
             />
           </div>
@@ -105,7 +105,7 @@ class FormPersonalDetails extends Component {
               //everytime we type in it, it will fire off an event
               //of onChange.....You will have firstName in brackets coz
               //handleChange takes in an input
-              onChange={this.handleChange("drivingLicense")}
+              onChange={handleChange("drivingLicense")}
               defaultValue={values.drivingLicense}
             />
           </div>
@@ -118,7 +118,7 @@ class FormPersonalDetails extends Component {
               //everytime we type in it, it will fire off an event
               //of onChange.....You will have firstName in brackets coz
               //handleChange takes in an input
-              onChange={this.handleChange("age")}
+              onChange={handleChange("age")}
               defaultValue={values.age}
             />
           </div>
