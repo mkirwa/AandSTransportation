@@ -80,10 +80,6 @@ class NavBarDriver extends Component {
             </li>
           </ul>
         </div>
-        <FormSearch
-          handleSubmit={this.handleSubmit}
-          handleInputChange={this.handleInputChange}
-        />
       </nav>
     );
   }
