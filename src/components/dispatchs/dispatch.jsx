@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 import DispatchNavbar from "./dispatchnavbar";
-import Users from "../users";
+import UserForm from "../userforms/userform";
 
 class Dispatch extends Component {
   render() {
     return (
       <div>
         <DispatchNavbar />
-        <Users />
+        <UserForm />
       </div>
     );
   }
