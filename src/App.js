@@ -74,6 +74,19 @@ class App extends React.Component {
     companyName: ""
   };
 
+  authListener() {
+    fire.auth().onAuthStateChanged(user => {
+      console.log(user);
+      if (user) {
+        this.setState({ user });
+        localStorage.setItem("user", user.id);
+      } else {
+        this.setState({ user: null });
+        localStorage.removeItem("user");
+      }
+    });
+  }
+
   handleSubmit = event => {
     event.preventDefault();
     const data = this.state;
