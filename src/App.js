@@ -55,6 +55,8 @@ import { reactDOM } from "react-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Select from "react-select";
 
+import fire from "./config/fire";
+
 class App extends React.Component {
   state = {
     //instead of hard coding all the counters in the render method
