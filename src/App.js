@@ -72,6 +72,7 @@ class App extends React.Component {
     email: "",
     occupation: "",
     city: "",
+
     bio: "",
     companyName: ""
   };
@@ -83,7 +84,9 @@ class App extends React.Component {
     };
   }
 
-  componentDidMount() {}
+  componentDidMount() {
+    this.authListener();
+  }
 
   authListener() {
     fire.auth().onAuthStateChanged(user => {
