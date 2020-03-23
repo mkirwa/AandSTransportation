@@ -88,6 +88,9 @@ class App extends React.Component {
     };
   }
 
+  //This method is available after the HTML from the render
+  //has finished loading. component mounted and available to
+  //the DOM...authListener is called after the component has mounted
   componentDidMount() {
     this.authListener();
   }
@@ -135,6 +138,10 @@ class App extends React.Component {
     return (
       <React.Fragment>
         <div className="content">
+          {
+            //check if the user is signed in if not take them to sign up page
+          }
+          {this.state.user ? <Drivers /> : <LoginPage />}
           <Switch>
             <Route path="/loads" component={Loads} />
             <Route path="/alladmins" component={AllAdmins} />
