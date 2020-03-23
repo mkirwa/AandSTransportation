@@ -77,7 +77,11 @@ class App extends React.Component {
     companyName: ""
   };
 
+  //calling constructor to bind event handlers to the
+  //component and initilize the local state of the component
   constructor(props) {
+    //taking a props value from the constructor and passing it
+    //to the super() method
     super(props);
     this.state = {
       user: {}
@@ -88,6 +92,10 @@ class App extends React.Component {
     this.authListener();
   }
 
+  //authentication listener
+  //Gets invoked in the UI threads on changes in the authentication
+  //state... When a user is signed in, current user is signed out
+  //when the current user changes
   authListener() {
     fire.auth().onAuthStateChanged(user => {
       //console.log(user);
