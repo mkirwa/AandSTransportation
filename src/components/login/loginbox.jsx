@@ -16,6 +16,8 @@ class LoginBox extends React.Component {
           <div className="input-group">
             <label htmlFor="username">Username</label>
             <input
+              value={this.state.username}
+              onChange={this.handleChange}
               type="text"
               name="username"
               className="login-input"
@@ -26,6 +28,8 @@ class LoginBox extends React.Component {
           <div className="input-group">
             <label htmlFor="password">Password</label>
             <input
+              value={this.state.password}
+              onChange={this.handleChange}
               type="password"
               name="password"
               className="login-input"

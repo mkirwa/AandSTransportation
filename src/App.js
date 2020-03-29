@@ -137,12 +137,12 @@ class App extends React.Component {
 
     return (
       <React.Fragment>
-        <div className="App">
+        
           {
             //check if the user is signed in if not take them to sign up page
           }
           {this.state.user ? <Drivers /> : <LoginPage />}
-        </div>
+       
         <div className="content">
           <Switch>
             <Route path="/loads" component={Loads} />
