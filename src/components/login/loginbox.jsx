@@ -8,6 +8,10 @@ class LoginBox extends React.Component {
 
   submitLogin(e) {}
 
+  handleChange(e) {
+    this.setState({ [e.target.name]: e.target.value });
+  }
+
   render() {
     return (
       <div className="inner-container">
