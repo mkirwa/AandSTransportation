@@ -4,6 +4,8 @@ import fire from "../../config/fire";
 class LoginBox extends React.Component {
   constructor(props) {
     super(props);
+    this.submitLogin = this.submitLogin.bind(this);
+    this.handleChange = this.handleChange.bind(this);
     this.state = {};
   }
 
