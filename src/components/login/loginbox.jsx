@@ -9,7 +9,13 @@ class LoginBox extends React.Component {
 
   submitLogin(e) {
     e.preventDefault();
-    fire.auth;
+    fire
+      .auth()
+      .signInWithEmailAndPassword(this.state.email, this.state.password)
+      .then((u) => {})
+      .catch((error) => {
+        console.log(error);
+      });
   }
 
   handleChange(e) {
