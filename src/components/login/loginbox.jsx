@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import fire from "../../config/fire";
 
 class LoginBox extends React.Component {
   constructor(props) {
@@ -6,7 +7,10 @@ class LoginBox extends React.Component {
     this.state = {};
   }
 
-  submitLogin(e) {}
+  submitLogin(e) {
+    e.preventDefault();
+    fire.auth;
+  }
 
   handleChange(e) {
     this.setState({ [e.target.name]: e.target.value });
