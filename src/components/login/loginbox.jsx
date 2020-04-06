@@ -6,7 +6,10 @@ class LoginBox extends React.Component {
     super(props);
     this.submitLogin = this.submitLogin.bind(this);
     this.handleChange = this.handleChange.bind(this);
-    this.state = {};
+    this.state = {
+      username: "",
+      passowrd: "",
+    };
   }
 
   submitLogin(e) {
