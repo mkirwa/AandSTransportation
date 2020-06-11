@@ -55,7 +55,7 @@ import { reactDOM } from "react-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Select from "react-select";
 
-import fire from "./config/fire";
+import firebase from "./config/firebase";
 
 class App extends React.Component {
   state = {
@@ -74,7 +74,7 @@ class App extends React.Component {
     city: "",
 
     bio: "",
-    companyName: ""
+    companyName: "",
   };
 
   //calling constructor to bind event handlers to the
@@ -84,7 +84,7 @@ class App extends React.Component {
     //to the super() method
     super(props);
     this.state = {
-      user: {}
+      user: {},
     };
   }
 
@@ -100,7 +100,7 @@ class App extends React.Component {
   //state... When a user is signed in, current user is signed out
   //when the current user changes
   authListener() {
-    fire.auth().onAuthStateChanged(user => {
+    firebase.auth().onAuthStateChanged((user) => {
       //console.log(user);
       if (user) {
         this.setState({ user });
@@ -112,17 +112,17 @@ class App extends React.Component {
     });
   }
 
-  handleSubmit = event => {
+  handleSubmit = (event) => {
     event.preventDefault();
     const data = this.state;
   };
 
-  handleInputChange = event => {
+  handleInputChange = (event) => {
     event.preventDefault();
     this.setState({ [event.target.name]: event.target.value });
   };
 
-  handleChange = input => e => {
+  handleChange = (input) => (e) => {
     //take whatever the input is
     //set it to whatever the value is
     //we can get that using the event parameter and using target.value
@@ -137,12 +137,11 @@ class App extends React.Component {
 
     return (
       <React.Fragment>
-        
-          {
-            //check if the user is signed in if not take them to sign up page
-          }
-          {this.state.user ? <Drivers /> : <LoginPage />}
-       
+        {
+          //check if the user is signed in if not take them to sign up page
+        }
+        {this.state.user ? <Drivers /> : <LoginPage />}
+
         <div className="content">
           <Switch>
             <Route path="/loads" component={Loads} />

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import fire from "../../config/fire";
+import firebase from "../../config/firebase";
 
 class LoginBox extends React.Component {
   constructor(props) {
@@ -7,14 +7,14 @@ class LoginBox extends React.Component {
     this.submitLogin = this.submitLogin.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.state = {
-      username: "",
-      passowrd: "",
+      email: "",
+      password: "",
     };
   }
 
-  submitLogin(e) {
-    e.preventDefault();
-    fire
+  submitLogin(event) {
+    event.preventDefault();
+    firebase
       .auth()
       .signInWithEmailAndPassword(this.state.email, this.state.password)
       .then((u) => {})
@@ -23,8 +23,8 @@ class LoginBox extends React.Component {
       });
   }
 
-  handleChange(e) {
-    this.setState({ [e.target.name]: e.target.value });
+  handleChange(event) {
+    this.setState({ [event.target.name]: event.target.value });
   }
 
   render() {
