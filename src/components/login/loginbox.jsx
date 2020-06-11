@@ -12,8 +12,8 @@ class LoginBox extends React.Component {
     };
   }
 
-  submitLogin(event) {
-    event.preventDefault();
+  submitLogin(e) {
+    e.preventDefault();
     firebase
       .auth()
       .signInWithEmailAndPassword(this.state.email, this.state.password)
@@ -23,8 +23,8 @@ class LoginBox extends React.Component {
       });
   }
 
-  handleChange(event) {
-    this.setState({ [event.target.name]: event.target.value });
+  handleChange(e) {
+    this.setState({ [e.target.name]: e.target.value });
   }
 
   render() {
@@ -35,6 +35,8 @@ class LoginBox extends React.Component {
           <div className="input-group">
             <label htmlFor="username">Username</label>
             <input
+              //this is where the problem is. Should not be username
+              //but email.
               value={this.state.username}
               onChange={this.handleChange}
               type="text"
