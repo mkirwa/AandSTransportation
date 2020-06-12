@@ -91,7 +91,7 @@ class NavBarDriver extends Component {
             </li>
           </ul>
         </div>
-        <button type="button" onClick={() => this.signOutUser()}>
+        <button type="button" onClick={this.submitLogin.bind(this)}>
           Sign Out
         </button>
       </nav>
