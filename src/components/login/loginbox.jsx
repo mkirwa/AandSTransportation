@@ -33,14 +33,14 @@ class LoginBox extends React.Component {
         <div className="header">Login</div>
         <div className="box">
           <div className="input-group">
-            <label htmlFor="username">Username</label>
+            <label htmlFor="email">Email</label>
             <input
               //this is where the problem is. Should not be username
               //but email.
-              value={this.state.username}
+              value={this.state.email}
               onChange={this.handleChange}
               type="text"
-              name="username"
+              name="email"
               className="login-input"
               placeholder="Username"
             />
