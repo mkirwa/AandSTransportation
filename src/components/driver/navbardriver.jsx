@@ -80,6 +80,9 @@ class NavBarDriver extends Component {
             </li>
           </ul>
         </div>
+        <button type="button" className="logout-btn">
+          Sign Out
+        </button>
       </nav>
     );
   }
