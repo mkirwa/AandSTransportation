@@ -2,8 +2,19 @@ import React, { Component } from "react";
 import FormSearch from "../formsearch";
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import firebase from "../../config/firebase";
 
 class NavBarDriver extends Component {
+  submitLogout(e) {
+    e.preventDefault();
+    firebase
+      .auth()
+      .signOut()
+      .catch((error) => {
+        console.log(error);
+      });
+  }
+
   render() {
     return (
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark ">
@@ -80,7 +91,7 @@ class NavBarDriver extends Component {
             </li>
           </ul>
         </div>
-        <button type="button" className="logout-btn">
+        <button type="button" onClick={() => this.signOutUser()}>
           Sign Out
         </button>
       </nav>
