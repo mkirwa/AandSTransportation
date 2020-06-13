@@ -5,7 +5,7 @@ import TextField from "material-ui/TextField";
 import RaisedButton from "material-ui/RaisedButton";
 
 class FormUserDetails extends Component {
-  continue = e => {
+  continue = (e) => {
     e.preventDefault();
     //this is where we will process our forms
     //send the data to the back end platform firebase php blah blah blha
@@ -73,14 +73,14 @@ class FormUserDetails extends Component {
 
 const styles = {
   button: {
-    margin: 15
-  }
+    margin: 15,
+  },
 };
 
 const style = {
   display: "flex",
   justifyContent: "center",
-  alignItems: "center"
+  alignItems: "center",
 };
 
 export default FormUserDetails;

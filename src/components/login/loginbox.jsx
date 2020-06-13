@@ -42,7 +42,7 @@ class LoginBox extends React.Component {
               type="text"
               name="email"
               className="login-input"
-              placeholder="Username"
+              placeholder="johndoe@mail.com"
             />
           </div>
 

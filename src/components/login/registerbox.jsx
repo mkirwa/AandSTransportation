@@ -6,7 +6,7 @@ const usertypes = [
   { label: "Driver", value: 1 },
   { label: "Admin", value: 2 },
   { label: "Accountant", value: 3 },
-  { label: "Dispatch", value: 4 }
+  { label: "Dispatch", value: 4 },
 ];
 
 class RegisterBox extends React.Component {
@@ -37,16 +37,6 @@ class RegisterBox extends React.Component {
 
           <div className="input-group">
             <Select options={usertypes} />
-          </div>
-
-          <div className="input-group">
-            <label htmlFor="username">Username</label>
-            <input
-              type="text"
-              name="username"
-              className="login-input"
-              placeholder="Username"
-            />
           </div>
 
           <div className="input-group">
