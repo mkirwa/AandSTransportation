@@ -4,17 +4,43 @@ import AppBar from "material-ui/AppBar";
 import TextField from "material-ui/TextField";
 import RaisedButton from "material-ui/RaisedButton";
 
+const handleChange = (firstName) => (event) => {
+  setValues({ ...values, [firstName]: event.target.value });
+};
+
+const [values, setValues] = React.useState({
+  firstName: "",
+});
+
 class FormUserDetails extends Component {
+  handleValidation = () => {
+    const {
+      firstName,
+      lastName,
+      streetAddress,
+      email,
+      apt,
+      city,
+      state,
+      zipCode,
+      sSN,
+      drivingLicense,
+      age,
+    } = this.state;
+  };
+
   continue = (e) => {
     e.preventDefault();
     //this is where we will process our forms
     //send the data to the back end platform firebase php blah blah blha
     this.props.nextStep();
   };
+
   render() {
     //pulling values from the props in continue
     //doing this so you can use values as a variable
-    const { values, handleChange } = this.props;
+    //const { values, handleChange, errors } = this.props;
+    const error = values.firstName !== "a";
     return (
       <div className="box-container">
         <MuiThemeProvider>
@@ -28,6 +54,8 @@ class FormUserDetails extends Component {
                 //of onChange.....You will have firstName in brackets coz
                 //handleChange takes in an input
                 onChange={handleChange("firstName")}
+                helperText={error ? "Name needs to be 'a'" : "Perfect!"}
+                error={error}
                 defaultValue={values.firstName}
               />
             </div>
