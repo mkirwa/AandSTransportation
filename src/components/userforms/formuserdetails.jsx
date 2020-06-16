@@ -3,14 +3,7 @@ import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import AppBar from "material-ui/AppBar";
 import TextField from "material-ui/TextField";
 import RaisedButton from "material-ui/RaisedButton";
-
-const handleChange = (firstName) => (event) => {
-  setValues({ ...values, [firstName]: event.target.value });
-};
-
-const [values, setValues] = React.useState({
-  firstName: "",
-});
+import makeStyles from "@material-ui/core/styles";
 
 class FormUserDetails extends Component {
   handleValidation = () => {
@@ -39,24 +32,27 @@ class FormUserDetails extends Component {
   render() {
     //pulling values from the props in continue
     //doing this so you can use values as a variable
-    //const { values, handleChange, errors } = this.props;
-    const error = values.firstName !== "a";
+    const { values, handleChange, errors } = this.props;
+
     return (
       <div className="box-container">
         <MuiThemeProvider>
           <React.Fragment>
             <div style={style}>
               <TextField
+                error
+                id="filled-error-helper-text"
+                label="error"
                 hintText="Enter Your First Name"
                 floatingLabelText="First Name"
                 //How react works, everytime the textfield changes
                 //everytime we type in it, it will fire off an event
                 //of onChange.....You will have firstName in brackets coz
                 //handleChange takes in an input
+
                 onChange={handleChange("firstName")}
-                helperText={error ? "Name needs to be 'a'" : "Perfect!"}
-                error={error}
                 defaultValue={values.firstName}
+                HelperText="Incorrect entry"
               />
             </div>
 
