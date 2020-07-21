@@ -73,10 +73,6 @@ class FormPersonalDetails extends Component {
               <TextField
                 placeholder="Zip Code"
                 label="Zip Code"
-                //How react works, everytime the textfield changes
-                //everytime we type in it, it will fire off an event
-                //of onChange.....You will have firstName in brackets coz
-                //handleChange takes in an input
                 onChange={handleChange("zipCode")}
                 defaultValue={values.zipCode}
                 margin="normal"
@@ -88,10 +84,6 @@ class FormPersonalDetails extends Component {
               <TextField
                 placeholder="444-99-6666"
                 label="Social Security Number"
-                //How react works, everytime the textfield changes
-                //everytime we type in it, it will fire off an event
-                //of onChange.....You will have firstName in brackets coz
-                //handleChange takes in an input
                 onChange={handleChange("sSN")}
                 defaultValue={values.sSN}
                 margin="normal"
