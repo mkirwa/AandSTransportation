@@ -109,8 +109,6 @@ class Confirm extends Component {
                 <Button
                   color="secondary"
                   variant="contained"
-                  //makes the button a white
-
                   //style={styles.button}
                   //we put contiue up above and what contiunue does
                   //is call the next step of userForm and we do that through
