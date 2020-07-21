@@ -2,7 +2,7 @@ import React from "react";
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import AppBar from "material-ui/AppBar";
 import TextField from "material-ui/TextField";
-import RaisedButton from "material-ui/RaisedButton";
+//import RaisedButton from "material-ui/RaisedButton";
 import { Route, Switch } from "react-router-dom";
 import LoginBox from "./components/login/loginbox";
 import RegisterBox from "./components/login/registerbox";
@@ -136,77 +136,88 @@ class App extends React.Component {
     //const { search } = this.state;
 
     return (
-      <React.Fragment>
-        {
-          //check if the user is signed in if not take them to sign up page
-        }
-        {this.state.user ? <Drivers /> : <LoginPage />}
+      <MuiThemeProvider>
+        <React.Fragment>
+          {
+            //check if the user is signed in if not take them to sign up page
+          }
+          {this.state.user ? <Drivers /> : <LoginPage />}
 
-        <div className="content">
-          <Switch>
-            <Route path="/loads" component={Loads} />
-            <Route path="/alladmins" component={AllAdmins} />
-            <Route path="/navbar" component={NavBar} />
-            <Route path="/users" component={Users} />
-            <Route path="/dispatchers" component={Dispatchers} />
-            <Route path="/formsearch" component={FormSearch} />
-            <Route path="/alldrivers" component={AllDrivers} />
-            <Route path="/loadsadmin" component={LoadsAdmin} />
-            <Route path="/allaccountants" component={AllAccountants} />
+          <div className="content">
+            <Switch>
+              <Route path="/loads" component={Loads} />
+              <Route path="/alladmins" component={AllAdmins} />
+              <Route path="/navbar" component={NavBar} />
+              <Route path="/users" component={Users} />
+              <Route path="/dispatchers" component={Dispatchers} />
+              <Route path="/formsearch" component={FormSearch} />
+              <Route path="/alldrivers" component={AllDrivers} />
+              <Route path="/loadsadmin" component={LoadsAdmin} />
+              <Route path="/allaccountants" component={AllAccountants} />
 
-            <Route path="/admins/admin" component={Admin} />
-            <Route path="/admins/addadmin" component={AddAdmin} />
-            <Route path="/admins/addaccountant" component={AddAccountant} />
-            <Route path="/admins/adddispatch" component={AddDispatch} />
-            <Route path="/admins/adddriver" component={AddDriver} />
-            <Route path="/admins/loadsadmin" component={LoadsAdmin} />
-            <Route path="/admins/usersadmin" component={UsersAdmin} />
-            <Route
-              path="/admins/adminallaccountants"
-              component={AdminAllAccountants}
-            />
-            <Route path="/admins/adminalldrivers" component={AdminAlldrivers} />
-            <Route path="/admins/adminalladmins" component={AdminAllAdmins} />
-            <Route
-              path="/admins/adminalldispatch"
-              component={AdminAllDispatch}
-            />
+              <Route path="/admins/admin" component={Admin} />
+              <Route path="/admins/addadmin" component={AddAdmin} />
+              <Route path="/admins/addaccountant" component={AddAccountant} />
+              <Route path="/admins/adddispatch" component={AddDispatch} />
+              <Route path="/admins/adddriver" component={AddDriver} />
+              <Route path="/admins/loadsadmin" component={LoadsAdmin} />
+              <Route path="/admins/usersadmin" component={UsersAdmin} />
+              <Route
+                path="/admins/adminallaccountants"
+                component={AdminAllAccountants}
+              />
+              <Route
+                path="/admins/adminalldrivers"
+                component={AdminAlldrivers}
+              />
+              <Route path="/admins/adminalladmins" component={AdminAllAdmins} />
+              <Route
+                path="/admins/adminalldispatch"
+                component={AdminAllDispatch}
+              />
 
-            <Route path="/accountants/accountant" component={Accountant} />
-            <Route
-              path="/accountants/loadsaccountant"
-              component={LoadsAccountant}
-            />
-            <Route
-              path="/accountants/accountantdrivers"
-              component={AccountantDrivers}
-            />
-            <Route
-              path="/accountants/accountantdispatchers"
-              component={AccountantDispatchers}
-            />
+              <Route path="/accountants/accountant" component={Accountant} />
+              <Route
+                path="/accountants/loadsaccountant"
+                component={LoadsAccountant}
+              />
+              <Route
+                path="/accountants/accountantdrivers"
+                component={AccountantDrivers}
+              />
+              <Route
+                path="/accountants/accountantdispatchers"
+                component={AccountantDispatchers}
+              />
 
-            <Route path="/dispatchs/dispatch" component={Dispatch} />
-            <Route
-              path="/dispatchs/dispatchnavbar"
-              component={DispatchNavbar}
-            />
-            <Route path="/dispatchs/dispatchusers" component={DispatchUsers} />
-            <Route path="/dispatchs/dispatchloads" component={DispatchLoads} />
-            <Route path="/dispatchs/dispatchload" component={DispatchLoad} />
+              <Route path="/dispatchs/dispatch" component={Dispatch} />
+              <Route
+                path="/dispatchs/dispatchnavbar"
+                component={DispatchNavbar}
+              />
+              <Route
+                path="/dispatchs/dispatchusers"
+                component={DispatchUsers}
+              />
+              <Route
+                path="/dispatchs/dispatchloads"
+                component={DispatchLoads}
+              />
+              <Route path="/dispatchs/dispatchload" component={DispatchLoad} />
 
-            <Route path="/driver/drivers" component={Drivers} />
-            <Route path="/driver/driverpaystubs" component={DriverPayStubs} />
-            <Route path="/driver/card1" component={Card1} />
-            <Route path="/driver/card2" component={Card2} />
-            <Route path="/driver/departurebol" component={DepartureBoL} />
-            <Route path="/driver/arrivalbol" component={ArrivalBoL} />
-            <Route path="/driver/driverloads" component={DriverLoads} />
+              <Route path="/driver/drivers" component={Drivers} />
+              <Route path="/driver/driverpaystubs" component={DriverPayStubs} />
+              <Route path="/driver/card1" component={Card1} />
+              <Route path="/driver/card2" component={Card2} />
+              <Route path="/driver/departurebol" component={DepartureBoL} />
+              <Route path="/driver/arrivalbol" component={ArrivalBoL} />
+              <Route path="/driver/driverloads" component={DriverLoads} />
 
-            <Route path="/login/loginpage" component={LoginPage} />
-          </Switch>
-        </div>
-      </React.Fragment>
+              <Route path="/login/loginpage" component={LoginPage} />
+            </Switch>
+          </div>
+        </React.Fragment>
+      </MuiThemeProvider>
     );
   }
 }

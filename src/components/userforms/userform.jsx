@@ -19,7 +19,7 @@ class UserForm extends Component {
     sSN: "",
     drivingLicense: "",
     age: "",
-    errors: {
+    error: {
       firstName: "",
       lastName: "",
       email: "",

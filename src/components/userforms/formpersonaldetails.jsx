@@ -1,16 +1,17 @@
 import React, { Component } from "react";
-import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
+import { ThemeProvider as MuiThemeProvider } from "@material-ui/core/styles";
+import TextField from "@material-ui/core/TextField";
 import AppBar from "material-ui/AppBar";
-import TextField from "material-ui/TextField";
-import RaisedButton from "material-ui/RaisedButton";
+import Button from "@material-ui/core/Button";
+import Dialog from "@material-ui/core/Dialog";
 
 class FormPersonalDetails extends Component {
-  continue = e => {
+  continue = (e) => {
     e.preventDefault();
     this.props.nextStep();
   };
 
-  back = e => {
+  back = (e) => {
     e.preventDefault();
     this.props.prevStep();
   };
@@ -18,151 +19,170 @@ class FormPersonalDetails extends Component {
     const { values, handleChange } = this.props;
 
     return (
-      <div className="box-container">
-        <MuiThemeProvider>
-          <React.Fragment>
+      <MuiThemeProvider>
+        <Dialog open>
+          <div className="box-container">
             <div style={style}>
               <TextField
-                hintText="Enter Your Street Address"
-                floatingLabelText="Street Address"
+                placeholder="Enter Your Street Address"
+                label="Street Address"
                 //How react works, everytime the textfield changes
                 //everytime we type in it, it will fire off an event
                 //of onChange.....You will have firstName in brackets coz
                 //handleChange takes in an input
                 onChange={handleChange("streetAddress")}
                 defaultValue={values.streetAddress}
+                margin="normal"
+                fullWidth
               />
             </div>
 
             <div style={style}>
               <TextField
-                hintText="Enter Your Apt Number"
-                floatingLabelText="Apt"
+                placeholder="Enter Your Apt Number"
+                label="Apt"
                 //How react works, everytime the textfield changes
                 //everytime we type in it, it will fire off an event
                 //of onChange.....You will have firstName in brackets coz
                 //handleChange takes in an input
                 onChange={handleChange("apt")}
                 defaultValue={values.apt}
+                margin="normal"
+                fullWidth
               />
             </div>
 
             <div style={style}>
               <TextField
-                hintText="Enter Your City"
-                floatingLabelText="City"
+                placeholder="Enter Your City"
+                label="City"
                 //How react works, everytime the textfield changes
                 //everytime we type in it, it will fire off an event
                 //of onChange.....You will have firstName in brackets coz
                 //handleChange takes in an input
                 onChange={handleChange("city")}
                 defaultValue={values.city}
+                margin="normal"
+                fullWidth
               />
             </div>
 
             <div style={style}>
               <TextField
-                hintText="Enter Your State"
-                floatingLabelText="State"
+                placeholder="Enter Your State"
+                label="State"
                 //How react works, everytime the textfield changes
                 //everytime we type in it, it will fire off an event
                 //of onChange.....You will have firstName in brackets coz
                 //handleChange takes in an input
                 onChange={handleChange("state")}
                 defaultValue={values.state}
+                margin="normal"
+                fullWidth
               />
             </div>
             <div style={style}>
               <TextField
-                hintText="Zip Code"
-                floatingLabelText="Zip Code"
+                placeholder="Zip Code"
+                label="Zip Code"
                 //How react works, everytime the textfield changes
                 //everytime we type in it, it will fire off an event
                 //of onChange.....You will have firstName in brackets coz
                 //handleChange takes in an input
                 onChange={handleChange("zipCode")}
                 defaultValue={values.zipCode}
+                margin="normal"
+                fullWidth
               />
             </div>
 
             <div style={style}>
               <TextField
-                hintText="Enter Your Social Security Number"
-                floatingLabelText="Social Security Number"
+                placeholder="444-99-6666"
+                label="Social Security Number"
                 //How react works, everytime the textfield changes
                 //everytime we type in it, it will fire off an event
                 //of onChange.....You will have firstName in brackets coz
                 //handleChange takes in an input
                 onChange={handleChange("sSN")}
                 defaultValue={values.sSN}
+                margin="normal"
+                fullWidth
               />
             </div>
 
             <div style={style}>
               <TextField
-                hintText="Enter Your Driving License Number"
-                floatingLabelText="Driving License Number"
+                placeholder="Enter Your Driving License Number"
+                label="Driving License Number"
                 //How react works, everytime the textfield changes
                 //everytime we type in it, it will fire off an event
                 //of onChange.....You will have firstName in brackets coz
                 //handleChange takes in an input
                 onChange={handleChange("drivingLicense")}
                 defaultValue={values.drivingLicense}
+                margin="normal"
+                fullWidth
               />
             </div>
 
             <div style={style}>
               <TextField
-                hintText="Enter Your Age"
-                floatingLabelText="Age"
+                placeholder="Enter Your Age"
+                label="Age"
                 //How react works, everytime the textfield changes
                 //everytime we type in it, it will fire off an event
                 //of onChange.....You will have firstName in brackets coz
                 //handleChange takes in an input
                 onChange={handleChange("age")}
                 defaultValue={values.age}
+                margin="normal"
+                fullWidth
               />
             </div>
 
             <div style={style}>
-              <RaisedButton
-                label="Continue"
-                primary={true}
+              <Button
+                color="primary"
+                variant="contained"
                 style={styles.button}
                 //we put contiue up above and what contiunue does
                 //is call the next step of userForm and we do that through
                 //props
                 onClick={this.continue}
-              />
+              >
+                Continue
+              </Button>
             </div>
 
-            <RaisedButton
-              label="Back"
-              //makes the button a white
-              primary={false}
+            <Button
+              color="secondary"
+              variant="contained"
               style={styles.button}
               //we put contiue up above and what contiunue does
               //is call the next step of userForm and we do that through
               //props
               onClick={this.back}
-            />
-          </React.Fragment>
-        </MuiThemeProvider>
-      </div>
+            >
+              Back
+            </Button>
+          </div>
+        </Dialog>
+      </MuiThemeProvider>
     );
   }
 }
 
 const styles = {
   button: {
-    margin: 15
-  }
+    margin: 15,
+  },
 };
 
 const style = {
   display: "flex",
   justifyContent: "center",
-  alignItems: "center"
+  alignItems: "center",
 };
 
 export default FormPersonalDetails;

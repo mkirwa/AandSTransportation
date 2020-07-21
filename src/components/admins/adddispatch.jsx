@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import NavBarAdmin from "./navbaradmin";
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
-import RaisedButton from "material-ui/RaisedButton";
+//import RaisedButton from "material-ui/RaisedButton";
 import UserForm from "../userforms/userform";
+import { Button } from "reactstrap";
 
 class AddDispatch extends Component {
   render() {
@@ -15,7 +16,7 @@ class AddDispatch extends Component {
         <UserForm />
         <div style={style}>
           <MuiThemeProvider>
-            <RaisedButton
+            <Button
               label="Send Email"
               //makes the button blue
               primary={true}
@@ -36,7 +37,7 @@ const style = {
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
-  margin: "30px auto"
+  margin: "30px auto",
 };
 
 export default AddDispatch;

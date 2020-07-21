@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import UserForm from "../userforms/userform";
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
-
+import { Button } from "reactstrap";
 import NavBarAdmin from "./navbaradmin";
-import RaisedButton from "material-ui/RaisedButton";
+//import RaisedButton from "material-ui/RaisedButton";
 
 import FormPersonalDetails from "../userforms/formpersonaldetails";
 
@@ -19,7 +19,7 @@ class AddAdmin extends Component {
 
         <div style={style}>
           <MuiThemeProvider>
-            <RaisedButton
+            <Button
               label="Send Email"
               //makes the button blue
               primary={true}
@@ -40,7 +40,7 @@ const style = {
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
-  margin: "30px auto"
+  margin: "30px auto",
 };
 
 export default AddAdmin;

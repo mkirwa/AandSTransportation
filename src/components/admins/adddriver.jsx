@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import { Navbar } from "react-bootstrap";
 import NavBarAdmin from "./navbaradmin";
+import { Button } from "reactstrap";
 import UserForm from "../userforms/userform";
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
-import RaisedButton from "material-ui/RaisedButton";
+//import RaisedButton from "material-ui/RaisedButton";
 
 class AddDriver extends Component {
   render() {
@@ -16,7 +17,7 @@ class AddDriver extends Component {
         <UserForm />
         <div style={style}>
           <MuiThemeProvider>
-            <RaisedButton
+            <Button
               label="Send Email"
               //makes the button blue
               primary={true}
@@ -37,7 +38,7 @@ const style = {
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
-  margin: "30px auto"
+  margin: "30px auto",
 };
 
 export default AddDriver;

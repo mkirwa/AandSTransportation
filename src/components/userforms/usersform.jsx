@@ -41,8 +41,8 @@ class UsersForm extends Component {
 
 const styles = {
   button: {
-    margin: 15
-  }
+    margin: 15,
+  },
 };
 
 export default UsersForm;

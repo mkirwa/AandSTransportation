@@ -1,11 +1,13 @@
 import React, { Component } from "react";
-import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
+import Dialog from "@material-ui/core/Dialog";
+import { ThemeProvider as MuiThemeProvider } from "@material-ui/core/styles";
 import AppBar from "material-ui/AppBar";
-import { List, ListItem } from "material-ui/List";
-import RaisedButton from "material-ui/RaisedButton";
+import { List, ListItem, ListItemText } from "@material-ui/core/";
+//import RaisedButton from "material-ui/RaisedButton";
+import Button from "@material-ui/core/Button";
 
 class Confirm extends Component {
-  continue = e => {
+  continue = (e) => {
     //prevent default
     e.preventDefault();
     //this is where you would process your form
@@ -13,7 +15,7 @@ class Confirm extends Component {
     this.props.nextStep();
   };
 
-  back = e => {
+  back = (e) => {
     //prevent default
     e.preventDefault();
     this.props.prevStep();
@@ -34,69 +36,103 @@ class Confirm extends Component {
         zipCode,
         sSN,
         drivingLicense,
-        age
-      }
+        age,
+      },
     } = this.props;
     return (
-      <div className="box-container">
-        <MuiThemeProvider>
-          <React.Fragment>
-            <div className="header">Confirm User Data</div>
-            <List>
-              <ListItem primaryText="First Name" secondaryText={firstName} />
-              <ListItem primaryText="Last Name" secondaryText={lastName} />
-              <ListItem primaryText="Email" secondaryText={email} />
-              <ListItem
-                primaryText="Street Address"
-                secondaryText={streetAddress}
-              />
-              <ListItem primaryText="Apartment" secondaryText={apt} />
-              <ListItem primaryText="City" secondaryText={city} />
-              <ListItem primaryText="State" secondaryText={state} />
-              <ListItem primaryText="zipCode" secondaryText={zipCode} />
-              <ListItem
-                primaryText="Social Security Number"
-                secondaryText={sSN}
-              />
-              <ListItem
-                primaryText="Driving License"
-                secondaryText={drivingLicense}
-              />
-              <ListItem primaryText="Age" secondaryText={age} />
-            </List>
+      <MuiThemeProvider>
+        <Dialog open>
+          <div className="box-container">
+            <React.Fragment>
+              <div className="header">Confirm User Data</div>
+              <List>
+                <ListItem>
+                  <ListItemText primary="First Name" secondary={firstName} />
+                </ListItem>
+                <ListItem>
+                  <ListItemText primary="Last Name" secondary={lastName} />
+                </ListItem>
+                <ListItem>
+                  <ListItemText primary="Email" secondary={email} />
+                </ListItem>
+                <ListItem>
+                  <ListItemText
+                    primary="Street Address"
+                    secondary={streetAddress}
+                  />
+                </ListItem>
+                <ListItem>
+                  <ListItemText primary="Apartment" secondary={apt} />
+                </ListItem>
+                <ListItem>
+                  <ListItemText primary="City" secondary={city} />
+                </ListItem>
+                <ListItem>
+                  <ListItemText primary="State" secondary={state} />
+                </ListItem>
+                <ListItem>
+                  <ListItemText primary="zipCode" secondary={zipCode} />
+                </ListItem>
+                <ListItem>
+                  <ListItemText
+                    primary="Social Security Number"
+                    secondary={sSN}
+                  />
+                </ListItem>
+                <ListItem>
+                  <ListItemText
+                    primary="Driving License"
+                    secondary={drivingLicense}
+                  />
+                </ListItem>
+                <ListItem>
+                  <ListItemText primary="Age" secondary={age} />
+                </ListItem>
+              </List>
 
-            <br />
-            <RaisedButton
-              label="Confirm & Continue"
-              //makes the button blue
-              primary={true}
-              style={styles.button}
-              //we put contiue up above and what contiunue does
-              //is call the next step of userForm and we do that through
-              //props
-              onClick={this.continue}
-            />
-            <RaisedButton
-              label="Back"
-              //makes the button a white
-              primary={false}
-              style={styles.button}
-              //we put contiue up above and what contiunue does
-              //is call the next step of userForm and we do that through
-              //props
-              onClick={this.back}
-            />
-          </React.Fragment>
-        </MuiThemeProvider>
-      </div>
+              <br />
+              <div>
+                <Button
+                  color="primary"
+                  variant="contained"
+                  //we put contiue up above and what contiunue does
+                  //is call the next step of userForm and we do that through
+                  //props
+                  // style={styles.button}
+                  onClick={this.continue}
+                >
+                  Confirm & Continue
+                </Button>
+              </div>
+              <br />
+              <div>
+                <Button
+                  color="secondary"
+                  variant="contained"
+                  //makes the button a white
+
+                  //style={styles.button}
+                  //we put contiue up above and what contiunue does
+                  //is call the next step of userForm and we do that through
+                  //props
+                  onClick={this.back}
+                >
+                  Back
+                </Button>
+              </div>
+              <br />
+            </React.Fragment>
+          </div>
+        </Dialog>
+      </MuiThemeProvider>
     );
   }
 }
 
 const styles = {
   button: {
-    margin: 15
-  }
+    margin: 15,
+  },
 };
 
 export default Confirm;

@@ -1,9 +1,11 @@
 import React, { Component } from "react";
-import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
+import { ThemeProvider as MuiThemeProvider } from "@material-ui/core/styles";
 import AppBar from "material-ui/AppBar";
-import TextField from "material-ui/TextField";
-import RaisedButton from "material-ui/RaisedButton";
+import TextField from "@material-ui/core/TextField";
+//import RaisedButton from "material-ui/RaisedButton";
 import makeStyles from "@material-ui/core/styles";
+import Button from "@material-ui/core/Button";
+import Dialog from "@material-ui/core/Dialog";
 
 class FormUserDetails extends Component {
   handleValidation = () => {
@@ -32,65 +34,67 @@ class FormUserDetails extends Component {
   render() {
     //pulling values from the props in continue
     //doing this so you can use values as a variable
-    const { values, handleChange, errors } = this.props;
+    const { values, handleChange } = this.props;
 
     return (
-      <div className="box-container">
-        <MuiThemeProvider>
-          <React.Fragment>
+      <MuiThemeProvider>
+        <Dialog open>
+          <div className="box-container">
             <div style={style}>
               <TextField
-                error
-                id="filled-error-helper-text"
-                label="error"
-                hintText="Enter Your First Name"
-                floatingLabelText="First Name"
+                //error
+                //id="filled-error-helper-text"
+                //label="error"
+                placeholder="Enter Your First Name"
+                label="First Name"
                 //How react works, everytime the textfield changes
                 //everytime we type in it, it will fire off an event
                 //of onChange.....You will have firstName in brackets coz
                 //handleChange takes in an input
-
                 onChange={handleChange("firstName")}
                 defaultValue={values.firstName}
-                HelperText="Incorrect entry"
+                margin="normal"
+                fullWidth
+                //HelperText="Incorrect entry"
               />
             </div>
 
             <div style={style}>
               <TextField
-                hintText="Enter Your Last Name"
-                floatingLabelText="Last Name"
+                placeholder="Enter Your Last Name"
+                label="Last Name"
                 //How react works, everytime the textfield changes
                 //everytime we type in it, it will fire off an event
                 //of onChange.....You will have firstName in brackets coz
                 //handleChange takes in an input
                 onChange={handleChange("lastName")}
                 defaultValue={values.lastName}
+                margin="normal"
+                fullWidth
               />
             </div>
 
             <div style={style}>
               <TextField
-                hintText="Enter Your Email"
-                floatingLabelText="Email"
+                placeholder="Enter Your Email"
+                label="Email"
                 //How react works, everytime the textfield changes
                 //everytime we type in it, it will fire off an event
                 //of onChange.....You will have firstName in brackets coz
                 //handleChange takes in an input
                 onChange={handleChange("email")}
                 defaultValue={values.email}
+                margin="normal"
+                fullWidth
               />
             </div>
-
-            <RaisedButton
-              label="Continue"
-              primary={true}
-              style={styles.button}
-              onClick={this.continue}
-            />
-          </React.Fragment>
-        </MuiThemeProvider>
-      </div>
+            <br />
+            <Button color="primary" variant="contained" onClick={this.continue}>
+              Continue
+            </Button>
+          </div>
+        </Dialog>
+      </MuiThemeProvider>
     );
   }
 }

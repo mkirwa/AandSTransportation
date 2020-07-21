@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import TextField from "material-ui/TextField";
-import RaisedButton from "material-ui/RaisedButton";
+//import RaisedButton from "material-ui/RaisedButton";
+import { Button } from "reactstrap";
 import AppBar from "material-ui/AppBar";
 
 class MainDispatchLoad extends Component {
@@ -178,7 +179,7 @@ class MainDispatchLoad extends Component {
           </div>
 
           <div style={styles}>
-            <RaisedButton
+            <Button
               label="Continue"
               primary={true}
               style={styles.button}
@@ -189,7 +190,7 @@ class MainDispatchLoad extends Component {
             />
           </div>
 
-          <RaisedButton
+          <Button
             label="Back"
             //makes the button a white
             primary={false}
@@ -209,13 +210,13 @@ const styles = {
   margin: "30px auto",
   display: "flex",
   justifyContent: "center",
-  alignItems: "center"
+  alignItems: "center",
 };
 
 const style = {
   display: "flex",
   justifyContent: "center",
-  alignItems: "center"
+  alignItems: "center",
 };
 
 export default MainDispatchLoad;
