@@ -3,7 +3,7 @@ import Dialog from "@material-ui/core/Dialog";
 import { ThemeProvider as MuiThemeProvider } from "@material-ui/core/styles";
 import AppBar from "material-ui/AppBar";
 import { List, ListItem, ListItemText } from "@material-ui/core/";
-//import RaisedButton from "material-ui/RaisedButton";
+//import RaisedButton from "material-ui/RaisedButton"; DON'T Use depracated
 import Button from "@material-ui/core/Button";
 
 class Confirm extends Component {
