@@ -110,10 +110,6 @@ class FormPersonalDetails extends Component {
               <TextField
                 placeholder="Enter Your Age"
                 label="Age"
-                //How react works, everytime the textfield changes
-                //everytime we type in it, it will fire off an event
-                //of onChange.....You will have firstName in brackets coz
-                //handleChange takes in an input
                 onChange={handleChange("age")}
                 defaultValue={values.age}
                 margin="normal"

@@ -78,14 +78,14 @@ class NavBarDriver extends Component {
                 aria-haspopup="true"
                 aria-expanded="false"
               >
-                Bill of Landing
+                Bill of Lading
               </Link>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <Link class="dropdown-item" to="/driver/departurebol">
-                  Departure Bill of Landing
+                  Departure Bill of Lading
                 </Link>
                 <Link class="dropdown-item" to="/driver/arrivalbol">
-                  Arrival Bill of Landing
+                  Arrival Bill of Lading
                 </Link>
               </div>
             </li>

@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { ThemeProvider as MuiThemeProvider } from "@material-ui/core/styles";
 import AppBar from "material-ui/AppBar";
 import TextField from "@material-ui/core/TextField";
-//import RaisedButton from "material-ui/RaisedButton";
 import makeStyles from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import Dialog from "@material-ui/core/Dialog";
@@ -63,10 +62,6 @@ class FormUserDetails extends Component {
               <TextField
                 placeholder="Enter Your Last Name"
                 label="Last Name"
-                //How react works, everytime the textfield changes
-                //everytime we type in it, it will fire off an event
-                //of onChange.....You will have firstName in brackets coz
-                //handleChange takes in an input
                 onChange={handleChange("lastName")}
                 defaultValue={values.lastName}
                 margin="normal"
@@ -78,10 +73,6 @@ class FormUserDetails extends Component {
               <TextField
                 placeholder="Enter Your Email"
                 label="Email"
-                //How react works, everytime the textfield changes
-                //everytime we type in it, it will fire off an event
-                //of onChange.....You will have firstName in brackets coz
-                //handleChange takes in an input
                 onChange={handleChange("email")}
                 defaultValue={values.email}
                 margin="normal"
