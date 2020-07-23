@@ -15,14 +15,15 @@ class MainDispatchLoad extends Component {
         <React.Fragment>
           <div style={style}>
             <TextField
-              hintText="Company name"
-              floatingLabelText="Company Name"
+              placholder="Company name"
+              label="Company Name"
               //How react works, everytime the textfield changes
               //everytime we type in it, it will fire off an event
               //of onChange.....You will have firstName in brackets coz
               //handleChange takes in an input
               //onChange={this.handleChange.bind(this)("Company Name")}
               //defaultValue={values.companyName}
+              margin="normal"
             />
           </div>
           <div>
