@@ -1,7 +1,6 @@
 import React, { Component } from "react";
-import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
-import TextField from "material-ui/TextField";
-//import RaisedButton from "material-ui/RaisedButton";
+import { ThemeProvider as MuiThemeProvider } from "@material-ui/core/styles";
+import TextField from "@material-ui/core/TextField";
 import { Button } from "reactstrap";
 import AppBar from "material-ui/AppBar";
 
