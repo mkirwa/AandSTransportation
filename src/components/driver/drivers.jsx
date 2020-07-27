@@ -9,6 +9,7 @@ class Drivers extends Component {
     return (
       <div>
         <NavBarDriver />
+
         <div style={style}>
           <h4>Driver Details</h4>
         </div>
@@ -21,7 +22,7 @@ const style = {
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
-  margin: "30px auto"
+  margin: "30px auto",
 };
 
 export default Drivers;
