@@ -2,10 +2,19 @@ import React, { Component } from "react";
 import FormSearch from "../formsearch";
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
-
+import firebase from "../../config/firebase";
 //import Dropdown from "./dropdown";
 
 class NavBar extends Component {
+  submitLogout(e) {
+    e.preventDefault();
+    firebase
+      .auth()
+      .signOut()
+      .catch((error) => {
+        console.log(error);
+      });
+  }
   render() {
     return (
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark ">
@@ -97,6 +106,9 @@ class NavBar extends Component {
           handleSubmit={this.handleSubmit}
           handleInputChange={this.handleInputChange}
         />
+        <button type="button" onClick={this.submitLogout.bind(this)}>
+          Sign Out
+        </button>
       </nav>
     );
   }

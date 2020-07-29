@@ -54,7 +54,6 @@ import LoginPage from "./components/login/loginpage";
 import { reactDOM } from "react-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Select from "react-select";
-
 import firebase from "./config/firebase";
 
 class App extends React.Component {
@@ -110,6 +109,16 @@ class App extends React.Component {
         //localStorage.removeItem("user");
       }
     });
+  }
+
+  submitLogout(e) {
+    e.preventDefault();
+    firebase
+      .auth()
+      .signOut()
+      .catch((error) => {
+        console.log(error);
+      });
   }
 
   handleSubmit = (event) => {
